@@ -5,7 +5,7 @@ This repo contains the source code of our portfolio website, built with **React 
 
 ---
 
-## 🚀 About Us
+## 🌟 About Us
 At **Axivelt**, we focus on:
 - ⚡ Custom websites & web applications (React, Node.js, PHP, JavaScript)  
 - 🛠️ Scalable digital systems for businesses  
