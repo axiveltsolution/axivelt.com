@@ -1,31 +1,99 @@
+import { useEffect, useMemo, useState } from "react";
 import "./OurProjects.css";
 
-const items = [
-  { name:'GadgetHub', desc:'E-commerce + distributor quotes. ASP.NET API + React.' },
-  { name:'FixMate.lk', desc:'Service booking platform (MERN). Multi-role dashboards.' },
-  { name:'LankaSafeTours', desc:'Tour site on WordPress with booking & payments.' },
-  { name:'MotoGear POS', desc:'Inventory & sales system with thermal receipts.' },
-  { name:'Kumara Arcade', desc:'Retail promo campaigns with WhatsApp broadcasts.' },
-  { name:'EasyNeat AU', desc:'Cleaning services site with booking wizard.' },
-];
+/** Auto-import every image in /assets/gallery (Vite feature).
+ *  Supported: jpg, jpeg, png, webp, avif, gif
+ *  Put files in: src/assets/gallery/...
+ */
+const modules = import.meta.glob(
+  "../../assets/gallery/**/*.{jpg,jpeg,png,webp,avif,gif}",
+  { eager: true, import: "default" }
+);
+const SOURCE_IMAGES = Object.values(modules);
 
-export default function OurProjects(){
+/* Utility: Fisher–Yates shuffle */
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+export default function OurProjects() {
+  // Randomize once per mount
+  const images = useMemo(() => shuffle(SOURCE_IMAGES), []);
+
+  // Lightbox
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const openAt = (i) => { setIndex(i); setOpen(true); };
+  const close  = () => setOpen(false);
+  const prev   = () => setIndex((i) => (i - 1 + images.length) % images.length);
+  const next   = () => setIndex((i) => (i + 1) % images.length);
+
+  // Keyboard + scroll lock
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
+    };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [open]);
+
   return (
-    <section className="container work-root">
-      <h1 className="work-h1">Projects</h1>
-      <p className="work-muted">A few highlights of what we build.</p>
+    <div className="projects">
+      <h1 className="sr-only">Projects Gallery</h1>
 
-      <div className="work-grid">
-        {items.map((p,i)=>(
-          <article key={i} className="work-card">
-            <div className="work-thumb"></div>
-            <div className="work-body">
-              <h3 className="work-h3">{p.name}</h3>
-              <p className="work-muted">{p.desc}</p>
-            </div>
-          </article>
-        ))}
+      <div className="container">
+        <ul className="gallery" aria-label="Projects image gallery">
+          {images.map((src, i) => (
+            <li className="gallery-item" key={src + i}>
+              <button
+                className="thumb"
+                onClick={() => openAt(i)}
+                aria-label="Open image"
+              >
+                <img
+                  src={src}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 540px) 95vw, (max-width: 1024px) 45vw, 30vw"
+                />
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
-    </section>
+
+      {open && (
+        <div
+          className="lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image viewer"
+          onClick={(e) => {
+            if (e.target.classList.contains("lightbox")) close();
+          }}
+        >
+          <button className="lb-btn lb-prev" onClick={prev} aria-label="Previous image">‹</button>
+          <img className="lb-image" src={images[index]} alt="" />
+          <button className="lb-btn lb-next" onClick={next} aria-label="Next image">›</button>
+
+          <button className="lb-close" onClick={close} aria-label="Close">×</button>
+        </div>
+      )}
+    </div>
   );
 }
