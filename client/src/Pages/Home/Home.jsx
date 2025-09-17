@@ -218,19 +218,19 @@ export default function Home() {
             <ProjectCard
               href="/our-projects"
               title="GadgetHub"
-              description="React + ASP.NET • B2C electronics marketplace with product search, accounts, and admin tools."
+              description="C# + ASP.NET • B2C electronics marketplace with product search, accounts, and admin tools."
               image="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1600&auto=format&fit=crop"
             />
             <ProjectCard
               href="/our-projects"
               title="FixMate.lk"
-              description="MERN Stack • On-demand service booking, payments, role-based dashboard, and notifications."
+              description="React + Node Js • On-demand service booking, payments, role-based dashboard, and notifications."
               image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop"
             />
             <ProjectCard
               href="/our-projects"
               title="LankaSafeTours"
-              description="WordPress • Tours & booking website with packages, inquiries, and analytics."
+              description="React + Node js • Tours & booking website with packages, inquiries, and analytics."
               image="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop"
             />
           </div>
