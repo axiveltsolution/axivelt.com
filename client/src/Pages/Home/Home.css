@@ -93,14 +93,14 @@
   display:grid; justify-items:center; text-align:center;
   margin: 8px 0 .25rem;
   font-family:"Space Grotesk",system-ui,sans-serif;
-  font-size: clamp(2.2rem, 7.8vw, 6.9rem);  /* was 2.1rem, 7.4vw, 6.5rem */   /* a touch larger than before */
-  font-weight:900; letter-spacing:-.03em; line-height:.9; /* tighter lines */
+  font-size: clamp(2.2rem, 7.8vw, 6.9rem);
+  font-weight:900; letter-spacing:-.03em; line-height:.9;
   background:linear-gradient(135deg,#fff 0%, var(--grad-a) 50%, var(--grad-b) 100%);
   -webkit-background-clip:text; background-clip:text; color:transparent;
   gap: clamp(0px, .8vw, 10px);
 }
 .home .title-line{ display:block; margin:0; }
-.home .title-rotator{ margin: clamp(-10px,-1.6vw,-16px) 0; } /* subtle pull up */
+.home .title-rotator{ margin: clamp(-10px,-1.6vw,-16px) 0; }
 
 /* Rotator alignment */
 .home .title .rotator,
@@ -108,7 +108,7 @@
 .home .rotator{ position:relative; display:inline-block; height:1em; vertical-align:baseline; }
 .home .rotator .word{
   position:absolute; top:0; left:50%;
-  transform:translate(-50%,10%);       /* slightly closer to baseline */
+  transform:translate(-50%,10%);
   white-space:nowrap;
   background:linear-gradient(135deg,var(--grad-a),var(--grad-b));
   -webkit-background-clip:text; background-clip:text; color:transparent;
@@ -386,15 +386,22 @@
 
 /* ================= Responsiveness specific ================= */
 @media (max-width:900px){
-  /* slightly larger than before but still comfy on tablets/large phones */
   .home .hero{ min-height: clamp(520px, 72svh, 800px); }
   .home .title{ font-size: clamp(2.2rem, 9vw, 5.2rem); gap: clamp(0px,.8vw,8px); }
   .home .title-rotator{ margin: clamp(-8px,-1.2vw,-12px) 0; }
 }
 
+/* === MOBILE-ONLY TWEAKS (what you asked for) === */
 @media (max-width:520px){
-  .home .hero{ padding-top: calc(var(--nav-h) + 12px); }
-  .home .title{ font-size: clamp(2rem, 10.5vw, 4.2rem); line-height:.92; }
+  /* ↓ smaller top spacing under fixed navbar */
+  .home .hero{
+    padding-top: calc(var(--nav-h) + 4px);   /* was +12px */
+  }
+  /* ↑ slightly bigger mobile title */
+  .home .title{
+    font-size: clamp(2.2rem, 11.5vw, 4.6rem); /* was 2rem, 10.5vw, 4.2rem */
+    line-height: .9;
+  }
   .home .sub{ font-size: clamp(1rem, 3.8vw, 1.15rem); }
 }
 
@@ -414,4 +421,18 @@
 /* Dark-mode hint */
 @media (prefers-color-scheme: dark){
   .home{ background: radial-gradient(ellipse at top, #0a0a0f 0%, #000 100%); }
+}
+
+/* === MOBILE-ONLY OVERRIDE (place at very end of Home.css) === */
+@media (max-width: 520px) {
+  /* smaller top spacing on phones */
+  .home .hero {
+    padding-top: calc(var(--nav-h) - 6vh);
+  }
+
+  /* bigger hero heading only on mobile */
+  .home .hero .title {
+    font-size: clamp(2.6rem, 13.5vw, 5.6rem) !important; /* force win if needed */
+    line-height: .88; /* a touch tighter */
+  }
 }
