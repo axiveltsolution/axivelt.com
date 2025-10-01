@@ -19,6 +19,22 @@
   min-height:100vh;
 }
 
+/* "Visit website" button inside project cards */
+.work-visit {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .6rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--line, rgba(255,255,255,0.2));
+  padding: .5rem .75rem;
+  border-radius: .6rem;
+  transition: transform .15s ease, background .2s ease, border-color .2s ease;
+}
+.work-visit:hover { transform: translateY(-1px); }
+
+
 /* Sections */
 .home .section{ padding: clamp(48px, 7vw, 96px) 0; position:relative; }
 .home .container{ max-width:var(--mxw); margin:0 auto; padding:0 clamp(16px,5vw,56px); }
