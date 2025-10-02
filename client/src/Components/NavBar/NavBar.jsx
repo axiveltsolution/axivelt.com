@@ -7,13 +7,10 @@ export default function NavBar() {
   const { pathname, hash } = useLocation();
   const [open, setOpen] = useState(false);
 
-  // active state for home anchors
   const isHashActive = (h) => pathname === "/" && hash === h;
 
-  // close drawer when route/hash changes
   useEffect(() => { setOpen(false); }, [pathname, hash]);
 
-  // lock scroll when drawer open
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = open ? "hidden" : prev || "";
@@ -51,7 +48,7 @@ export default function NavBar() {
         <nav className="links">
           {item("/", "Home")}
           {item("/services", "Services")}
-          {anchor("#projects", "Projects")}
+          {item("/our-projects", "Projects")}
           {anchor("#about", "About")}
           {anchor("#faq", "FAQ")}
         </nav>
@@ -79,7 +76,7 @@ export default function NavBar() {
         <nav className="m-links">
           {item("/", "Home")}
           {item("/services", "Services")}
-          {anchor("#projects", "Projects")}
+          {item("/our-projects", "Projects")}
           {anchor("#about", "About")}
           {anchor("#faq", "FAQ")}
           <Link to="/contact" className="cta m-cta" onClick={() => setOpen(false)}>
