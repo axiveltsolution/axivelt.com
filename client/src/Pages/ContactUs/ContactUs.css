@@ -18,3 +18,26 @@
   background: linear-gradient(135deg,#19c6ff,#7c5cff); border: 0;
 }
 .contact-help { color: #9ca0a8; font-size: 13px; margin-top: 8px; }
+
+/* Layout row for button + banner */
+.send-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Neon green success message */
+.sent-banner {
+  color: #39ff14; /* neon green */
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(57, 255, 20, 0.65), 0 0 12px rgba(57, 255, 20, 0.35);
+  letter-spacing: 0.2px;
+}
+
+/* Optional: subtle error style */
+.error-text {
+  color: #ff6b6b;
+  margin-top: 10px;
+  font-weight: 600;
+}
