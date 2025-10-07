@@ -132,7 +132,7 @@ export default function OurProjects() {
       <div className="container">
         <header className="projects-header">
           <h1 className="h2">Projects</h1>
-          <p className="muted">A selection of recent work — websites, dashboards, and custom web apps.</p>
+          <p className="muted">A selection of recent work. websites, dashboards, and custom web apps.</p>
         </header>
 
         <div className="projects-grid">
