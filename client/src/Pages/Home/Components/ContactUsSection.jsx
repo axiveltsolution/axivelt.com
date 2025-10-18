@@ -1,6 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import "./ContactUs.css";
+import "./../Home.css";
 
 const SERVICE_ID = "service_gmailaxivelt";
 const TEMPLATE_ADMIN_ID = "template_2erh7n5";
@@ -11,7 +11,7 @@ const PUBLIC_KEY = "Tg5YfwWCQAsQCGMZc";
 const AXIVELT_TO_EMAIL = "axiveltofficial@gmail.com";
 const AXIVELT_TO_NAME = "Axivelt Solutions";
 
-export default function ContactUs() {
+export default function ContactUsSection() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [err, setErr] = useState("");
@@ -91,7 +91,8 @@ export default function ContactUs() {
   }
 
   return (
-    <section className="container contact-root">
+    <section id="contactus" className=" contactus-section">
+      <h1>Contact Us</h1>
       <h1 className="contact-h1">Let’s build something great</h1>
       <p className="contact-muted">
         Tell us about your project. We’ll reply within 24 hours with next steps.
@@ -102,8 +103,7 @@ export default function ContactUs() {
         method="POST"
         data-netlify="true"
         onSubmit={handleSubmit}
-        className="contact-form"
-      >
+        className="contact-form">
         <input type="hidden" name="form-name" value="contact" />
 
         <div className="contact-row2">
@@ -113,7 +113,12 @@ export default function ContactUs() {
           </div>
           <div className="contact-field">
             <label>Email</label>
-            <input type="email" name="email" required placeholder="you@example.com" />
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="you@example.com"
+            />
           </div>
         </div>
 
@@ -125,7 +130,9 @@ export default function ContactUs() {
           <div className="contact-field">
             <label>Budget</label>
             <select name="budget" defaultValue="">
-              <option value="" disabled>Select a range</option>
+              <option value="" disabled>
+                Select a range
+              </option>
               <option>Under LKR 100,000</option>
               <option>LKR 100,000 – 250,000</option>
               <option>LKR 250,000 – 500,000</option>
@@ -159,7 +166,9 @@ export default function ContactUs() {
 
         <p className="contact-help">
           Prefer email?{" "}
-          <a href="mailto:axiveltofficial@gmail.com">axiveltofficial@gmail.com</a>
+          <a href="mailto:axiveltofficial@gmail.com">
+            axiveltofficial@gmail.com
+          </a>
         </p>
       </form>
     </section>

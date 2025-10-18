@@ -1,4 +1,19 @@
-.nf-root { padding: 48px 0; }
-.nf-h1 { font-family: "Space Grotesk", Inter, sans-serif; margin: 0 0 6px; }
-.nf-muted { color: #9ca0a8; }
-.nf-btn { display: inline-block; margin-top: 12px; padding: 10px 14px; border-radius: 12px; font-weight: 700; color: #061019; background: linear-gradient(135deg,#19c6ff,#7c5cff); }
+.nf-root {
+  padding: 48px 0;
+}
+.nf-h1 {
+  font-family: "Space Grotesk", Inter, sans-serif;
+  margin: 0 0 6px;
+}
+.nf-muted {
+  color: #9ca0a8;
+}
+.nf-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #061019;
+  background: linear-gradient(135deg, #19c6ff, #7c5cff);
+}

@@ -9,20 +9,23 @@ export default function NavBar() {
 
   const isHashActive = (h) => pathname === "/" && hash === h;
 
-  useEffect(() => { setOpen(false); }, [pathname, hash]);
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname, hash]);
 
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = open ? "hidden" : prev || "";
-    return () => { document.body.style.overflow = prev; };
+    return () => {
+      document.body.style.overflow = prev;
+    };
   }, [open]);
 
   const item = (to, label) => (
     <NavLink
       to={to}
       className={({ isActive }) => (isActive ? "link active" : "link")}
-      onClick={() => setOpen(false)}
-    >
+      onClick={() => setOpen(false)}>
       {label}
     </NavLink>
   );
@@ -31,8 +34,7 @@ export default function NavBar() {
     <Link
       to={`/${h}`}
       className={isHashActive(h) ? "link active" : "link"}
-      onClick={() => setOpen(false)}
-    >
+      onClick={() => setOpen(false)}>
       {label}
     </Link>
   );
@@ -47,15 +49,13 @@ export default function NavBar() {
         {/* Desktop links */}
         <nav className="links">
           {item("/", "Home")}
-          {item("/services", "Services")}
-          {item("/our-projects", "Projects")}
+          {anchor("#services", "Services")}
+          {anchor("#projects", "Projects")}
           {anchor("#about", "About")}
           {anchor("#faq", "FAQ")}
         </nav>
 
-        <Link to="/contact" className="cta desk-cta" onClick={() => setOpen(false)}>
-          Contact Us
-        </Link>
+        <nav>{anchor("#contactus", "Contact Us")}</nav>
 
         {/* Mobile toggle */}
         <button
@@ -63,8 +63,7 @@ export default function NavBar() {
           aria-label="Toggle menu"
           aria-expanded={open}
           aria-controls="mobile-menu"
-          onClick={() => setOpen((v) => !v)}
-        >
+          onClick={() => setOpen((v) => !v)}>
           <span />
           <span />
           <span />
@@ -75,11 +74,14 @@ export default function NavBar() {
       <div id="mobile-menu" className="drawer" role="dialog" aria-modal="true">
         <nav className="m-links">
           {item("/", "Home")}
-          {item("/services", "Services")}
-          {item("/our-projects", "Projects")}
+          {anchor("#services", "Services")}
+          {anchor("#projects", "Projects")}
           {anchor("#about", "About")}
           {anchor("#faq", "FAQ")}
-          <Link to="/contact" className="cta m-cta" onClick={() => setOpen(false)}>
+          <Link
+            to="/contact"
+            className="cta m-cta"
+            onClick={() => setOpen(false)}>
             Contact Us
           </Link>
         </nav>

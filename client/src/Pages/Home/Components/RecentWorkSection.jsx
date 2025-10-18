@@ -1,0 +1,151 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+
+/* ======= Project images (local) ======= */
+import imgGadgetHub from "../../../assets/projects/gadgethub/img1.webp";
+import imgEasyNeat from "../../../assets/projects/easyneat/img1.webp";
+import imgElinapix from "../../../assets/projects/elinapix/img1.webp";
+
+/* ================= Intersection Observer ================= */
+function useIntersectionObserver(options = {}) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.style.opacity = "1";
+          el.style.transform = "translateY(0)";
+        }
+      },
+      { threshold: 0.1, ...options }
+    );
+    obs.observe(el);
+    return () => obs.unobserve(el);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  return ref;
+}
+
+/* Card with internal href + separate external button */
+function ProjectCard({
+  href,
+  website,
+  title,
+  description,
+  image,
+  websiteLabel = "Visit website",
+}) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  const cardRef = useIntersectionObserver();
+
+  const Wrapper = href ? Link : "div";
+  const wrapperProps = href
+    ? { to: href, "aria-label": `View ${title} project details` }
+    : {};
+
+  const onExternalClick = (e) => e.stopPropagation();
+
+  return (
+    <Wrapper
+      ref={cardRef}
+      {...wrapperProps}
+      className="work"
+      style={{
+        opacity: 0,
+        transform: "translateY(30px)",
+        transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)",
+      }}>
+      <div className="work-thumb">
+        {!imageError ? (
+          <img
+            className="work-img"
+            src={image}
+            alt={`${title} project preview`}
+            loading="lazy"
+            onLoad={() => setImageLoaded(true)}
+            onError={() => setImageError(true)}
+            style={{ opacity: imageLoaded ? 1 : 0, transition: "opacity 0.4s" }}
+          />
+        ) : (
+          <div className="image-fallback">
+            <div className="project-placeholder">{title?.charAt(0) || "P"}</div>
+          </div>
+        )}
+        {!imageLoaded && !imageError && <div className="image-placeholder" />}
+      </div>
+
+      <div className="work-body">
+        <h4 className="work-title">{title}</h4>
+        <p className="muted work-tag">{description}</p>
+
+        {website && (
+          <a
+            className="work-visit"
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onExternalClick}
+            aria-label={`Open ${title} website (new tab)`}>
+            {websiteLabel} ↗
+          </a>
+        )}
+      </div>
+    </Wrapper>
+  );
+}
+
+export default function RecentWorkSection() {
+  return (
+    <>
+      <section id="projects" className="section">
+        <div className="container slab">
+          <div className="section-header">
+            <h2 className="h2 section-title">Recent work</h2>
+            <Link to="/our-projects" className="link-muted section-link">
+              View all projects →
+            </Link>
+          </div>
+
+          <div className="grid grid-3 grid-projects">
+            {/* Card click -> individual project page */}
+            <ProjectCard
+              href="/projects/easyneat"
+              website="https://easyneat.com.au"
+              title="Easy neat"
+              description="EasyNeat provides reliable, eco-friendly cleaning services across Victoria with an easy online booking system and clear, upfront pricing. The platform is powered by a Node.js API and a React (Vite) front-end for speed, security, and a seamless customer experience. A powerful, advanced admin dashboard is included to manage bookings, customers, and services with ease."
+              image={imgEasyNeat}
+            />
+            <ProjectCard
+              href="/our-projects" /* change to /projects/motogear when you make that page */
+              website="https://motogear.lk/"
+              title="Motogear"
+              description="MotoGear delivers quality motorcycle helmets and bike spare parts with a smooth shopping experience and clear pricing. The site is powered by WordPress and a custom PHP/HTML/CSS inventory management system for real-time stock control and fast product updates."
+              image={imgGadgetHub}
+            />
+            <ProjectCard
+              href="/our-projects" /* change to /projects/aroundlanka when you make that page */
+              website="https://elinapix.com/"
+              title="Elinapix"
+              description="ElinaPix showcases the work of a professional photographer in France with a clean portfolio and elegant galleries. The website is powered by WordPress, delivering a seamless viewing experience and easy content updates for stunning photography displays."
+              image={imgElinapix}
+            />
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "18px",
+            }}>
+            <Link to="/our-projects" className="btn btn-secondary">
+              View more projects
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
