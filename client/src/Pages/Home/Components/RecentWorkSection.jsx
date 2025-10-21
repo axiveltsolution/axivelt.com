@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
 
 /* ======= Project images (local) ======= */
 import imgGadgetHub from "../../../assets/projects/gadgethub/img1.webp";
@@ -39,18 +38,16 @@ function ProjectCard({
   const navigate = useNavigate();
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [readMore, setReadMore] = useState(false);
   const cardRef = useIntersectionObserver();
 
   const onExternalClick = (e) => {
-    // stop outer click from firing
     e.stopPropagation();
-    // let the link follow normally (we will use <a> for external)
   };
 
-  const handleCardActivate = (e) => {
-    // make Enter/Space activate
-    if (!href) return;
-    navigate(href);
+  const toggleReadMore = (e) => {
+    e.stopPropagation();
+    setReadMore(!readMore);
   };
 
   return (
@@ -66,11 +63,6 @@ function ProjectCard({
           e.preventDefault();
           navigate(href);
         }
-      }}
-      style={{
-        opacity: 0,
-        transform: "translateY(30px)",
-        transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)",
       }}>
       <div className="work-thumb">
         {!imageError ? (
@@ -81,7 +73,6 @@ function ProjectCard({
             loading="lazy"
             onLoad={() => setImageLoaded(true)}
             onError={() => setImageError(true)}
-            style={{ opacity: imageLoaded ? 1 : 0, transition: "opacity 0.4s" }}
           />
         ) : (
           <div className="image-fallback">
@@ -93,7 +84,21 @@ function ProjectCard({
 
       <div className="work-body">
         <h4 className="work-title">{title}</h4>
-        <p className="muted work-tag">{description}</p>
+        <p className="muted work-tag">
+          {readMore
+            ? description
+            : description.slice(0, 150) +
+              (description.length > 150 ? "..." : "")}
+        </p>
+
+        {description.length > 150 && (
+          <button
+            type="button"
+            className="read-more-btn"
+            onClick={toggleReadMore}>
+            {readMore ? "Read Less" : "Read More"}
+          </button>
+        )}
 
         {website && (
           <a
@@ -131,25 +136,24 @@ export default function RecentWorkSection() {
           </div>
 
           <div className="grid grid-3 grid-projects">
-            {/* Card click -> individual project page */}
             <ProjectCard
               href="/projects/easyneat"
               website="https://easyneat.com.au"
-              title="Easy neat"
+              title="Easyneat.com"
               description="EasyNeat provides reliable, eco-friendly cleaning services across Victoria with an easy online booking system and clear, upfront pricing. The platform is powered by a Node.js API and a React (Vite) front-end for speed, security, and a seamless customer experience. A powerful, advanced admin dashboard is included to manage bookings, customers, and services with ease."
               image={imgEasyNeat}
             />
             <ProjectCard
-              href="/our-projects" /* change to /projects/motogear when you make that page */
+              href="/our-projects"
               website="https://motogear.lk/"
-              title="Motogear"
+              title="Motogear.lk"
               description="MotoGear delivers quality motorcycle helmets and bike spare parts with a smooth shopping experience and clear pricing. The site is powered by WordPress and a custom PHP/HTML/CSS inventory management system for real-time stock control and fast product updates."
               image={imgGadgetHub}
             />
             <ProjectCard
-              href="/our-projects" /* change to /projects/aroundlanka when you make that page */
+              href="/our-projects"
               website="https://elinapix.com/"
-              title="Elinapix"
+              title="Elinapix.com"
               description="ElinaPix showcases the work of a professional photographer in France with a clean portfolio and elegant galleries. The website is powered by WordPress, delivering a seamless viewing experience and easy content updates for stunning photography displays."
               image={imgElinapix}
             />

@@ -591,7 +591,7 @@ p,
 }
 
 .work:hover {
-  border-color: var(--clr-accent-pink);
+  border-color: #9d7aff98;
 }
 
 .work-thumb {
@@ -628,6 +628,7 @@ p,
 
 .work-tag {
   color: var(--clr-gray-mid);
+  font-size: clamp(0.7rem, 1.8vw, 1rem);
 }
 
 .work-visit {
@@ -639,15 +640,13 @@ p,
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 0.5rem 0.75rem;
   border-radius: 0.6rem;
-  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
-  color: var(--clr-white);
+  transition: all 0.15s ease;
 }
 
 .work-visit:hover {
   transform: translateY(-1px);
-  border-color: var(--clr-accent-red);
-  background: rgba(255, 61, 154, 0.1);
-  color: var(--clr-accent-red);
+  border-color: var(--clr-accent-purple);
+  color: var(--grad-b);
 }
 
 /* === Section Headers === */
