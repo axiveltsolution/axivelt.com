@@ -43,7 +43,7 @@ export default function StatusSection() {
   return (
     <>
       <section className="section stats">
-        <div className="container">
+        <div>
           <div className="stats-grid">
             <StatCard number="10+" label="Projects delivered" />
             <StatCard number="A+" label="Lighthouse grade" />

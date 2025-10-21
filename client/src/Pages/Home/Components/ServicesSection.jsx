@@ -1,6 +1,8 @@
 import React from "react";
+import { useRef, useEffect, useState } from "react";
+import "./../Home.css"; // Import the new component-specific CSS
 
-/* ======= SERVICES GIFs) ======= */
+/* ======= SERVICES GIFs ======= */
 import gifWebsites from "../../../assets/gifs/websites.gif";
 import gifWebapps from "../../../assets/gifs/webapps.gif";
 import gifInventory from "../../../assets/gifs/inventory.gif";
@@ -25,11 +27,11 @@ function useIntersectionObserver(options = {}) {
     );
     obs.observe(el);
     return () => obs.unobserve(el);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
   return ref;
 }
 
-function ServiceCard({ icon, title, items = [] }) {
+function ServiceCard({ icon, title, description }) {
   const [iconLoaded, setIconLoaded] = useState(false);
   const [iconError, setIconError] = useState(false);
   const cardRef = useIntersectionObserver();
@@ -37,18 +39,19 @@ function ServiceCard({ icon, title, items = [] }) {
   return (
     <article
       ref={cardRef}
-      className="card"
+      className="card services-section-card" // Use .card from Home.css and custom class
       style={{
         opacity: 0,
         transform: "translateY(30px)",
         transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)",
       }}>
-      <div className="card-icon">
+      <div className="card-icon services-section-gif">
         {!iconError ? (
           <img
             src={icon}
             alt={`${title} services`}
             loading="lazy"
+            decoding="async"
             onLoad={() => setIconLoaded(true)}
             onError={() => setIconError(true)}
             style={{ opacity: iconLoaded ? 1 : 0, transition: "opacity 0.3s" }}
@@ -60,14 +63,8 @@ function ServiceCard({ icon, title, items = [] }) {
         )}
       </div>
       <div className="card-content">
-        <h3 className="h3 card-title">{title}</h3>
-        {items.length > 0 && (
-          <ul className="card-list">
-            {items.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        )}
+        <h3 className="h3">{title}</h3>
+        <p className="muted">{description}</p>
       </div>
     </article>
   );
@@ -108,31 +105,35 @@ const items = [
 ];
 
 export default function ServicesSection() {
+  const sectionRef = useIntersectionObserver();
+
   return (
-    <>
-      <section id="services" className="container svc-root">
-        <h1 className="svc-h1">Our Services</h1>
-        <p className="svc-muted">
+    <section
+      id="services"
+      className="section services-section"
+      ref={sectionRef}
+      style={{
+        opacity: 0,
+        transform: "translateY(30px)",
+        transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)",
+      }}>
+      <div className="slab">
+        <h1 className="h1">Our Services</h1>
+        <p className="sub-title">
           Clear scope, fixed price, fast delivery. Most corporate sites ship in
           1–2 weeks.
         </p>
-
-        <div className="svc-grid">
+        <div className="grid grid-3 services-section-grid">
           {items.map((s, i) => (
-            <article className="svc-card" key={i}>
-              <img
-                className="svc-gif"
-                src={s.gif}
-                alt={s.title}
-                loading="lazy"
-                decoding="async"
-              />
-              <h3 className="svc-h3">{s.title}</h3>
-              <p className="svc-muted">{s.desc}</p>
-            </article>
+            <ServiceCard
+              key={i}
+              icon={s.gif}
+              title={s.title}
+              description={s.desc}
+            />
           ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

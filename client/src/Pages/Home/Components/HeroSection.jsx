@@ -1,16 +1,13 @@
-import React from "react";
-import { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-
 import bgImg from "./../../../assets/bgimg.jpg";
 
-/* ================= RotatingText ================= */
 function RotatingText({ words, interval = 3000 }) {
-  const [index, setIndex] = useState(0);
-  const [widthPx, setWidthPx] = useState(0);
+  const [index, setIndex] = React.useState(0);
   const measureRef = useRef(null);
+  const [widthPx, setWidthPx] = React.useState(0);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const id = setInterval(
       () => setIndex((i) => (i + 1) % words.length),
       interval
@@ -18,7 +15,7 @@ function RotatingText({ words, interval = 3000 }) {
     return () => clearInterval(id);
   }, [words.length, interval]);
 
-  const computeWidth = () => {
+  React.useEffect(() => {
     const root = measureRef.current;
     if (!root) return;
     const items = root.querySelectorAll("[data-word]");
@@ -28,11 +25,14 @@ function RotatingText({ words, interval = 3000 }) {
       if (w > max) max = w;
     });
     setWidthPx(Math.ceil(max));
-  };
-
-  useEffect(() => {
-    computeWidth();
-    const onResize = () => computeWidth();
+    const onResize = () => {
+      let m = 0;
+      items.forEach((el) => {
+        const w = el.getBoundingClientRect().width;
+        if (w > m) m = w;
+      });
+      setWidthPx(Math.ceil(m));
+    };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, [words]);
@@ -50,8 +50,6 @@ function RotatingText({ words, interval = 3000 }) {
           </span>
         ))}
       </span>
-
-      {/* Hidden measurer */}
       <span className="rotator-measure" ref={measureRef} aria-hidden="true">
         {words.map((w) => (
           <span key={`m-${w}`} data-word className="word-measure">
@@ -65,56 +63,47 @@ function RotatingText({ words, interval = 3000 }) {
 
 export default function HeroSection() {
   const rotatingWords = ["fast", "beautiful", "secure", "scalable"];
+
   return (
-    <>
-      <section
-        className="section hero"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.47)), url(${bgImg})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}>
-        <div className="container">
-          <div className="badge">🇱🇰 Sri Lanka • Remote-first</div>
-
-          <h1 className="title">
-            <span className="title-line">We build</span>
-            <span className="title-line title-rotator">
-              <RotatingText words={rotatingWords} />
-            </span>
-            <span className="title-line">web experiences.</span>
-          </h1>
-
-          <p className="sub">
-            Websites, web apps, and inventory systems engineered with React,
-            Node.js, and WordPress. We also handle maintenance &amp; SEO. so you
-            can focus on growing your business.
-          </p>
-
-          <div className="actions">
-            <Link to="/contact" className="btn btn-primary">
-              Start a project
-            </Link>
-            <Link to="/our-projects" className="btn btn-secondary">
-              View our work
-            </Link>
-            <a
-              href="mailto:axiveltofficial@gmail.com"
-              className="btn btn-outline"
-              aria-label="Send us an email">
-              Email us
-            </a>
-            <a
-              href="https://wa.me/94700000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline"
-              aria-label="Contact us on WhatsApp">
-              WhatsApp
-            </a>
-          </div>
+    <section className="hero">
+      <div className="hero-sec-bg-img" />
+      <div className="hero-content">
+        <div className="badge">🇱🇰 Sri Lanka • Remote-first</div>
+        <h1 className="title">
+          <span className="title-line">We build</span>
+          <span className="title-line title-rotator">
+            <RotatingText words={rotatingWords} />
+          </span>
+          <span className="title-line">web experiences.</span>
+        </h1>
+        <p className="sub-title">
+          Websites, web apps, and inventory systems engineered with React,
+          Node.js, and WordPress. We also handle maintenance &amp; SEO so you
+          can focus on growing your business.
+        </p>
+        <div className="actions">
+          <Link to="#get-a-quote" className="btn btn-primary">
+            Start a project
+          </Link>
+          <Link to="#projects" className="btn btn-secondary">
+            View our work
+          </Link>
+          <a
+            href="mailto:axiveltofficial@gmail.com"
+            className="btn btn-outline"
+            aria-label="Send us an email">
+            Email us
+          </a>
+          <a
+            href="https://wa.me/94700000000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline"
+            aria-label="Contact us on WhatsApp">
+            WhatsApp
+          </a>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

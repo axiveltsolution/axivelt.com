@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
 /* ======= Project images (local) ======= */
@@ -28,7 +28,6 @@ function useIntersectionObserver(options = {}) {
   return ref;
 }
 
-/* Card with internal href + separate external button */
 function ProjectCard({
   href,
   website,
@@ -37,22 +36,37 @@ function ProjectCard({
   image,
   websiteLabel = "Visit website",
 }) {
+  const navigate = useNavigate();
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
   const cardRef = useIntersectionObserver();
 
-  const Wrapper = href ? Link : "div";
-  const wrapperProps = href
-    ? { to: href, "aria-label": `View ${title} project details` }
-    : {};
+  const onExternalClick = (e) => {
+    // stop outer click from firing
+    e.stopPropagation();
+    // let the link follow normally (we will use <a> for external)
+  };
 
-  const onExternalClick = (e) => e.stopPropagation();
+  const handleCardActivate = (e) => {
+    // make Enter/Space activate
+    if (!href) return;
+    navigate(href);
+  };
 
   return (
-    <Wrapper
+    <article
       ref={cardRef}
-      {...wrapperProps}
       className="work"
+      role={href ? "link" : undefined}
+      tabIndex={href ? 0 : undefined}
+      onClick={() => href && navigate(href)}
+      onKeyDown={(e) => {
+        if (!href) return;
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          navigate(href);
+        }
+      }}
       style={{
         opacity: 0,
         transform: "translateY(30px)",
@@ -93,17 +107,24 @@ function ProjectCard({
           </a>
         )}
       </div>
-    </Wrapper>
+    </article>
   );
 }
 
 export default function RecentWorkSection() {
   return (
     <>
-      <section id="projects" className="section">
-        <div className="container slab">
+      <section id="projects" className="section rw-section">
+        <div className="slab">
           <div className="section-header">
-            <h2 className="h2 section-title">Recent work</h2>
+            <div>
+              <h1 className="h2 section-title">Recent work</h1>
+              <p className="rw-section-h-sub-title sub-title">
+                Clear scope, fixed price, fast delivery. Most corporate sites
+                ship in 1–2 weeks.
+              </p>
+            </div>
+
             <Link to="/our-projects" className="link-muted section-link">
               View all projects →
             </Link>

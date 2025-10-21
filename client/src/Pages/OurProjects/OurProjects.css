@@ -1,6 +1,5 @@
 :root {
   --mxw: 1280px;
-  --nav-h: 72px;
 }
 
 .projects {
@@ -20,7 +19,6 @@
   margin: 12px 0 28px;
 }
 .projects-header .h2 {
-  font-family: "Space Grotesk", system-ui, sans-serif;
   font-size: clamp(1.75rem, 4.5vw, 3.25rem);
   font-weight: 700;
   line-height: 1.1;

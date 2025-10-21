@@ -28,7 +28,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="section about">
-      <div className="container slab">
+      <div className="slab">
         <div className="about-grid">
           <div
             ref={leftRef}

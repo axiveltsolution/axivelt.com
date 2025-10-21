@@ -1,27 +1,25 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./NavBar.css";
-import logo from "../../assets/logo.svg";
 
 export default function NavBar() {
   const { pathname, hash } = useLocation();
   const [open, setOpen] = useState(false);
 
+  // Check if a hash link (like #about) is active
   const isHashActive = (h) => pathname === "/" && hash === h;
 
+  // Close mobile menu when navigating
   useEffect(() => {
     setOpen(false);
   }, [pathname, hash]);
 
+  // Prevent body scroll when menu is open
   useEffect(() => {
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = open ? "hidden" : prev || "";
-    return () => {
-      document.body.style.overflow = prev;
-    };
+    document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
-  const item = (to, label) => (
+  const NavItem = (to, label) => (
     <NavLink
       to={to}
       className={({ isActive }) => (isActive ? "link active" : "link")}
@@ -30,7 +28,7 @@ export default function NavBar() {
     </NavLink>
   );
 
-  const anchor = (h, label) => (
+  const AnchorItem = (h, label) => (
     <Link
       to={`/${h}`}
       className={isHashActive(h) ? "link active" : "link"}
@@ -40,24 +38,24 @@ export default function NavBar() {
   );
 
   return (
-    <header className={`nav${open ? " open" : ""}`}>
-      <div className="container row">
+    <header className={`nav-header${open ? " open" : ""}`}>
+      <div className="nav-container">
+        {/* Brand */}
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
           <p className="logo-text-nav">Axivelt Solution</p>
         </Link>
 
-        {/* Desktop links */}
-        <nav className="links">
-          {item("/", "Home")}
-          {anchor("#services", "Services")}
-          {anchor("#projects", "Projects")}
-          {anchor("#about", "About")}
-          {anchor("#faq", "FAQ")}
+        {/* Desktop Navigation */}
+        <nav className="nav-links" aria-label="Main Navigation">
+          {NavItem("/", "Home")}
+          {AnchorItem("#services", "Services")}
+          {AnchorItem("#projects", "Projects")}
+          {AnchorItem("#about", "About")}
+          {AnchorItem("#faq", "FAQ")}
+          {AnchorItem("#get-a-quote", "Get a Quote")}
         </nav>
 
-        <nav>{anchor("#contactus", "Contact Us")}</nav>
-
-        {/* Mobile toggle */}
+        {/* Mobile Menu Toggle */}
         <button
           className="nav-toggle"
           aria-label="Toggle menu"
@@ -70,20 +68,15 @@ export default function NavBar() {
         </button>
       </div>
 
-      {/* Mobile drawer */}
+      {/* Mobile Drawer */}
       <div id="mobile-menu" className="drawer" role="dialog" aria-modal="true">
-        <nav className="m-links">
-          {item("/", "Home")}
-          {anchor("#services", "Services")}
-          {anchor("#projects", "Projects")}
-          {anchor("#about", "About")}
-          {anchor("#faq", "FAQ")}
-          <Link
-            to="/contact"
-            className="cta m-cta"
-            onClick={() => setOpen(false)}>
-            Contact Us
-          </Link>
+        <nav className="m-links" aria-label="Mobile Navigation">
+          {NavItem("/", "Home")}
+          {AnchorItem("#services", "Services")}
+          {AnchorItem("#projects", "Projects")}
+          {AnchorItem("#about", "About")}
+          {AnchorItem("#faq", "FAQ")}
+          {AnchorItem("#get-a-quote", "Get a Quote")}
         </nav>
       </div>
     </header>

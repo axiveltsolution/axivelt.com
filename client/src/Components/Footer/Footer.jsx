@@ -3,8 +3,10 @@ import "./Footer.css";
 
 /** Social links */
 const WHATSAPP_NUMBER = "94766980686"; // wa.me format (no +)
-const INSTAGRAM_URL = "https://www.instagram.com/axiveltsolutions?igsh=dWo1ZHR0YTJqNzQw&utm_source=qr"; // <-- replace if different
-const FACEBOOK_URL  = "https://www.facebook.com/share/1Ek3LgcVKT/?mibextid=wwXIfr";  // <-- replace if different
+const INSTAGRAM_URL =
+  "https://www.instagram.com/axiveltsolutions?igsh=dWo1ZHR0YTJqNzQw&utm_source=qr"; // <-- replace if different
+const FACEBOOK_URL =
+  "https://www.facebook.com/share/1Ek3LgcVKT/?mibextid=wwXIfr"; // <-- replace if different
 
 /* Simple inline SVG icons using currentColor */
 function IconWhatsApp(props) {
@@ -46,14 +48,14 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer">
-      <div className="container">
+    <footer className="footer c-footer-nav">
+      <div>
         <div className="grid">
           <div>
-            <h3 className="title">Axivelt</h3>
+            <h3>Axivelt Solutions</h3>
             <p className="muted">
-              Websites, web apps, and inventory systems. React, Node.js &amp; WordPress.
-              Based in Sri Lanka. Serving clients worldwide.
+              Websites, web apps, and inventory systems. React, Node.js &amp;
+              WordPress. Based in Sri Lanka. Serving clients worldwide.
             </p>
 
             {/* Social icons row */}
@@ -64,8 +66,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                title="WhatsApp"
-              >
+                title="WhatsApp">
                 <IconWhatsApp className="icon" />
               </a>
               <a
@@ -74,8 +75,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                title="Instagram"
-              >
+                title="Instagram">
                 <IconInstagram className="icon" />
               </a>
               <a
@@ -84,19 +84,30 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                title="Facebook"
-              >
+                title="Facebook">
                 <IconFacebook className="icon" />
               </a>
             </div>
           </div>
 
           <div>
-            <h4 className="head">Links</h4>
+            <h4 className="head">Sections</h4>
             <ul className="list">
-              <li><Link to="/services" className="footlink">Services</Link></li>
-              <li><Link to="/our-projects" className="footlink">Projects</Link></li>
-              <li><Link to="/contact" className="footlink">Contact</Link></li>
+              <li>
+                <Link to="/services" className="footlink">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/our-projects" className="footlink">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="footlink">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -113,8 +124,7 @@ export default function Footer() {
                   className="footlink"
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
-                  rel="noreferrer"
-                >
+                  rel="noreferrer">
                   WhatsApp: +94&nbsp;76&nbsp;698&nbsp;0686
                 </a>
               </li>
@@ -124,11 +134,11 @@ export default function Footer() {
         </div>
 
         <div className="bottom">
-          <small>© {year} AxiveltSolution. All rights reserved.</small>
+          <small>© {year} AxiveltSolutions. All rights reserved.</small>
           <small>
             Developed by{" "}
             <a className="footlink" href="mailto:axiveltofficial@gmail.com">
-              AxiveltSolution
+              AxiveltSolutions
             </a>
           </small>
         </div>

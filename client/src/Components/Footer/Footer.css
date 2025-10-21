@@ -1,6 +1,5 @@
 .footer {
   margin-top: 0px;
-  padding: clamp(28px, 4vw, 48px) 0 clamp(20px, 3.5vw, 28px);
   background: #07070b;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -20,14 +19,6 @@
   .footer .grid {
     grid-template-columns: 2fr 1fr 1.2fr;
   }
-}
-
-.footer .title {
-  margin: 0 0 8px 0;
-  font-family: "Space Grotesk", Inter, sans-serif;
-  font-size: clamp(1.6rem, 3.8vw, 2rem);
-  line-height: 1.1;
-  color: #ffffff;
 }
 
 .footer .head {
@@ -63,7 +54,7 @@
 }
 .footer .social-link:hover {
   transform: translateY(-1px);
-  border-color: rgba(0, 212, 255, 0.45);
+  border-color: #ff3d9a;
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
@@ -87,7 +78,7 @@
   transition: color 0.2s ease;
 }
 .footer .footlink:hover {
-  color: #ffffff;
+  color: #ff3d9a;
 }
 
 .footer .badge {
