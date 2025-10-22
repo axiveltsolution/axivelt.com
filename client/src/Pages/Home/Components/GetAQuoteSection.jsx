@@ -233,7 +233,9 @@ export default function GetAQuoteSection() {
             ))}
           </div>
           <p className="field-instruction">
-            Paste links you like. Only valid URLs will be added.
+            Paste links you like
+            <span style={{ color: "#ff4757" }}> and hit enter.</span> Only valid
+            URLs will be added.
           </p>
         </div>
 

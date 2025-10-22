@@ -1,14 +1,39 @@
-import { Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+// src/pages/OurProjects.jsx
+import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./OurProjects.css";
 
-/* ======= Local project screenshots (swap to real paths as needed) ======= */
-import imgEasyNeat from "../../assets/projects/easyneat/img1.webp";
-import imgMotoGear from "../../assets/projects/motogear/img1.webp";
-import imgAroundLanka from "../../assets/projects/aroundlanka/img1.webp";
-import imgElinaPix from "../../assets/projects/elinapix/img1.webp";
-import imgFitZone from "../../assets/projects/fitzone/img1.webp";
-import imgGadgetHub from "../../assets/projects/gadgethub/img1.webp";
+/**
+ * Simple projects page — edit the `projects` array manually.
+ * Uses namespaced classes (op-*) so styles do not conflict.
+ */
+
+const projects = [
+  {
+    title: "Easyneat",
+    description:
+      "EasyNeat provides reliable, eco-friendly cleaning services with an easy online booking system and clear pricing. Node.js API + React front-end and admin dashboard.",
+    image: "/assets/projects/easyneat/img1.webp",
+    website: "https://easyneat.com.au",
+    href: "/projects/easyneat",
+  },
+  {
+    title: "MotoGear",
+    description:
+      "MotoGear sells motorcycle helmets & spare parts with a smooth shopping experience. WordPress + custom PHP inventory integration.",
+    image: "/assets/projects/motogear/img1.webp",
+    website: "https://motogear.lk/",
+    href: "/projects/motogear",
+  },
+  {
+    title: "AroundLankaTravels",
+    description:
+      "AroundLankaTravels shows curated Sri Lanka tours with booking flows and responsive brochure pages.",
+    image: "/assets/projects/aroundlanka/img1.webp",
+    href: "/projects/aroundlanka",
+  },
+  // add more projects here
+];
 
 function useIntersectionObserver(options = {}) {
   const ref = useRef(null);
@@ -26,119 +51,118 @@ function useIntersectionObserver(options = {}) {
     );
     obs.observe(el);
     return () => obs.unobserve(el);
-  }, []);
+  }, []); // eslint-disable-line
   return ref;
 }
 
-function ProjectCard({ href, website, title, description, image, websiteLabel = "Visit website" }) {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError] = useState(false);
+function ProjectCard({ project }) {
+  const { title, description, image, website, href } = project;
+  const navigate = useNavigate();
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgError, setImgError] = useState(false);
+  const [readMore, setReadMore] = useState(false);
   const cardRef = useIntersectionObserver();
 
-  const Wrapper = href ? Link : "div";
-  const wrapperProps = href ? { to: href, "aria-label": `View ${title} project details` } : {};
   const onExternalClick = (e) => e.stopPropagation();
 
   return (
-    <Wrapper
+    <article
       ref={cardRef}
-      {...wrapperProps}
-      className="work"
-      style={{ opacity: 0, transform: "translateY(30px)", transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)" }}
-    >
-      <div className="work-thumb">
-        {!imageError ? (
+      className="op-card"
+      role={href ? "link" : undefined}
+      tabIndex={href ? 0 : undefined}
+      onClick={() => href && navigate(href)}
+      onKeyDown={(e) => {
+        if (!href) return;
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          navigate(href);
+        }
+      }}
+      aria-label={href ? `Open ${title} project` : title}>
+      <div className="op-thumb">
+        {!imgError ? (
           <img
-            className="work-img"
+            className="op-img"
             src={image}
-            alt={`${title} project preview`}
+            alt={`${title} preview`}
             loading="lazy"
-            onLoad={() => setImageLoaded(true)}
-            onError={() => setImageError(true)}
-            style={{ opacity: imageLoaded ? 1 : 0, transition: "opacity 0.4s" }}
+            onLoad={() => setImgLoaded(true)}
+            onError={() => setImgError(true)}
+            style={{ opacity: imgLoaded ? 1 : 0 }}
           />
         ) : (
-          <div className="image-fallback"><div className="project-placeholder">{title?.charAt(0) || "P"}</div></div>
+          <div className="op-image-fallback">
+            <div className="op-project-placeholder">
+              {title?.charAt(0) || "P"}
+            </div>
+          </div>
         )}
-        {!imageLoaded && !imageError && <div className="image-placeholder" />}
+        {!imgLoaded && !imgError && <div className="op-image-placeholder" />}
       </div>
 
-      <div className="work-body">
-        <h4 className="work-title">{title}</h4>
-        <p className="muted work-tag">{description}</p>
+      <div className="op-body">
+        <h4 className="op-title">{title}</h4>
+
+        <p className="op-desc">
+          {readMore
+            ? description
+            : description.length > 140
+            ? description.slice(0, 140) + "..."
+            : description}
+        </p>
+
+        {description && description.length > 140 && (
+          <button
+            type="button"
+            className="op-readmore"
+            onClick={(e) => {
+              e.stopPropagation();
+              setReadMore((v) => !v);
+            }}
+            aria-expanded={readMore}>
+            {readMore ? "Read less" : "Read more"}
+          </button>
+        )}
 
         {website && (
           <a
-            className="work-visit"
+            className="op-visit"
             href={website}
             target="_blank"
             rel="noopener noreferrer"
             onClick={onExternalClick}
-            aria-label={`Open ${title} website (new tab)`}
-          >
-            {websiteLabel} ↗
+            aria-label={`Open ${title} website (new tab)`}>
+            Visit website ↗
           </a>
         )}
       </div>
-    </Wrapper>
+    </article>
   );
 }
 
 export default function OurProjects() {
-  const projects = [
-    {
-      title: "Easyneat",
-      description: "EasyNeat provides reliable, eco-friendly cleaning services across Victoria with an easy online booking system and clear, upfront pricing. The platform is powered by a Node.js API and a React (Vite) front-end for speed, security, and a seamless customer experience. A powerful, advanced admin dashboard is included to manage bookings, customers, and services with ease.",
-      image: imgEasyNeat,
-      website: "https://easyneat.com.au",
-      href: "/projects/easyneat", // card click -> detail page
-    },
-    {
-      title: "MotoGear",
-      description: "MotoGear delivers quality motorcycle helmets and bike spare parts with a smooth shopping experience and clear pricing. The site is powered by WordPress and a custom PHP/HTML/CSS inventory management system for real-time stock control and fast product updates.",
-      image: imgMotoGear,
-      website: "https://motogear.lk/",
-      href: "/projects/motogear",
-    },
-    {
-      title: "AroundLankaTravels",
-      description: "AroundLankaTravels.com brings authentic Sri Lankan tourism experiences with professional service and tailored travel packages. The site is built with React for a modern, engaging interface and Node.js for a fast, reliable backend to ensure smooth bookings and real-time updates. An integrated admin dashboard allows the client to easily customize and manage the website content.",
-      image: imgAroundLanka,
-      // website: "...",
-    },
-    {
-      title: "ElinaPix",
-      description: "ElinaPix showcases the work of a professional photographer in France with a clean portfolio and elegant galleries. The website is powered by WordPress, delivering a seamless viewing experience and easy content updates for stunning photography displays.",
-      image: imgElinaPix,
-      website: "https://elinapix.com/",
-      href: "/projects/elinapix"
-    },
-    {
-      title: "FitZone",
-      description: "Fitzone offers a modern gym management web app with class schedules, membership tracking, and workout updates. Built using PHP, HTML, CSS, and JavaScript, it provides a smooth user experience and easy management for both trainers and members. An advanced admin panel is included to efficiently manage site content, members, and operations.",
-      image: imgFitZone,
-      href: "/projects/fitzone"
-    },
-    {
-      title: "GadgetHub",
-      description: "The Gadget Hub offers a smart gadget shopping platform with real-time price comparison, stock checks, and order tracking. Built using React and Node.js, it delivers a fast, reliable experience for customers and ensures smooth management through its streamlined ordering system.",
-      image: imgGadgetHub,
-      href: "/projects/gadgethub"
-    },
-  ];
-
   return (
-    <div className="projects">
-      <div className="container">
-        <header className="projects-header">
-          <h1 className="h2">Projects</h1>
-          <p className="muted">A selection of recent work. websites, dashboards, and custom web apps.</p>
+    <section className="op-section" aria-labelledby="op-projects-title">
+      <div className="op-slab">
+        <header className="op-header">
+          <div>
+            <h1 id="op-projects-title" className="op-heading">
+              All projects
+            </h1>
+            <p className="op-sub">
+              A manually-managed list of projects — edit the `projects` array in
+              this file.
+            </p>
+          </div>
         </header>
 
-        <div className="projects-grid">
-          {projects.map((p, i) => <ProjectCard key={p.title + i} {...p} />)}
+        <div className="op-grid">
+          {projects.map((p, i) => (
+            <ProjectCard key={p.title + i} project={p} />
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

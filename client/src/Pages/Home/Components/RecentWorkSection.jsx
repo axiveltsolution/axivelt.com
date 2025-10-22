@@ -56,7 +56,7 @@ function ProjectCard({
       className="work"
       role={href ? "link" : undefined}
       tabIndex={href ? 0 : undefined}
-      onClick={() => href && navigate(href)}
+      // onClick={() => href && navigate(href)}
       onKeyDown={(e) => {
         if (!href) return;
         if (e.key === "Enter" || e.key === " ") {
@@ -73,6 +73,7 @@ function ProjectCard({
             loading="lazy"
             onLoad={() => setImageLoaded(true)}
             onError={() => setImageError(true)}
+            onClick={() => href && navigate(href)}
           />
         ) : (
           <div className="image-fallback">
@@ -91,15 +92,6 @@ function ProjectCard({
               (description.length > 150 ? "..." : "")}
         </p>
 
-        {description.length > 150 && (
-          <button
-            type="button"
-            className="read-more-btn"
-            onClick={toggleReadMore}>
-            {readMore ? "Read Less" : "Read More"}
-          </button>
-        )}
-
         {website && (
           <a
             className="work-visit"
@@ -110,6 +102,15 @@ function ProjectCard({
             aria-label={`Open ${title} website (new tab)`}>
             {websiteLabel} ↗
           </a>
+        )}
+
+        {description.length > 150 && (
+          <button
+            type="button"
+            className="read-more-btn"
+            onClick={toggleReadMore}>
+            {readMore ? "Read Less" : "Read More"}
+          </button>
         )}
       </div>
     </article>
@@ -131,7 +132,7 @@ export default function RecentWorkSection() {
             </div>
 
             <Link to="/our-projects" className="link-muted section-link">
-              View all projects →
+              View more projects →
             </Link>
           </div>
 
@@ -157,17 +158,6 @@ export default function RecentWorkSection() {
               description="ElinaPix showcases the work of a professional photographer in France with a clean portfolio and elegant galleries. The website is powered by WordPress, delivering a seamless viewing experience and easy content updates for stunning photography displays."
               image={imgElinapix}
             />
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginTop: "18px",
-            }}>
-            <Link to="/our-projects" className="btn btn-secondary">
-              View more projects
-            </Link>
           </div>
         </div>
       </section>
