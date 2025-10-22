@@ -104,12 +104,15 @@ function ProjectCard({
           </a>
         )}
 
-        {description.length > 150 && (
+        {description.length > 150 && href && (
           <button
             type="button"
             className="read-more-btn"
-            onClick={toggleReadMore}>
-            {readMore ? "Read Less" : "Read More"}
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(href); // goes to /projects/easyneat
+            }}>
+            Read More
           </button>
         )}
       </div>

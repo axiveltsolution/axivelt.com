@@ -11,11 +11,7 @@ import NotFound from "./Pages/NotFound/NotFound.jsx";
 import ScrollToTop from "./Components/ScrollToTop.jsx";
 
 /* Project detail pages */
-import Easyneat from "./Pages/ListOfProjects/Easyneat.jsx";
-import MotoGear from "./Pages/ListOfProjects/MotoGear.jsx";
-import ElinaPix from "./Pages/ListOfProjects/ElinaPix.jsx";
-import FitZone from "./Pages/ListOfProjects/Fitzone.jsx";
-import GadgetHub from "./Pages/ListOfProjects/GadgetHub.jsx";
+import Easyneat from "./Pages/Projects/EasyneatArticle.jsx";
 
 export default function App() {
   return (
@@ -33,10 +29,6 @@ export default function App() {
 
         {/* Project detail pages */}
         <Route path="/projects/easyneat" element={<Easyneat />} />
-        <Route path="/projects/motogear" element={<MotoGear />} />
-        <Route path="/projects/elinapix" element={<ElinaPix />} />
-        <Route path="/projects/fitzone" element={<FitZone />} />
-        <Route path="/projects/gadgethub" element={<GadgetHub />} />
 
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
