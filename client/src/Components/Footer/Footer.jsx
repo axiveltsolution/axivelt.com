@@ -69,7 +69,7 @@ export default function Footer() {
                 title="WhatsApp">
                 <IconWhatsApp className="icon" />
               </a>
-              <a
+              {/* <a
                 className="social-link"
                 href={INSTAGRAM_URL}
                 target="_blank"
@@ -77,7 +77,7 @@ export default function Footer() {
                 aria-label="Instagram"
                 title="Instagram">
                 <IconInstagram className="icon" />
-              </a>
+              </a> */}
               <a
                 className="social-link"
                 href={FACEBOOK_URL}

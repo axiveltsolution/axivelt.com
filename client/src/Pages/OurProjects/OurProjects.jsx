@@ -111,31 +111,31 @@ function ProjectCard({ project }) {
             ? description.slice(0, 140) + "..."
             : description}
         </p>
-
-        {description && description.length > 140 && (
-          <button
-            type="button"
-            className="op-readmore"
-            onClick={(e) => {
-              e.stopPropagation();
-              setReadMore((v) => !v);
-            }}
-            aria-expanded={readMore}>
-            {readMore ? "Read less" : "Read more"}
-          </button>
-        )}
-
-        {website && (
-          <a
-            className="op-visit"
-            href={website}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={onExternalClick}
-            aria-label={`Open ${title} website (new tab)`}>
-            Visit website ↗
-          </a>
-        )}
+        <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
+          {website && (
+            <a
+              className="op-visit"
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onExternalClick}
+              aria-label={`Open ${title} website (new tab)`}>
+              Visit website ↗
+            </a>
+          )}
+          {description && description.length > 140 && (
+            <button
+              type="button"
+              className="op-readmore"
+              onClick={(e) => {
+                e.stopPropagation();
+                setReadMore((v) => !v);
+              }}
+              aria-expanded={readMore}>
+              {readMore ? "Read less" : "Read more"}
+            </button>
+          )}
+        </div>
       </div>
     </article>
   );
@@ -143,7 +143,7 @@ function ProjectCard({ project }) {
 
 export default function OurProjects() {
   return (
-    <section className="op-section" aria-labelledby="op-projects-title">
+    <section className="op-section section" aria-labelledby="op-projects-title">
       <div className="op-slab">
         <header className="op-header">
           <div>

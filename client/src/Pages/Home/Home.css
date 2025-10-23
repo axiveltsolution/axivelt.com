@@ -649,6 +649,22 @@ p,
   color: var(--grad-b);
 }
 
+.rw-read-more-btn {
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  color: var(--clr-accent-purple);
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.rw-read-more-btn:hover {
+  color: var(--clr-white);
+  text-decoration: underline;
+}
+
 /* === Section Headers === */
 .section-header {
   display: flex;
@@ -993,6 +1009,7 @@ p,
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--clr-gray-lighter);
 }
 
 .faq-icon {

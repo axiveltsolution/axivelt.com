@@ -65,7 +65,7 @@ export default function WhyChooseUsSection() {
             <article key={i} className="card why-card">
               <div className="card-content why-card-content">
                 <h3 className="h3 card-title why-card-title">{f.title}</h3>
-                <p className="card-text why-card-text">{f.text}</p>
+                <p className="p-muted">{f.text}</p>
               </div>
             </article>
           ))}

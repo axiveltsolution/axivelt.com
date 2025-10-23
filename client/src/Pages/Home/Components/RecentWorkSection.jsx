@@ -107,7 +107,7 @@ function ProjectCard({
         {description.length > 150 && href && (
           <button
             type="button"
-            className="read-more-btn"
+            className="rw-read-more-btn"
             onClick={(e) => {
               e.stopPropagation();
               navigate(href); // goes to /projects/easyneat
