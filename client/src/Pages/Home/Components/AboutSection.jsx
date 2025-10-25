@@ -40,44 +40,46 @@ export default function AboutSection() {
             }}>
             <div className="about-badges">
               <span className="chip">Remote-first</span>
-              <span className="chip">Sri Lanka</span>
+              <span className="chip">Colombo, Sri Lanka</span>
               <span className="chip">Senior-led</span>
             </div>
 
-            <h2 className="h2 about-title">About AxiveltSolution</h2>
+            <h2 className="h2 about-title">About Axivelt Solutions</h2>
 
             <p className="body-text about-lead">
-              We’re a small, senior team building{" "}
-              <strong>fast, secure web experiences</strong> for founders and
-              SMEs. From corporate sites to custom dashboards and inventory
-              systems. We ship with
-              <strong> clarity, realistic timelines, and a fixed quote</strong>.
+              Leading <strong>web development company in Sri Lanka</strong>{" "}
+              specializing in custom websites, web applications, and inventory
+              systems. We deliver
+              <strong> fast, secure digital solutions</strong> for businesses
+              across Colombo, Kandy, Galle, and beyond—with{" "}
+              <strong>transparent pricing and realistic timelines</strong>.
             </p>
 
             <ul className="about-points">
               <li>
-                <strong>Speed</strong> - small sites in 48–72h; phased delivery
-                for larger scopes.
+                <strong>Speed</strong> — Most corporate sites delivered in 2-4
+                weeks; complex web systems in 6-12 weeks with phased rollouts.
               </li>
               <li>
-                <strong>Clarity</strong> - a written plan, milestones, and an
-                owner for every task.
+                <strong>Transparency</strong> — Fixed quotes, detailed
+                proposals, clear milestones, and a dedicated project manager for
+                every build.
               </li>
               <li>
-                <strong>Care</strong> - monitoring, backups, updates, and small
-                fixes via care plans.
+                <strong>Ongoing Support</strong> — 24/7 monitoring, automatic
+                backups, security updates, and affordable maintenance plans.
               </li>
             </ul>
 
             <div className="about-stack">
-              <span className="stack-label">Core stack</span>
+              <span className="stack-label">Our technology stack</span>
               <ul className="stack-chips">
                 <li className="chip">React</li>
                 <li className="chip">Node.js</li>
                 <li className="chip">Express</li>
                 <li className="chip">Vite</li>
-                <li className="chip">WordPress</li>
                 <li className="chip">MySQL / MongoDB</li>
+                <li className="chip">Cloud Hosting</li>
               </ul>
             </div>
           </div>
@@ -91,41 +93,45 @@ export default function AboutSection() {
               transition: "all .6s cubic-bezier(.4,0,.2,1) .06s",
             }}>
             <div className="about-art" aria-hidden="true" />
-            <h3 className="h3 about-panel-title">How we work</h3>
+            <h3 className="h3 about-panel-title">Our Development Process</h3>
             <ol className="about-steps">
               <li>
                 <span className="step-n">1</span>
                 <div>
-                  <div className="step-t">Discovery call</div>
+                  <div className="step-t">Discovery & Planning</div>
                   <div className="muted">
-                    Goals, constraints, content &amp; integrations.
+                    Understand your goals, audience, features, and technical
+                    requirements.
                   </div>
                 </div>
               </li>
               <li>
                 <span className="step-n">2</span>
                 <div>
-                  <div className="step-t">Plan &amp; fixed quote</div>
+                  <div className="step-t">Proposal & Quote</div>
                   <div className="muted">
-                    Scope, milestones, timeline, responsibilities.
+                    Detailed scope, fixed pricing, timeline, and deliverables in
+                    writing.
                   </div>
                 </div>
               </li>
               <li>
                 <span className="step-n">3</span>
                 <div>
-                  <div className="step-t">Build &amp; review</div>
+                  <div className="step-t">Design & Development</div>
                   <div className="muted">
-                    Staging link, async updates, rapid iterations.
+                    Staging environment access, weekly updates, and
+                    collaborative feedback.
                   </div>
                 </div>
               </li>
               <li>
                 <span className="step-n">4</span>
                 <div>
-                  <div className="step-t">Launch &amp; care</div>
+                  <div className="step-t">Launch & Maintenance</div>
                   <div className="muted">
-                    Monitoring, backups, analytics &amp; small fixes.
+                    Live deployment, training, analytics setup, and ongoing
+                    support.
                   </div>
                 </div>
               </li>
@@ -133,16 +139,16 @@ export default function AboutSection() {
 
             <div className="about-mini-stats">
               <div className="mini">
-                <div className="mini-n">48-72h</div>
-                <div className="mini-l">Small site delivery</div>
+                <div className="mini-n">50+</div>
+                <div className="mini-l">Projects delivered</div>
               </div>
               <div className="mini">
-                <div className="mini-n">A+</div>
-                <div className="mini-l">Core Web Vitals</div>
+                <div className="mini-n">99.8%</div>
+                <div className="mini-l">Uptime guarantee</div>
               </div>
               <div className="mini">
                 <div className="mini-n">GMT+5:30</div>
-                <div className="mini-l">Timezone</div>
+                <div className="mini-l">Sri Lanka timezone</div>
               </div>
             </div>
           </div>

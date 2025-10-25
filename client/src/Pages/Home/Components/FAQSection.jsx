@@ -6,28 +6,28 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      q: "How quickly can you launch a project?",
-      a: "Landing pages and small sites can be delivered in 3-5 days. Business websites typically take 1-2 weeks. Larger web apps depend on scope. You'll get a realistic timeline before we begin.",
+      q: "How much does a custom website cost in Sri Lanka?",
+      a: "Our website development Sri Lanka pricing starts from Rs. 75,000 for basic business websites. E-commerce sites range from Rs. 200,000-400,000, and custom web applications from Rs. 300,000-800,000 depending on features. We provide detailed, transparent quotes with no hidden costs after understanding your specific requirements.",
     },
     {
-      q: "Do you provide SEO and marketing support?",
-      a: "Yes. We ship semantic HTML, schema/OG tags, fast pages, clean URLs, XML sitemaps, analytics & conversion goals, plus ongoing on-page SEO if needed.",
+      q: "How long does it take to build a website?",
+      a: "Most business websites are delivered within 2-4 weeks from project start. Landing pages can be completed in 5-7 days. Complex web systems development Sri Lanka projects like inventory management or booking platforms typically take 6-12 weeks with phased rollouts. You'll receive a realistic timeline in our proposal.",
     },
     {
-      q: "Can you maintain and update our existing website?",
-      a: "Absolutely. Our care plans include backups, security updates, performance monitoring, bug fixes, and small enhancements each month.",
+      q: "Do you provide website maintenance and support?",
+      a: "Yes! We offer comprehensive maintenance packages including automatic backups, security updates, performance monitoring, bug fixes, and content updates. Our affordable care plans start from Rs. 15,000/month with 24/7 uptime monitoring and fast response times via WhatsApp, email, and phone.",
     },
     {
-      q: "What if we already have a design or content?",
-      a: "Perfect. We'll implement your Figma/UX and wire up the CMS. If content is pending, we can launch in phases and iterate quickly.",
+      q: "Will my website be mobile-friendly and SEO optimized?",
+      a: "Absolutely. Every website we build is fully responsive (mobile, tablet, desktop) and follows SEO best practices from day one. We optimize page speed, implement proper meta tags, create XML sitemaps, add schema markup, and integrate Google Analytics and Search Console to help your site rank higher and attract more customers.",
     },
     {
-      q: "Do you work with clients outside Sri Lanka?",
-      a: "Yes. We're remote-first (GMT+5:30) and used to async collaboration. We work over email, chat, and shared docs with clear weekly updates.",
+      q: "Can you help with hosting and domain registration?",
+      a: "Yes, we handle the complete technical setup. We can register your .lk or .com domain, set up reliable hosting (we recommend providers based on your budget and traffic), configure business email accounts, install SSL certificates for security, and ensure everything is properly connected before launch.",
     },
     {
-      q: "Which technologies do you use?",
-      a: "React, Node.js/Express, Vite, WordPress, and MySQL/MongoDB. Choosing the best stack for performance, security, and long-term maintainability.",
+      q: "Do you work with clients outside Colombo?",
+      a: "Yes! While we're based in Colombo, we serve businesses throughout Sri Lanka—Kandy, Galle, Jaffna, and beyond. We're also experienced working with international clients in Australia, UK, and other countries. We operate remotely with clear communication via video calls, email, and project management tools.",
     },
   ];
 
@@ -37,9 +37,18 @@ export default function FAQSection() {
 
   return (
     <section id="faq" className="section faq">
-      <h1 className="h2" style={{ textAlign: "center", marginBottom: "3rem" }}>
+      <h2 className="h1" style={{ textAlign: "center" }}>
         Frequently Asked Questions
-      </h1>
+      </h2>
+      <p
+        className="sub-title"
+        style={{
+          textAlign: "center",
+          margin: "0 auto 2rem",
+        }}>
+        Common questions about our website development services in Sri Lanka.
+        Don't see your question? Contact us directly—we're here to help!
+      </p>
       <div className="faq-list">
         {faqs.map((item, index) => (
           <div

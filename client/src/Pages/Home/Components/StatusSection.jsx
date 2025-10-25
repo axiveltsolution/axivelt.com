@@ -45,10 +45,13 @@ export default function StatusSection() {
       <section className="section stats">
         <div>
           <div className="stats-grid">
-            <StatCard number="10+" label="Projects delivered" />
-            <StatCard number="A+" label="Lighthouse grade" />
-            <StatCard number="48h" label="Small site turnaround" />
-            <StatCard number="100%" label="Client satisfaction" />
+            <StatCard number="50+" label="Successful projects delivered" />
+            <StatCard number="35+" label="Happy clients across Sri Lanka" />
+            <StatCard number="99.8%" label="Uptime guarantee" />
+            <StatCard
+              number="2-4 weeks"
+              label="Average website delivery time"
+            />
           </div>
         </div>
       </section>

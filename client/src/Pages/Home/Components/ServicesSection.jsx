@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef, useEffect, useState } from "react";
-import "./../Home.css"; // Import the new component-specific CSS
+import "./../Home.css";
 
 /* ======= SERVICES GIFs ======= */
 import gifWebsites from "../../../assets/gifs/websites.gif";
@@ -39,7 +39,7 @@ function ServiceCard({ icon, title, description }) {
   return (
     <article
       ref={cardRef}
-      className="card services-section-card" // Use .card from Home.css and custom class
+      className="card services-section-card"
       style={{
         opacity: 0,
         transform: "translateY(30px)",
@@ -49,7 +49,7 @@ function ServiceCard({ icon, title, description }) {
         {!iconError ? (
           <img
             src={icon}
-            alt={`${title} services`}
+            alt={`${title} - web development services Sri Lanka`}
             loading="lazy"
             decoding="async"
             onLoad={() => setIconLoaded(true)}
@@ -74,33 +74,33 @@ function ServiceCard({ icon, title, description }) {
 const items = [
   {
     gif: gifWebsites,
-    title: "Websites (React / WordPress)",
-    desc: "Corporate sites, marketing pages, blogs, CMS-backed content.",
+    title: "Custom Website Development",
+    desc: "Responsive business websites, e-commerce platforms, and landing pages built with React. Perfect for startups and SMEs in Colombo looking to establish their online presence.",
   },
   {
     gif: gifWebapps,
-    title: "Web Apps & Dashboards",
-    desc: "Custom portals, role-based dashboards, bookings, automation.",
+    title: "Web Application Development",
+    desc: "Custom portals, booking systems, CRM dashboards, and SaaS platforms. Scalable web apps built with modern JavaScript frameworks for complex business needs.",
   },
   {
     gif: gifInventory,
-    title: "Inventory / ERP Systems",
-    desc: "Stock, orders, suppliers, reports. Integrations when needed.",
+    title: "Inventory & ERP Systems",
+    desc: "Complete web systems development for inventory management, stock tracking, order processing, supplier management, and business reporting with seamless integrations.",
   },
   {
     gif: gifSeo,
-    title: "SEO & Performance",
-    desc: "Core Web Vitals, on-page SEO, analytics & search console.",
+    title: "SEO & Performance Optimization",
+    desc: "Technical SEO, Core Web Vitals optimization, Google Analytics setup, and Search Console integration to help your website rank higher and load faster.",
   },
   {
     gif: gifMaintenance,
-    title: "Maintenance & Care Plans",
-    desc: "Backups, updates, uptime monitoring, bug fixes, improvements.",
+    title: "Website Maintenance & Support",
+    desc: "Affordable care plans including automated backups, security updates, uptime monitoring, bug fixes, and continuous improvements with 24/7 support availability.",
   },
   {
     gif: gifMigrations,
-    title: "Migrations & Fixes",
-    desc: "Move hosts, rescue broken sites, refactor legacy frontends.",
+    title: "Website Migrations & Fixes",
+    desc: "Migrate to better hosting, rescue broken websites, refactor legacy code, and modernize outdated frontends with zero downtime deployment strategies.",
   },
 ];
 
@@ -118,10 +118,11 @@ export default function ServicesSection() {
         transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)",
       }}>
       <div className="slab">
-        <h1 className="h1">Our Services</h1>
+        <h2 className="h1">Our Web Development Services</h2>
         <p className="sub-title">
-          Clear scope, fixed price, fast delivery. Most corporate sites ship in
-          1–2 weeks.
+          Comprehensive website development Sri Lanka businesses trust.
+          Transparent pricing, fixed timelines, and expert execution from
+          discovery to launch.
         </p>
         <div className="grid grid-3 services-section-grid">
           {items.map((s, i) => (

@@ -33,6 +33,7 @@ function ProjectCard({
   title,
   description,
   image,
+  tags,
   websiteLabel = "Visit website",
 }) {
   const navigate = useNavigate();
@@ -45,18 +46,12 @@ function ProjectCard({
     e.stopPropagation();
   };
 
-  const toggleReadMore = (e) => {
-    e.stopPropagation();
-    setReadMore(!readMore);
-  };
-
   return (
     <article
       ref={cardRef}
       className="work"
       role={href ? "link" : undefined}
       tabIndex={href ? 0 : undefined}
-      // onClick={() => href && navigate(href)}
       onKeyDown={(e) => {
         if (!href) return;
         if (e.key === "Enter" || e.key === " ") {
@@ -69,7 +64,7 @@ function ProjectCard({
           <img
             className="work-img"
             src={image}
-            alt={`${title} project preview`}
+            alt={`${title} - custom website development by Axivelt Solutions Sri Lanka`}
             loading="lazy"
             onLoad={() => setImageLoaded(true)}
             onError={() => setImageError(true)}
@@ -84,13 +79,33 @@ function ProjectCard({
       </div>
 
       <div className="work-body">
-        <h4 className="work-title">{title}</h4>
+        <h3 className="work-title">{title}</h3>
         <p className="muted work-tag">
           {readMore
             ? description
             : description.slice(0, 150) +
               (description.length > 150 ? "..." : "")}
         </p>
+
+        {tags && (
+          <div
+            className="work-tags"
+            style={{ marginTop: "0.5rem", marginBottom: "0.75rem" }}>
+            {tags.map((tag, i) => (
+              <span
+                key={i}
+                className="chip"
+                style={{
+                  fontSize: "0.75rem",
+                  padding: "0.25rem 0.5rem",
+                  marginRight: "3px",
+                  marginBottom: "2px",
+                }}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
 
         {website && (
           <a
@@ -99,7 +114,7 @@ function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             onClick={onExternalClick}
-            aria-label={`Open ${title} website (new tab)`}>
+            aria-label={`Visit ${title} website (opens in new tab)`}>
             {websiteLabel} ↗
           </a>
         )}
@@ -110,9 +125,9 @@ function ProjectCard({
             className="rw-read-more-btn"
             onClick={(e) => {
               e.stopPropagation();
-              navigate(href); // goes to /projects/easyneat
+              navigate(href);
             }}>
-            Read More
+            View Full Case Study
           </button>
         )}
       </div>
@@ -127,15 +142,23 @@ export default function RecentWorkSection() {
         <div className="slab">
           <div className="section-header">
             <div>
-              <h1 className="h2 section-title">Recent work</h1>
+              <div
+                className="badge"
+                style={{ display: "inline-block", marginBottom: "1rem" }}>
+                Our Portfolio
+              </div>
+              <h2 className="h2 section-title">Custom Websites We've Built</h2>
               <p className="rw-section-h-sub-title sub-title">
-                Clear scope, fixed price, fast delivery. Most corporate sites
-                ship in 1–2 weeks.
+                Real projects delivered for businesses across Sri Lanka and
+                internationally. From booking platforms to e-commerce sites—see
+                how our web development expertise brings ideas to life.
               </p>
             </div>
 
-            <Link to="/our-projects" className="link-muted section-link">
-              View more projects →
+            <Link
+              to="/our-projects"
+              className="link-muted section-link view-all-projects-link">
+              View all projects →
             </Link>
           </div>
 
@@ -143,23 +166,26 @@ export default function RecentWorkSection() {
             <ProjectCard
               href="/projects/easyneat"
               website="https://easyneat.com.au"
-              title="Easyneat.com"
-              description="EasyNeat provides reliable, eco-friendly cleaning services across Victoria with an easy online booking system and clear, upfront pricing. The platform is powered by a Node.js API and a React (Vite) front-end for speed, security, and a seamless customer experience. A powerful, advanced admin dashboard is included to manage bookings, customers, and services with ease."
+              title="EasyNeat - Cleaning Services Platform"
+              description="Complete booking platform for Victoria's leading eco-friendly cleaning service. Features include real-time booking system, payment integration, customer dashboard, and advanced admin panel for managing services, customers, and schedules. Built with React (Vite) and Node.js API for fast, secure performance."
               image={imgEasyNeat}
+              tags={["Web Application", "React", "Node.js", "Australia"]}
             />
             <ProjectCard
               href="/our-projects"
               website="https://motogear.lk/"
-              title="Motogear.lk"
-              description="MotoGear delivers quality motorcycle helmets and bike spare parts with a smooth shopping experience and clear pricing. The site is powered by WordPress and a custom PHP/HTML/CSS inventory management system for real-time stock control and fast product updates."
+              title="MotoGear - E-commerce Website"
+              description="Modern e-commerce platform for motorcycle helmets and spare parts in Sri Lanka. Features custom inventory management system for real-time stock tracking, product catalog, shopping cart, and order processing. Delivers smooth shopping experience with fast load times and mobile-responsive design."
               image={imgGadgetHub}
+              tags={["E-commerce", "Inventory System", "Sri Lanka"]}
             />
             <ProjectCard
               href="/our-projects"
               website="https://elinapix.com/"
-              title="Elinapix.com"
-              description="ElinaPix showcases the work of a professional photographer in France with a clean portfolio and elegant galleries. The website is powered by WordPress, delivering a seamless viewing experience and easy content updates for stunning photography displays."
+              title="ElinaPix - Photography Portfolio"
+              description="Elegant portfolio website for professional photographer showcasing stunning galleries and client work. Clean, minimalist design with smooth image galleries, contact forms, and easy content management. Optimized for fast loading and beautiful presentation across all devices."
               image={imgElinapix}
+              tags={["Portfolio Website", "Photography", "France"]}
             />
           </div>
         </div>

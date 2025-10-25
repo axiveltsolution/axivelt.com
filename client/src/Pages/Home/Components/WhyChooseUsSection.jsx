@@ -2,35 +2,35 @@ import React from "react";
 
 /**
  * WhyChooseUs.jsx
- * - Six cards, no icons.
- * - External CSS file: WhyChooseUs.css
- * - Edit the `features` array to change headings / SEO text.
+ * - Six cards showcasing competitive advantages
+ * - SEO-optimized content for Sri Lankan market
+ * - Edit the `features` array to change content
  */
 
 const features = [
   {
-    title: "Full-stack expertise",
-    text: "From static HTML prototypes to production-grade React + Node apps — we build scalable, maintainable systems with SQL, MongoDB, and PHP backends.",
+    title: "Local Expertise, Global Standards",
+    text: "Based in Colombo, we understand Sri Lankan businesses while delivering international-quality web development. Competitive pricing without compromising on security, performance, or scalability.",
   },
   {
-    title: "Performance & SEO first",
-    text: "Fast by design — optimized assets, SSR/SSG options, semantic markup and measurable SEO practices so your product ranks and converts.",
+    title: "Transparent & Affordable Pricing",
+    text: "Clear proposals with fixed quotes starting from Rs. 75,000 for business websites. No hidden costs, no surprise fees—just honest pricing that fits your budget and timeline.",
   },
   {
-    title: "Security & Reliability",
-    text: "Hardened deployments, secure auth patterns, dependency management and monitoring so your app stays safe and available under load.",
+    title: "Modern Technology Stack",
+    text: "Built with React, Node.js, and cloud infrastructure—your custom website loads fast, ranks well on Google, and scales effortlessly as your business grows.",
   },
   {
-    title: "Design that converts",
-    text: "Modern, accessible UI with clear UX patterns and conversion-focused interactions — we design interfaces that look premium and drive action.",
+    title: "SEO & Performance First",
+    text: "Every website we develop includes technical SEO optimization, Core Web Vitals enhancement, and Google Analytics integration to help you rank higher and convert more visitors.",
   },
   {
-    title: "Flexible integration",
-    text: "APIs, webhooks, third-party services and legacy systems — we integrate cleanly with your tools and migrate data safely when needed.",
+    title: "Complete Web Systems Development",
+    text: "From simple landing pages to complex inventory management systems—we handle everything including payment gateways, API integrations, and custom business automation.",
   },
   {
-    title: "Long-term partnership",
-    text: "We deliver with documentation, tests and handover support so your team can own the product long after launch.",
+    title: "Ongoing Support & Maintenance",
+    text: "24/7 monitoring, automatic backups, security updates, and fast response times. Our affordable maintenance plans keep your website secure and running smoothly year-round.",
   },
 ];
 
@@ -40,22 +40,23 @@ export default function WhyChooseUsSection() {
       <div className="slab why-slab">
         <div className="section-header why-header">
           <div>
-            <div className="badge">Why choose us</div>
-            <h1 id="why-title" className="section-title why-title">
-              Build faster. Launch stronger.
-            </h1>
+            <div className="badge">Why Choose Axivelt Solutions</div>
+            <h2 id="why-title" className="section-title why-title">
+              Why Choose Our Web Development Company?
+            </h2>
             <p className="sub-title">
-              We design, engineer and ship reliable web & app products — from
-              prototypes to production. Below are the core strengths we bring to
-              every project.
+              Leading software development company in Sri Lanka delivering
+              custom websites, web applications, and inventory systems. Here's
+              what sets us apart from other web development companies in Colombo
+              and across the island.
             </p>
           </div>
           <div className="why-cta">
             <a className="btn btn-outline" href="#get-a-quote">
-              Get a quote
+              Get free quote
             </a>
             <a className="btn btn-primary" href="#projects">
-              See work
+              View portfolio
             </a>
           </div>
         </div>

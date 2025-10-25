@@ -51,8 +51,8 @@ export default function NavBar() {
           {AnchorItem("#services", "Services")}
           {AnchorItem("#projects", "Projects")}
           {AnchorItem("#about", "About")}
-          {AnchorItem("#faq", "FAQ")}
           {AnchorItem("#get-a-quote", "Get a Quote")}
+          {AnchorItem("#faq", "FAQ")}
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -75,8 +75,8 @@ export default function NavBar() {
           {AnchorItem("#services", "Services")}
           {AnchorItem("#projects", "Projects")}
           {AnchorItem("#about", "About")}
-          {AnchorItem("#faq", "FAQ")}
           {AnchorItem("#get-a-quote", "Get a Quote")}
+          {AnchorItem("#faq", "FAQ")}
         </nav>
       </div>
     </header>

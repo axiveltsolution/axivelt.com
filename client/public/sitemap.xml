@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home page -->
+  <url>
+    <loc>https://axivelt.com/</loc>
+    <lastmod>2025-10-25</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Projects overview page -->
+  <url>
+    <loc>https://axivelt.com/our-projects</loc>
+    <lastmod>2025-10-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Individual project pages -->
+  <url>
+    <loc>https://axivelt.com/projects/easyneat</loc>
+    <lastmod>2025-10-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 404 page (optional, usually not indexed) -->
+  <!-- <url>
+    <loc>https://axivelt.com/404</loc>
+    <lastmod>2025-10-25</lastmod>
+    <priority>0.1</priority>
+  </url> -->
+</urlset>

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import bgImg from "./../../../assets/bgimg.jpg";
 
 function RotatingText({ words, interval = 3000 }) {
   const [index, setIndex] = React.useState(0);
@@ -68,7 +67,7 @@ export default function HeroSection() {
     <section className="hero">
       <div className="hero-sec-bg-img" />
       <div className="hero-content">
-        <div className="badge">🇱🇰 Sri Lanka • Remote-first</div>
+        <div className="badge">🇱🇰 Sri Lanka • Serving Colombo & Beyond</div>
         <h1 className="title">
           <span className="title-line">We build</span>
           <span className="title-line title-rotator">
@@ -77,29 +76,30 @@ export default function HeroSection() {
           <span className="title-line">web experiences.</span>
         </h1>
         <p className="sub-title">
-          Websites, web apps, and inventory systems engineered with React,
-          Node.js, and WordPress. We also handle maintenance &amp; SEO so you
-          can focus on growing your business.
+          Leading web development company in Sri Lanka specializing in custom
+          websites, web applications, and inventory management systems. Built
+          with React, Node.js, and modern technologies for businesses in Colombo
+          and across the island.
         </p>
         <div className="actions">
           <Link to="#get-a-quote" className="btn btn-primary">
-            Start a project
+            Get Your Free Quote
           </Link>
           <Link to="#projects" className="btn btn-secondary">
-            View our work
+            View Our Portfolio
           </Link>
           <a
             href="mailto:axiveltofficial@gmail.com"
             className="btn btn-outline"
-            aria-label="Send us an email">
-            Email us
+            aria-label="Email Axivelt Solutions for web development services">
+            Email Us
           </a>
           <a
             href="https://wa.me/94700000000"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline"
-            aria-label="Contact us on WhatsApp">
+            aria-label="WhatsApp Axivelt Solutions">
             WhatsApp
           </a>
         </div>

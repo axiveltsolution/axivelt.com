@@ -4,9 +4,9 @@ import "./Footer.css";
 /** Social links */
 const WHATSAPP_NUMBER = "94766980686"; // wa.me format (no +)
 const INSTAGRAM_URL =
-  "https://www.instagram.com/axiveltsolutions?igsh=dWo1ZHR0YTJqNzQw&utm_source=qr"; // <-- replace if different
+  "https://www.instagram.com/axiveltsolutions?igsh=dWo1ZHR0YTJqNzQw&utm_source=qr";
 const FACEBOOK_URL =
-  "https://www.facebook.com/share/1Ek3LgcVKT/?mibextid=wwXIfr"; // <-- replace if different
+  "https://www.facebook.com/share/1Ek3LgcVKT/?mibextid=wwXIfr";
 
 /* Simple inline SVG icons using currentColor */
 function IconWhatsApp(props) {
@@ -51,11 +51,14 @@ export default function Footer() {
     <footer className="footer c-footer-nav">
       <div>
         <div className="grid">
+          {/* Company Info */}
           <div>
             <h3>Axivelt Solutions</h3>
             <p className="muted">
-              Websites, web apps, and inventory systems. React, Node.js &amp;
-              WordPress. Based in Sri Lanka. Serving clients worldwide.
+              Leading web development company in Sri Lanka specializing in
+              custom websites, web applications, and inventory management
+              systems. Based in Colombo, serving businesses across Sri Lanka and
+              internationally.
             </p>
 
             {/* Social icons row */}
@@ -65,54 +68,99 @@ export default function Footer() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp"
+                aria-label="Contact Axivelt Solutions on WhatsApp"
                 title="WhatsApp">
                 <IconWhatsApp className="icon" />
               </a>
-              {/* <a
-                className="social-link"
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                title="Instagram">
-                <IconInstagram className="icon" />
-              </a> */}
               <a
                 className="social-link"
                 href={FACEBOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook"
+                aria-label="Follow Axivelt Solutions on Facebook"
                 title="Facebook">
                 <IconFacebook className="icon" />
               </a>
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h4 className="head">Sections</h4>
+            <h4 className="head">Quick Links</h4>
             <ul className="list">
               <li>
-                <Link to="/services" className="footlink">
-                  Services
+                <Link to="/#about" className="footlink">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/#services" className="footlink">
+                  Our Services
                 </Link>
               </li>
               <li>
                 <Link to="/our-projects" className="footlink">
-                  Projects
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link to="/#get-a-quote" className="footlink">
+                  Get a Quote
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="footlink">
-                  Contact
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/#faq" className="footlink">
+                  FAQ
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* Services */}
           <div>
-            <h4 className="head">Contact</h4>
+            <h4 className="head">Our Services</h4>
+            <ul className="list">
+              <li>
+                <Link to="/#services" className="footlink">
+                  Custom Website Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/#services" className="footlink">
+                  Web Application Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/#services" className="footlink">
+                  E-commerce Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/#services" className="footlink">
+                  Inventory Management Systems
+                </Link>
+              </li>
+              <li>
+                <Link to="/#services" className="footlink">
+                  Website Maintenance
+                </Link>
+              </li>
+              <li>
+                <Link to="/#services" className="footlink">
+                  SEO Optimization
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="head">Get In Touch</h4>
             <ul className="list">
               <li>
                 <a className="footlink" href="mailto:axiveltofficial@gmail.com">
@@ -125,20 +173,30 @@ export default function Footer() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noreferrer">
-                  WhatsApp: +94&nbsp;76&nbsp;698&nbsp;0686
+                  WhatsApp: +94 76 698 0686
                 </a>
               </li>
+              <li
+                className="muted"
+                style={{ margin: "0.75rem 0 0 0 ", fontSize: "0.875rem" }}>
+                📍 Colombo, Sri Lanka
+              </li>
             </ul>
-            <span className="badge">48–72h delivery for small sites</span>
+            <div>
+              <span className="badge">2-4 weeks delivery</span>
+            </div>
           </div>
         </div>
 
         <div className="bottom">
-          <small>© {year} AxiveltSolutions. All rights reserved.</small>
           <small>
-            Developed by{" "}
-            <a className="footlink" href="mailto:axiveltofficial@gmail.com">
-              AxiveltSolutions
+            © {year} Axivelt Solutions. All rights reserved. Web Development
+            Company Sri Lanka.
+          </small>
+          <small>
+            Designed & Developed by{" "}
+            <a className="footlink" href="/">
+              Axivelt Solutions
             </a>
           </small>
         </div>
