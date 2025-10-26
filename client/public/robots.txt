@@ -1,9 +1,86 @@
-# Allow all search engines
+## **FILE 2: robots.txt**
+
+Place this file in your **public/** folder: `public/robots.txt`
+
+```txt
+# Axivelt Solutions - robots.txt
+# Web Development Company Sri Lanka
+# https://axivelt.com
+
+# ===== ALLOW ALL SEARCH ENGINES =====
 User-agent: *
 Allow: /
 
-# Disallow admin or private sections (none for now)
-# Disallow: /admin/
+# ===== CRAWL DELAY (Optional - prevents overload) =====
+# Crawl-delay: 1
 
-# Sitemap location
+# ===== DISALLOW SPECIFIC PATHS =====
+# Block admin areas (if any exist in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /draft/
+
+# Block internal search results (if implemented)
+Disallow: /*?s=
+Disallow: /*&s=
+
+# Block duplicate content parameters
+Disallow: /*?*
+Disallow: /*&*
+
+# Block temporary/test pages
+Disallow: /test/
+Disallow: /dev/
+Disallow: /staging/
+
+# Block API endpoints (if any)
+Disallow: /api/
+
+# ===== ALLOW IMPORTANT RESOURCES =====
+# Explicitly allow CSS, JS, images for better indexing
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.webp
+Allow: /*.svg
+
+# ===== SPECIFIC SEARCH ENGINE RULES =====
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# ===== BLOCK BAD BOTS (Optional) =====
+# Uncomment to block known scrapers/spammers
+# User-agent: AhrefsBot
+# Disallow: /
+
+# User-agent: SemrushBot
+# Disallow: /
+
+# User-agent: MJ12bot
+# Disallow: /
+
+# ===== SITEMAP LOCATION =====
 Sitemap: https://axivelt.com/sitemap.xml
+
+# ===== HOST (Optional - helps with canonical) =====
+Host: https://axivelt.com

@@ -1,30 +1,90 @@
+# SEO-OPTIMIZED SITEMAP & ROBOTS FILES
+
+---
+
+## **FILE 1: sitemap.xml**
+
+Place this file in your **public/** folder: `public/sitemap.xml`
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Home page -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://axivelt.com/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Projects overview page -->
+  <!-- Services Page -->
   <url>
-    <loc>https://axivelt.com/our-projects</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://axivelt.com/services</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Individual project pages -->
+  <!-- Projects Overview Page -->
   <url>
-    <loc>https://axivelt.com/projects/easyneat</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://axivelt.com/our-projects</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://axivelt.com/contact</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 404 page (optional, usually not indexed) -->
-  <!-- <url>
-    <loc>https://axivelt.com/404</loc>
-    <lastmod>2025-10-25</lastmod>
-    <priority>0.1</priority>
-  </url> -->
+  <!-- Individual Project: EasyNeat -->
+  <url>
+    <loc>https://axivelt.com/projects/easyneat</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Add more individual project pages as needed -->
+  <!-- Example:
+  <url>
+    <loc>https://axivelt.com/projects/motogear</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  -->
+
+  <!-- FAQ Section (if it has dedicated page) -->
+  <url>
+    <loc>https://axivelt.com/#faq</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- About Section (if it has dedicated page) -->
+  <url>
+    <loc>https://axivelt.com/#about</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Get Quote Section -->
+  <url>
+    <loc>https://axivelt.com/#get-a-quote</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
