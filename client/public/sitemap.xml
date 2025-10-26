@@ -1,18 +1,13 @@
-# SEO-OPTIMIZED SITEMAP & ROBOTS FILES
-
----
-
-## **FILE 1: sitemap.xml**
-
-Place this file in your **public/** folder: `public/sitemap.xml`
-
-```xml
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- FILE 1: sitemap.xml -->
+<!-- Place this file in your public/ folder: public/sitemap.xml -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- ========== MAIN PAGES - HIGHEST PRIORITY ========== -->
+  
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://axivelt.com/</loc>
@@ -45,40 +40,6 @@ Place this file in your **public/** folder: `public/sitemap.xml`
     <priority>0.8</priority>
   </url>
 
-  <!-- Individual Project: EasyNeat -->
-  <url>
-    <loc>https://axivelt.com/projects/easyneat</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Add more individual project pages as needed -->
-  <!-- Example:
-  <url>
-    <loc>https://axivelt.com/projects/motogear</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  -->
-
-  <!-- FAQ Section (if it has dedicated page) -->
-  <url>
-    <loc>https://axivelt.com/#faq</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- About Section (if it has dedicated page) -->
-  <url>
-    <loc>https://axivelt.com/#about</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
   <!-- Get Quote Section -->
   <url>
     <loc>https://axivelt.com/#get-a-quote</loc>
@@ -86,5 +47,59 @@ Place this file in your **public/** folder: `public/sitemap.xml`
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- ========== PROJECT CASE STUDIES - HIGH PRIORITY ========== -->
+  
+  <!-- Individual Project: EasyNeat Cleaning Service -->
+  <url>
+    <loc>https://axivelt.com/projects/easyneat</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual Project: Around Lanka Travels -->
+  <url>
+    <loc>https://axivelt.com/projects/aroundlanka</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual Project: MotoGear Inventory System -->
+  <url>
+    <loc>https://axivelt.com/projects/motogear</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ========== SECONDARY SECTIONS ========== -->
+  
+  <!-- FAQ Section -->
+  <url>
+    <loc>https://axivelt.com/#faq</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://axivelt.com/#about</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ========== ADD MORE PROJECT PAGES AS YOU CREATE THEM ========== -->
+  <!-- Template for new projects:
+  <url>
+    <loc>https://axivelt.com/projects/your-project-name</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  -->
 
 </urlset>

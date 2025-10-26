@@ -10,15 +10,15 @@ import React from "react";
 const features = [
   {
     title: "Local Expertise, Global Standards",
-    text: "Based in Colombo, we understand Sri Lankan businesses while delivering international-quality web development. Competitive pricing without compromising on security, performance, or scalability.",
+    text: "Based in Colombo, we understand Sri Lankan businesses while delivering international quality web development. Competitive pricing without compromising on security, performance, or scalability.",
   },
   {
     title: "Transparent & Affordable Pricing",
-    text: "Clear proposals with fixed quotes starting from Rs. 75,000 for business websites. No hidden costs, no surprise fees—just honest pricing that fits your budget and timeline.",
+    text: "You’ll always know exactly what you’re paying for. No hidden fees or unexpected costs - just clear, fair pricing that works for you.",
   },
   {
     title: "Modern Technology Stack",
-    text: "Built with React, Node.js, and cloud infrastructure—your custom website loads fast, ranks well on Google, and scales effortlessly as your business grows.",
+    text: "Built with React, Node.js, and cloud infrastructure. Your custom website loads fast, ranks well on Google, and scales effortlessly as your business grows.",
   },
   {
     title: "SEO & Performance First",
@@ -26,11 +26,11 @@ const features = [
   },
   {
     title: "Complete Web Systems Development",
-    text: "From simple landing pages to complex inventory management systems—we handle everything including payment gateways, API integrations, and custom business automation.",
+    text: "From simple landing pages to complex inventory management systems - we handle everything including payment gateways, API integrations, and custom business automation.",
   },
   {
     title: "Ongoing Support & Maintenance",
-    text: "24/7 monitoring, automatic backups, security updates, and fast response times. Our affordable maintenance plans keep your website secure and running smoothly year-round.",
+    text: "24/7 monitoring, automatic backups, security updates, and fast response times. Our affordable maintenance plans keep your website secure and running smoothly year round.",
   },
 ];
 

@@ -51,7 +51,7 @@ export default function AboutSection() {
               specializing in custom websites, web applications, and inventory
               systems. We deliver
               <strong> fast, secure digital solutions</strong> for businesses
-              across Colombo, Kandy, Galle, and beyond—with{" "}
+              across Colombo, Kandy, Galle, and beyond - with{" "}
               <strong>transparent pricing and realistic timelines</strong>.
             </p>
 
@@ -139,7 +139,7 @@ export default function AboutSection() {
 
             <div className="about-mini-stats">
               <div className="mini">
-                <div className="mini-n">50+</div>
+                <div className="mini-n">10+</div>
                 <div className="mini-l">Projects delivered</div>
               </div>
               <div className="mini">

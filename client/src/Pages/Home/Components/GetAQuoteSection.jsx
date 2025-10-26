@@ -148,7 +148,7 @@ export default function GetAQuoteSection() {
         Ready to build your website or web application? Fill in the form below
         with your project details. As a leading web development company in Sri
         Lanka, we provide transparent proposals and competitive quotes within 24
-        hours—no hidden costs, no pressure.
+        hours. No hidden costs, no pressure.
       </p>
 
       <form

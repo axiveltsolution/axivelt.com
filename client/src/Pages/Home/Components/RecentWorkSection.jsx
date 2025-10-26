@@ -150,7 +150,7 @@ export default function RecentWorkSection() {
               <h2 className="h2 section-title">Custom Websites We've Built</h2>
               <p className="rw-section-h-sub-title sub-title">
                 Real projects delivered for businesses across Sri Lanka and
-                internationally. From booking platforms to e-commerce sites—see
+                internationally. From booking platforms to e-commerce sites. See
                 how our web development expertise brings ideas to life.
               </p>
             </div>

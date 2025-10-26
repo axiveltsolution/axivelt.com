@@ -6,16 +6,12 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      q: "How much does a custom website cost in Sri Lanka?",
-      a: "Our website development Sri Lanka pricing starts from Rs. 75,000 for basic business websites. E-commerce sites range from Rs. 200,000-400,000, and custom web applications from Rs. 300,000-800,000 depending on features. We provide detailed, transparent quotes with no hidden costs after understanding your specific requirements.",
-    },
-    {
       q: "How long does it take to build a website?",
       a: "Most business websites are delivered within 2-4 weeks from project start. Landing pages can be completed in 5-7 days. Complex web systems development Sri Lanka projects like inventory management or booking platforms typically take 6-12 weeks with phased rollouts. You'll receive a realistic timeline in our proposal.",
     },
     {
       q: "Do you provide website maintenance and support?",
-      a: "Yes! We offer comprehensive maintenance packages including automatic backups, security updates, performance monitoring, bug fixes, and content updates. Our affordable care plans start from Rs. 15,000/month with 24/7 uptime monitoring and fast response times via WhatsApp, email, and phone.",
+      a: "Yes! We offer comprehensive maintenance packages that include automatic backups, security updates, performance monitoring, bug fixes, and content updates. You’ll also get 24/7 uptime monitoring and fast response times via WhatsApp, email, and phone.",
     },
     {
       q: "Will my website be mobile-friendly and SEO optimized?",
@@ -27,7 +23,11 @@ export default function FAQSection() {
     },
     {
       q: "Do you work with clients outside Colombo?",
-      a: "Yes! While we're based in Colombo, we serve businesses throughout Sri Lanka—Kandy, Galle, Jaffna, and beyond. We're also experienced working with international clients in Australia, UK, and other countries. We operate remotely with clear communication via video calls, email, and project management tools.",
+      a: "Yes! While we're based in Colombo, we serve businesses throughout Sri Lanka - Kandy, Galle, Jaffna, and beyond. We're also experienced working with international clients in Australia, UK, and other countries. We operate remotely with clear communication via video calls, email, and project management tools.",
+    },
+    {
+      q: "Can you redesign my existing website?",
+      a: "Definitely! We can refresh your current website with a modern design, improved speed, and better SEO performance - all while keeping your existing content and branding. Whether you need a small visual upgrade or a full rebuild, we’ll make sure your site looks great and performs even better.",
     },
   ];
 
@@ -47,7 +47,7 @@ export default function FAQSection() {
           margin: "0 auto 2rem",
         }}>
         Common questions about our website development services in Sri Lanka.
-        Don't see your question? Contact us directly—we're here to help!
+        Don't see your question? Contact us directly, we're here to help!
       </p>
       <div className="faq-list">
         {faqs.map((item, index) => (

@@ -16,6 +16,7 @@ import NotFound from "./Pages/NotFound/NotFound.jsx";
 /* ================= Project Detail Pages ================= */
 import Easyneat from "./Pages/Projects/EasyneatArticle.jsx";
 import AroundLankaTravels from "./Pages/Projects/AroundLankaTravelsArticle.jsx";
+import MotoGearInventorySystem from "./Pages/Projects/MotoGearInventorySystemArticle.jsx";
 
 export default function App() {
   return (
@@ -40,6 +41,10 @@ export default function App() {
           <Route
             path="/projects/aroundlankatravels"
             element={<AroundLankaTravels />}
+          />
+          <Route
+            path="/projects/motogear-inventory-system"
+            element={<MotoGearInventorySystem />}
           />
 
           {/* 404 */}

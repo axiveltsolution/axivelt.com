@@ -16,7 +16,7 @@ export default function CTASection() {
             <p className="sub-title cta-text">
               Partner with Sri Lanka's trusted web development company for your
               next project. Share your goals and we'll respond with a clear
-              plan, realistic timeline, and transparent fixed quote—all within
+              plan, realistic timeline, and transparent fixed quote - all within
               24 hours. No hidden costs, no pressure.
             </p>
             <div className="cta-actions">

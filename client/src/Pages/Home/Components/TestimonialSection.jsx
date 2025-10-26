@@ -16,7 +16,7 @@ const testimonials = [
     location: "Colombo",
     website: "https://easyneat.com.au/",
     quote:
-      "Axivelt Solutions transformed our inventory chaos into a streamlined web system. Their web development expertise is unmatched in Sri Lanka—professional, responsive, and delivered exactly what we needed within budget and timeline.",
+      "Axivelt Solutions transformed our inventory chaos into a streamlined web system. Their web development expertise is unmatched in Sri Lanka - professional, responsive, and delivered exactly what we needed within budget and timeline.",
     initials: "RF",
     projectType: "Inventory Management System",
   },
@@ -110,7 +110,7 @@ export default function TestimonialSection() {
             What Our Clients Say
           </h2>
           <p className="sub-title">
-            Trusted by businesses across Sri Lanka—from Colombo to Galle and
+            Trusted by businesses across Sri Lanka - from Colombo to Galle and
             Kandy. Here's what companies say about our web development services.
           </p>
         </div>
