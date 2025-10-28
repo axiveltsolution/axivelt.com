@@ -31,29 +31,20 @@
 .op-badge {
   display: inline-block;
   padding: 0.5rem 1rem;
-  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: 600;
   color: #9ee6ff;
   border: 1px solid rgba(25, 198, 255, 0.25);
   background: rgba(25, 198, 255, 0.12);
   border-radius: 999px;
-  margin: 0 auto 1rem;
 }
 
 .op-heading {
-  margin: 0 0 1rem 0;
-  font-size: clamp(1.75rem, 5vw, 3rem);
-  font-weight: 800;
   color: #ffffff;
   line-height: 1.2;
 }
 
 .op-sub {
   margin: 0 auto;
-  max-width: 700px;
-  font-size: clamp(0.938rem, 2vw, 1.125rem);
-  line-height: 1.7;
-  color: #9ca0a8;
 }
 
 /* ========== GRID ========== */
@@ -197,11 +188,7 @@
 }
 
 .op-title {
-  margin: 0;
-  font-size: clamp(1.063rem, 2vw, 1.25rem);
-  font-weight: 800;
   color: #ffffff;
-  line-height: 1.3;
 }
 
 /* Tags */
@@ -235,9 +222,7 @@
 /* Description */
 .op-desc {
   margin: 0;
-  font-size: clamp(0.875rem, 1.5vw, 0.938rem);
   color: #9ca0a8;
-  line-height: 1.7;
   flex: 1;
 }
 
@@ -297,7 +282,7 @@
 /* ========== CTA SECTION ========== */
 .op-cta {
   margin-top: clamp(3rem, 6vw, 5rem);
-  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(2.5rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 2.5rem);
   background: linear-gradient(
     135deg,
     rgba(157, 122, 255, 0.08),
@@ -309,19 +294,11 @@
 }
 
 .op-cta-title {
-  margin: 0 0 1rem 0;
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
-  font-weight: 800;
   color: #ffffff;
-  line-height: 1.2;
 }
 
 .op-cta-text {
-  margin: 0 auto 2rem;
-  max-width: 600px;
-  font-size: clamp(0.938rem, 2vw, 1.125rem);
-  color: #9ca0a8;
-  line-height: 1.6;
+  margin: 0 auto 1rem;
 }
 
 .op-cta-actions {
@@ -338,8 +315,6 @@
   align-items: center;
   justify-content: center;
   padding: 0.875rem 1.75rem;
-  font-size: clamp(0.938rem, 1.5vw, 1rem);
-  font-weight: 700;
   text-decoration: none;
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -351,13 +326,13 @@
   background: linear-gradient(135deg, #9d7aff, #ff3d9a);
   color: #ffffff;
   border: none;
-  box-shadow: 0 8px 20px rgba(157, 122, 255, 0.3);
+  box-shadow: 0 1px 10px rgba(157, 122, 255, 0.3);
 }
 
 .op-btn-primary:hover,
 .op-btn-primary:focus {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(157, 122, 255, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 1px 15px rgba(157, 122, 255, 0.4);
   outline: none;
 }
 

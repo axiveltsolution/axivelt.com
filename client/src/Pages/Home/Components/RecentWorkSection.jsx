@@ -164,7 +164,7 @@ export default function RecentWorkSection() {
 
           <div className="grid grid-3 grid-projects">
             <ProjectCard
-              href="/projects/easyneat"
+              href="/projects/easyNeat-cleaning-service-booking-platform"
               website="https://easyneat.com.au"
               title="EasyNeat - Cleaning Services Platform"
               description="Complete booking platform for Victoria's leading eco-friendly cleaning service. Features include real-time booking system, payment integration, customer dashboard, and advanced admin panel for managing services, customers, and schedules. Built with React (Vite) and Node.js API for fast, secure performance."
@@ -172,20 +172,20 @@ export default function RecentWorkSection() {
               tags={["Web Application", "React", "Node.js", "Australia"]}
             />
             <ProjectCard
-              href="/our-projects"
-              website="https://motogear.lk/"
-              title="MotoGear - E-commerce Website"
-              description="Modern e-commerce platform for motorcycle helmets and spare parts in Sri Lanka. Features custom inventory management system for real-time stock tracking, product catalog, shopping cart, and order processing. Delivers smooth shopping experience with fast load times and mobile-responsive design."
+              href="/projects/motogear-inventory-management-system"
+              website=""
+              title="MotoGear - Inventory Management System"
+              description="Professional inventory management system for motorcycle helmet and parts retail store in Sri Lanka. Features comprehensive stock tracking, integrated POS system, sales recording, expense management, receipt printing, and beautiful analytics dashboards. Streamlines retail operations and eliminates manual processes."
               image={imgGadgetHub}
-              tags={["E-commerce", "Inventory System", "Sri Lanka"]}
+              tags={["Inventory System", "POS System", "Retail Software"]}
             />
             <ProjectCard
-              href="/our-projects"
-              website="https://elinapix.com/"
-              title="ElinaPix - Photography Portfolio"
-              description="Elegant portfolio website for professional photographer showcasing stunning galleries and client work. Clean, minimalist design with smooth image galleries, contact forms, and easy content management. Optimized for fast loading and beautiful presentation across all devices."
-              image={imgElinapix}
-              tags={["Portfolio Website", "Photography", "France"]}
+              href="/projects/around-lanka-travels-tour-booking-platform"
+              website="https://aroundlankatravels.com/"
+              title="Around Lanka Travels - Tour Booking Platform"
+              description="Complete travel agency website for Sri Lankan tourism business. Features advanced tour booking system, dynamic content management, beautiful destination galleries, inquiry management, automated email notifications, and comprehensive admin dashboard. Empowers travel agencies to showcase tours and convert visitors into confirmed bookings."
+              image={imgGadgetHub}
+              tags={["Travel Agency", "Booking System", "Tourism"]}
             />
           </div>
         </div>

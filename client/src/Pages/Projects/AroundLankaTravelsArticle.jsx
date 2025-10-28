@@ -13,9 +13,11 @@ import fe2 from "../../assets/projects/aroundlanka/img1.webp";
 /* Gallery dynamic import (Vite) */
 export default function AroundLankaTravelsArticle() {
   let images = [];
+  console.log("Loaded gallery images:", images);
+
   try {
     const modules = import.meta.globEager(
-      "../../assets/galleries/aroundlanka/*.{jpg,jpeg,png,webp}"
+      "../../assets/img-gallery/aroundLankaTravels/*.{jpg,jpeg,png,webp}"
     );
     images = Object.keys(modules)
       .sort()
@@ -771,11 +773,7 @@ export default function AroundLankaTravelsArticle() {
 
           {images.length === 0 ? (
             <div className="pa-gallery-empty">
-              <p>
-                Gallery showcases the homepage design, tour booking flow,
-                inquiry forms, admin dashboard, content management interface,
-                and mobile responsive layouts across various devices.
-              </p>
+              <p>Gallery showcases.</p>
             </div>
           ) : (
             <div className="pa-gallery-grid">

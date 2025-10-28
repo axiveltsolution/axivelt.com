@@ -11,33 +11,33 @@ import "./OurProjects.css";
 
 const projects = [
   {
-    title: "EasyNeat - Cleaning Services Platform",
+    title: "EasyNeat - Cleaning Service Booking Platform",
     description:
-      "Complete booking platform for Victoria's leading eco-friendly cleaning service. Features include real-time booking system, payment integration, customer dashboard, and advanced admin panel for managing services and schedules. Built with React (Vite) and Node.js API for fast, secure performance.",
+      "Professional booking platform and admin dashboard for cleaning service business in Victoria, Australia. Features advanced multi-step booking form with real-time availability, customer inquiry system, staff scheduling, automated notifications, and comprehensive admin dashboard. Built with React (Vite) and Node.js for exceptional performance and security.",
     image: "/assets/projects/easyneat/img1.webp",
     website: "https://easyneat.com.au",
-    href: "/projects/easyneat",
-    tags: ["Web Application", "React", "Node.js", "Australia"],
-    location: "Victoria, Australia",
+    href: "/projects/easyNeat-cleaning-service-booking-platform",
+    tags: ["Booking System", "React", "Admin Dashboard", "Australia"],
+    location: "Melbourne, Australia",
   },
   {
-    title: "MotoGear - E-commerce Website",
+    title: "MotoGear - Inventory Management System",
     description:
-      "Modern e-commerce platform for motorcycle helmets and spare parts in Sri Lanka. Features custom inventory management system for real-time stock tracking, product catalog, shopping cart, and order processing. Delivers smooth shopping experience with fast load times and mobile-responsive design.",
+      "Professional inventory management system for motorcycle helmet and parts retail store in Sri Lanka. Features comprehensive stock tracking, integrated POS system with receipt printing, sales recording, expense management, and beautiful analytics dashboards. Streamlines retail operations and eliminates manual processes with clean, intuitive interface.",
     image: "/assets/projects/motogear/img1.webp",
-    website: "https://motogear.lk/",
-    href: "/projects/motogear",
-    tags: ["E-commerce", "Inventory System", "Sri Lanka"],
+    website: "",
+    href: "/projects/motogear-inventory-management-system",
+    tags: ["Inventory System", "POS System", "Retail Software", "Sri Lanka"],
     location: "Colombo, Sri Lanka",
   },
   {
-    title: "Around Lanka Travels - Tour Booking Website",
+    title: "Around Lanka Travels - Tour Booking Platform",
     description:
-      "Professional travel agency website showcasing curated Sri Lanka tour packages with integrated booking system. Features include tour galleries, itinerary management, customer inquiries, and responsive design optimized for international travelers. Built with modern web technologies for fast performance.",
+      "Complete travel agency website for Sri Lankan tourism business. Features advanced tour booking system, dynamic content management dashboard, beautiful destination galleries, inquiry management, automated email notifications, and page editor for non-technical users. Empowers travel agencies to showcase tours and convert visitors into confirmed bookings.",
     image: "/assets/projects/aroundlanka/img1.webp",
     website: "https://aroundlankatravels.com/",
-    href: "/projects/aroundlanka",
-    tags: ["Travel Website", "Booking System", "Tourism"],
+    href: "/projects/around-lanka-travels-tour-booking-platform",
+    tags: ["Travel Agency", "Booking System", "Tourism", "Sri Lanka"],
     location: "Sri Lanka",
   },
   // Add more projects here
@@ -68,7 +68,6 @@ function ProjectCard({ project }) {
   const navigate = useNavigate();
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgError, setImgError] = useState(false);
-  const [readMore, setReadMore] = useState(false);
   const cardRef = useIntersectionObserver();
 
   const onExternalClick = (e) => e.stopPropagation();
@@ -129,13 +128,7 @@ function ProjectCard({ project }) {
 
         {location && <p className="op-location">📍 {location}</p>}
 
-        <p className="op-desc">
-          {readMore
-            ? description
-            : description.length > 150
-            ? description.slice(0, 150) + "..."
-            : description}
-        </p>
+        <p className="op-desc">{description}</p>
 
         <div className="op-actions">
           {website && (
@@ -148,18 +141,6 @@ function ProjectCard({ project }) {
               aria-label={`Visit ${title} website (opens in new tab)`}>
               Visit Website ↗
             </a>
-          )}
-          {description && description.length > 150 && (
-            <button
-              type="button"
-              className="op-readmore"
-              onClick={(e) => {
-                e.stopPropagation();
-                setReadMore((v) => !v);
-              }}
-              aria-expanded={readMore}>
-              {readMore ? "Show less" : "Read more"}
-            </button>
           )}
         </div>
       </div>
@@ -274,9 +255,9 @@ export default function OurProjects() {
               </h1>
               <p className="op-sub">
                 Real projects delivered for businesses across Sri Lanka and
-                internationally. From e-commerce platforms to booking
-                systems—see how our web development expertise transforms ideas
-                into successful digital products.
+                internationally. From e-commerce platforms to booking systems -
+                See how our web development expertise transforms ideas into
+                successful digital products.
               </p>
             </div>
           </header>
@@ -297,9 +278,6 @@ export default function OurProjects() {
             <div className="op-cta-actions">
               <a href="/#get-a-quote" className="op-btn-primary">
                 Get Free Quote
-              </a>
-              <a href="/contact" className="op-btn-secondary">
-                Contact Us
               </a>
             </div>
           </div>

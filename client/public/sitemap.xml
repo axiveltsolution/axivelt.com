@@ -16,28 +16,12 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Services Page -->
-  <url>
-    <loc>https://axivelt.com/services</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <!-- Projects Overview Page -->
   <url>
     <loc>https://axivelt.com/our-projects</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-
-  <!-- Contact Page -->
-  <url>
-    <loc>https://axivelt.com/contact</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <!-- Get Quote Section -->
@@ -52,7 +36,7 @@
   
   <!-- Individual Project: EasyNeat Cleaning Service -->
   <url>
-    <loc>https://axivelt.com/projects/easyneat</loc>
+    <loc>https://axivelt.com/projects/easyNeat-cleaning-service-booking-platform</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -60,7 +44,7 @@
 
   <!-- Individual Project: Around Lanka Travels -->
   <url>
-    <loc>https://axivelt.com/projects/aroundlanka</loc>
+    <loc>https://axivelt.com/projects/around-lanka-travels-tour-booking-platform</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -68,7 +52,7 @@
 
   <!-- Individual Project: MotoGear Inventory System -->
   <url>
-    <loc>https://axivelt.com/projects/motogear</loc>
+    <loc>https://axivelt.com/projects/motogear-inventory-management-system</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

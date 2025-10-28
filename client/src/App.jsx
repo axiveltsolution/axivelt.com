@@ -37,13 +37,16 @@ export default function App() {
           />
 
           {/* Project detail pages */}
-          <Route path="/projects/easyneat" element={<Easyneat />} />
           <Route
-            path="/projects/aroundlankatravels"
+            path="/projects/easyNeat-cleaning-service-booking-platform"
+            element={<Easyneat />}
+          />
+          <Route
+            path="/projects/around-lanka-travels-tour-booking-platform"
             element={<AroundLankaTravels />}
           />
           <Route
-            path="/projects/motogear-inventory-system"
+            path="/projects/motogear-inventory-management-system"
             element={<MotoGearInventorySystem />}
           />
 

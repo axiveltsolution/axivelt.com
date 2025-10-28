@@ -11,36 +11,36 @@ import "./../Home.css";
 const testimonials = [
   {
     name: "Rajitha Fernando",
-    role: "CEO",
-    company: "RetailHub Lanka",
+    role: "Owner",
+    company: "MotoGear Lanka",
     location: "Colombo",
-    website: "https://easyneat.com.au/",
+    website: "",
     quote:
       "Axivelt Solutions transformed our inventory chaos into a streamlined web system. Their web development expertise is unmatched in Sri Lanka - professional, responsive, and delivered exactly what we needed within budget and timeline.",
     initials: "RF",
     projectType: "Inventory Management System",
   },
   {
-    name: "Samantha Perera",
-    role: "Marketing Manager",
-    company: "Ocean Breeze Resorts",
-    location: "Galle",
+    name: "Anuhas",
+    role: "Owner",
+    company: "AroundLankaTravels",
+    location: "Colombo, Sri Lanka",
     website: "https://aroundlankatravels.com/",
     quote:
       "We needed a custom website that could compete with international hotel chains. Our online bookings increased by 240% after launch, and guests constantly praise how easy it is to book through our site.",
     initials: "SP",
-    projectType: "Hotel Booking Website",
+    projectType: "Travel Agency Website",
   },
   {
     name: "Dr. Nuwan Silva",
-    role: "Founder",
-    company: "HealthCare Solutions",
-    location: "Kandy",
-    website: "https://motogear.lk/",
+    role: "Owner",
+    company: "EasyNeat",
+    location: "Melbourne, Australia",
+    website: "https://easyneat.com.au/",
     quote:
       "As a startup, we needed affordable web development without sacrificing quality. Axivelt gave us both. Their team understood our vision and created a website that perfectly represents our brand. Highly recommended!",
     initials: "NS",
-    projectType: "Corporate Website",
+    projectType: "Booking Website",
   },
 ];
 
@@ -123,12 +123,12 @@ export default function TestimonialSection() {
                 <div className="ts-meta">
                   <strong className="ts-name">{t.name}</strong>
                   <span className="ts-role">
-                    {t.role} — <span className="ts-company">{t.company}</span>
+                    {t.role} - <span className="ts-company">{t.company}</span>
                   </span>
                   <span
                     className="ts-location"
                     style={{ fontSize: "0.875rem", color: "#64748b" }}>
-                    {t.location}, Sri Lanka • {t.projectType}
+                    {t.location} • {t.projectType}
                   </span>
                   <Stars />
                 </div>
@@ -136,6 +136,9 @@ export default function TestimonialSection() {
 
               <div className="ts-body">
                 <p className="ts-quote">"{t.quote}"</p>
+                <a style={{ color: "#9d7aff" }} href={t.website}>
+                  {t.website}
+                </a>
               </div>
             </article>
           ))}
