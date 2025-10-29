@@ -558,7 +558,6 @@
 
 .pa-cta > p {
   margin: 1em;
-  max-width: 700px;
   font-size: clamp(1rem, 2vw, 1.125rem);
   color: #bdbdbd;
   line-height: 1.6;
