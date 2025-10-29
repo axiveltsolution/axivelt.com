@@ -47,43 +47,55 @@ export default function GetAQuoteSection() {
 
   // Form submission
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setErr("");
+  e.preventDefault();
+  setErr("");
 
-    const form = e.currentTarget;
+  // Get the actual button that submitted the form (works in modern browsers + React)
+  const submitter = e.nativeEvent?.submitter;
+  const buttonType = submitter?.dataset?.type || submitType || "Send message"; // fallback
 
-    // Mandatory fields
-    const details = form.details?.value?.trim();
-    if (!details) {
-      setErr("Project details are required.");
+  // Use a friendly text for email template
+  const friendlyType =
+    buttonType === "Get a quote" || buttonType === "quote"
+      ? "Get a quote"
+      : "Send message";
+
+  const form = e.currentTarget;
+
+  // Mandatory fields as before
+  const details = form.details?.value?.trim();
+  if (!details) {
+    setErr("Project details are required.");
+    return;
+  }
+
+  // phone validation...
+  const phone = form.phone?.value?.trim();
+  if (phone) {
+    const phoneRegex = /^\+?[1-9]\d{1,14}$/;
+    if (!phoneRegex.test(phone)) {
+      setErr("Please enter a valid mobile number (international format).");
       return;
     }
+  }
 
-    const phone = form.phone?.value?.trim();
-    if (phone) {
-      const phoneRegex = /^\+?[1-9]\d{1,14}$/;
-      if (!phoneRegex.test(phone)) {
-        setErr("Please enter a valid mobile number (international format).");
-        return;
-      }
-    }
+  setSending(true);
 
-    setSending(true);
-
-    const fd = new FormData(form);
-    const payload = {
-      name: fd.get("name")?.toString() || "",
-      email: fd.get("email")?.toString() || "",
-      phone: fd.get("phone")?.toString() || "",
-      budget: fd.get("budget")?.toString() || "",
-      details,
-      websites: websites.join(", ") || "None",
-      type: submitType,
-      message:
-        submitType === "quote"
-          ? "We will review your project and send a quote to your email as quickly as possible."
-          : "We will contact you soon regarding your message.",
-    };
+  const fd = new FormData(form);
+  const payload = {
+    name: fd.get("name")?.toString() || "",
+    email: fd.get("email")?.toString() || "",
+    phone: fd.get("phone")?.toString() || "",
+    budget: fd.get("budget")?.toString() || "",
+    details,
+    websites: websites.join(", ") || "None",
+    // send the friendly text value that matches your template: {{type}}
+    type: friendlyType,
+    message:
+      friendlyType === "Get a quote"
+        ? "We will review your project and send a quote to your email as quickly as possible."
+        : "We will contact you soon regarding your message.",
+  };
 
     try {
       // Send to admin
@@ -254,14 +266,17 @@ export default function GetAQuoteSection() {
             type="submit"
             className="btn btn-outline"
             disabled={sending}
-            onClick={() => setSubmitType("message")}>
+            data-type="Send message"
+          >
             {sending ? "Sending..." : "Send message"}
           </button>
+
           <button
             type="submit"
             className="btn btn-primary"
             disabled={sending}
-            onClick={() => setSubmitType("quote")}>
+            data-type="Get a quote"
+          >
             {sending ? "Sending..." : "Get a quote"}
           </button>
 
