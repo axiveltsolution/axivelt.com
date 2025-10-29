@@ -42,7 +42,7 @@ export default function NavBar() {
       <div className="nav-container">
         {/* Brand */}
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
-          <p className="logo-text-nav">Axivelt Solution</p>
+          <p className="logo-text-nav">Axivelt Solutions</p>
         </Link>
 
         {/* Desktop Navigation */}
