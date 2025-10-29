@@ -1540,18 +1540,16 @@ p,
     padding: 6vh 15px;
   }
 
-  .title {
+  /* .title {
     font-size: clamp(1.8rem, 6vw, 4rem);
     gap: 5px;
-  }
+  } */
 
   .title-rotator {
     margin: clamp(-8px, -1.2vw, -12px) 0;
   }
 
   .actions {
-    gap: 10px;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -1786,7 +1784,7 @@ p,
   }
 
   .title {
-    font-size: clamp(1.5rem, 8vw, 2.8rem);
+    font-size: clamp(2rem, 10vw, 2.8rem);
     gap: 3px;
   }
 

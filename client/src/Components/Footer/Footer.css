@@ -212,10 +212,6 @@
 
 /* Mobile (≤576px) */
 @media (max-width: 576px) {
-  .footer {
-    padding: clamp(1.5rem, 5vw, 2rem) 0;
-  }
-
   .footer .grid {
     gap: clamp(1.25rem, 4vw, 1.75rem);
   }
