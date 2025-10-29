@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "./article.css";
 
-import heroImg from "../../assets/projects/aroundlanka/img1.webp";
-import dash1 from "../../assets/projects/aroundlanka/img1.webp";
-import dash2 from "../../assets/projects/aroundlanka/img1.webp";
-import fe1 from "../../assets/projects/aroundlanka/img1.webp";
-import fe2 from "../../assets/projects/aroundlanka/img1.webp";
+import heroImg from "../../assets/projects/aroundlankatravels.com/sri-lanka-traveling-agency-website-aroundlankatravels.com-axivelt-solutions-web-development-in-sri-lanka-project-hero.jpg";
+import dash1 from "../../assets/projects/aroundlankatravels.com/sri-lanka-traveling-agency-website-aroundlankatravels.com-axivelt-solutions-web-development-in-sri-lanka-project-admin-dashboard(3).webp";
+import dash2 from "../../assets/projects/aroundlankatravels.com/sri-lanka-traveling-agency-website-aroundlankatravels.com-axivelt-solutions-web-development-in-sri-lanka-project-admin-dashboard(4).webp";
+import fe1 from "../../assets/projects/aroundlankatravels.com/sri-lanka-traveling-agency-website-aroundlankatravels.com-axivelt-solutions-web-development-in-sri-lanka-project-frontend01.jpg";
+import fe2 from "../../assets/projects/aroundlankatravels.com/sri-lanka-traveling-agency-website-aroundlankatravels.com-axivelt-solutions-web-development-in-sri-lanka-project-frontend02.webp";
 
 /* Gallery dynamic import (Vite) */
 export default function AroundLankaTravelsArticle() {
@@ -84,7 +84,10 @@ export default function AroundLankaTravelsArticle() {
         />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://axivelt.com/projects/aroundlanka" />
+        <link
+          rel="canonical"
+          href="https://axivelt.com/projects/around-lanka-travels-tour-booking-platform"
+        />
 
         {/* Geo Tags for Local SEO */}
         <meta name="geo.region" content="LK-1" />
@@ -106,7 +109,7 @@ export default function AroundLankaTravelsArticle() {
         />
         <meta
           property="og:url"
-          content="https://axivelt.com/projects/aroundlanka"
+          content="https://axivelt.com/projects/around-lanka-travels-tour-booking-platform"
         />
         <meta
           property="og:image"
@@ -148,14 +151,12 @@ export default function AroundLankaTravelsArticle() {
       <main className="pa-article section">
         <article className="pa-hero">
           <div className="pa-hero-inner">
-            <h1 className="pa-hero-title">
-              Around Lanka Travels — Complete Travel Agency Website Development
-              in Sri Lanka
-            </h1>
+            <h1 className="pa-hero-title">Around Lanka Travels</h1>
+            <h2>Complete Travel Agency Website Development in Sri Lanka</h2>
             <p className="pa-hero-sub">
               Professional tourism website featuring advanced tour booking
               system, dynamic content management, stunning galleries, and
-              comprehensive admin dashboard — empowering travel agencies to grow
+              comprehensive admin dashboard - empowering travel agencies to grow
               their business online.
             </p>
           </div>
@@ -184,7 +185,7 @@ export default function AroundLankaTravelsArticle() {
             <strong>web development projects in Sri Lanka</strong>, we built a
             complete digital ecosystem that handles everything from tour
             discovery and inquiry management to automated email communications
-            and real-time content updates — all designed specifically for the
+            and real-time content updates - all designed specifically for the
             unique needs of travel and tourism businesses.
           </p>
         </section>
@@ -914,7 +915,7 @@ export default function AroundLankaTravelsArticle() {
           <p>
             Whether you need a <strong>tour booking system</strong>, destination
             showcase website, or complete{" "}
-            <strong>travel agency web application</strong> — Axivelt Solutions
+            <strong>travel agency web application</strong> - Axivelt Solutions
             creates custom digital experiences that inspire bookings and grow
             your tourism business in Sri Lanka.
           </p>
@@ -978,7 +979,9 @@ export default function AroundLankaTravelsArticle() {
           </p>
 
           <div className="pa-related-grid">
-            <Link to="/projects/easyneat" className="pa-related-card">
+            <Link
+              to="/projects/easyNeat-cleaning-service-booking-platform"
+              className="pa-related-card">
               <h3>EasyNeat Cleaning Service Platform</h3>
               <p>
                 Complete booking system with advanced scheduling, customer
@@ -987,11 +990,14 @@ export default function AroundLankaTravelsArticle() {
               <span className="pa-related-link">View Case Study →</span>
             </Link>
 
-            <Link to="/projects/motogear" className="pa-related-card">
-              <h3>MotoGear E-commerce Platform</h3>
+            <Link
+              to="/projects/motogear-inventory-management-system"
+              className="pa-related-card">
+              <h3>MotoGear Inventory Management System</h3>
               <p>
-                Full-featured online store with inventory management, order
-                processing, and customer portal for motorcycle parts retailer
+                Professional inventory and POS system with stock tracking, sales
+                recording, expense management, and analytics for motorcycle
+                parts and helmet retail store
               </p>
               <span className="pa-related-link">View Case Study →</span>
             </Link>
@@ -1085,7 +1091,8 @@ export default function AroundLankaTravelsArticle() {
               image: heroImg,
               mainEntityOfPage: {
                 "@type": "WebPage",
-                "@id": "https://axivelt.com/projects/aroundlanka",
+                "@id":
+                  "https://axivelt.com/projects/around-lanka-travels-tour-booking-platform",
               },
             }),
           }}
@@ -1115,7 +1122,7 @@ export default function AroundLankaTravelsArticle() {
                   "@type": "ListItem",
                   position: 3,
                   name: "Around Lanka Travels",
-                  item: "https://axivelt.com/projects/aroundlanka",
+                  item: "https://axivelt.com/projects/around-lanka-travels-tour-booking-platform",
                 },
               ],
             }),

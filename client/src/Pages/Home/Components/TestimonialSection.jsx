@@ -12,11 +12,11 @@ const testimonials = [
   {
     name: "Rajitha Fernando",
     role: "Owner",
-    company: "MotoGear Lanka",
+    company: "MotoGear Helmet Store",
     location: "Colombo",
     website: "",
     quote:
-      "Axivelt Solutions transformed our inventory chaos into a streamlined web system. Their web development expertise is unmatched in Sri Lanka - professional, responsive, and delivered exactly what we needed within budget and timeline.",
+      "Axivelt transformed our inventory chaos into a streamlined system. The POS and stock tracking eliminated manual errors completely. Professional, delivered on time and within budget.",
     initials: "RF",
     projectType: "Inventory Management System",
   },
@@ -27,7 +27,7 @@ const testimonials = [
     location: "Colombo, Sri Lanka",
     website: "https://aroundlankatravels.com/",
     quote:
-      "We needed a custom website that could compete with international hotel chains. Our online bookings increased by 240% after launch, and guests constantly praise how easy it is to book through our site.",
+      "Axivelt delivered a beautiful travel website that showcases our Sri Lankan tours perfectly. The content management system is easy to use, and our online bookings have increased significantly since launch.",
     initials: "SP",
     projectType: "Travel Agency Website",
   },
@@ -38,7 +38,7 @@ const testimonials = [
     location: "Melbourne, Australia",
     website: "https://easyneat.com.au/",
     quote:
-      "As a startup, we needed affordable web development without sacrificing quality. Axivelt gave us both. Their team understood our vision and created a website that perfectly represents our brand. Highly recommended!",
+      "The booking platform revolutionized our operations. Customers love the easy booking process, and our staff saves hours weekly with the automated dashboard. Highly professional team and great value.",
     initials: "NS",
     projectType: "Booking Website",
   },

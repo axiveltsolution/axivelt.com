@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 /* ======= Project images (local) ======= */
-import imgGadgetHub from "../../../assets/projects/gadgethub/img1.webp";
-import imgEasyNeat from "../../../assets/projects/easyneat/img1.webp";
-import imgElinapix from "../../../assets/projects/elinapix/img1.webp";
+import EasyneatImg from "../../../assets/projects/easyneat.au.com/australian-cleaning-company-website-easyneat.au.com-axivelt-solutions-web-development-in-sri-lanka-projects-frontend.jpg";
+import MotogearInventoryImg from "../../../assets/projects/motogearinventorysystem/inventory-management-system-development-axivelt-solutions-web-development-in-sri-lanka-project-dashboard.webp";
+import AroundLankaTravelsImg from "../../../assets/projects/aroundlankatravels.com/sri-lanka-traveling-agency-website-aroundlankatravels.com-axivelt-solutions-web-development-in-sri-lanka-project-hero.jpg";
 
 /* ================= Intersection Observer ================= */
 function useIntersectionObserver(options = {}) {
@@ -168,7 +168,7 @@ export default function RecentWorkSection() {
               website="https://easyneat.com.au"
               title="EasyNeat - Cleaning Services Platform"
               description="Complete booking platform for Victoria's leading eco-friendly cleaning service. Features include real-time booking system, payment integration, customer dashboard, and advanced admin panel for managing services, customers, and schedules. Built with React (Vite) and Node.js API for fast, secure performance."
-              image={imgEasyNeat}
+              image={EasyneatImg}
               tags={["Web Application", "React", "Node.js", "Australia"]}
             />
             <ProjectCard
@@ -176,7 +176,7 @@ export default function RecentWorkSection() {
               website=""
               title="MotoGear - Inventory Management System"
               description="Professional inventory management system for motorcycle helmet and parts retail store in Sri Lanka. Features comprehensive stock tracking, integrated POS system, sales recording, expense management, receipt printing, and beautiful analytics dashboards. Streamlines retail operations and eliminates manual processes."
-              image={imgGadgetHub}
+              image={MotogearInventoryImg}
               tags={["Inventory System", "POS System", "Retail Software"]}
             />
             <ProjectCard
@@ -184,7 +184,7 @@ export default function RecentWorkSection() {
               website="https://aroundlankatravels.com/"
               title="Around Lanka Travels - Tour Booking Platform"
               description="Complete travel agency website for Sri Lankan tourism business. Features advanced tour booking system, dynamic content management, beautiful destination galleries, inquiry management, automated email notifications, and comprehensive admin dashboard. Empowers travel agencies to showcase tours and convert visitors into confirmed bookings."
-              image={imgGadgetHub}
+              image={AroundLankaTravelsImg}
               tags={["Travel Agency", "Booking System", "Tourism"]}
             />
           </div>

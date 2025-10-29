@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "./article.css";
 
-import heroImg from "../../assets/projects/motogear/img1.webp";
-import dash1 from "../../assets/projects/motogear/img1.webp";
-import dash2 from "../../assets/projects/motogear/img1.webp";
-import fe1 from "../../assets/projects/motogear/img1.webp";
-import fe2 from "../../assets/projects/motogear/img1.webp";
+import heroImg from "../../assets/projects/motogearinventorysystem/inventory-management-system-development-axivelt-solutions-web-development-in-sri-lanka-project-dashboard.webp";
+import ImgReports1 from "../../assets/projects/motogearinventorysystem/inventory-management-system-development-axivelt-solutions-web-development-in-sri-lanka-project-dashboard(1).webp";
+import ImgReports2 from "../../assets/projects/motogearinventorysystem/inventory-management-system-development-axivelt-solutions-web-development-in-sri-lanka-project-dashboard.webp";
+import ProductSearch1 from "../../assets/projects/motogearinventorysystem/inventory-management-system-development-axivelt-solutions-web-development-in-sri-lanka-project-dashboard(2).webp";
+import ProductSearch2 from "../../assets/projects/motogearinventorysystem/inventory-management-system-development-axivelt-solutions-web-development-in-sri-lanka-project-dashboard(3).webp";
 
 /* Gallery dynamic import (Vite) */
 export default function MotoGearInventorySystemArticle() {
@@ -82,7 +82,10 @@ export default function MotoGearInventorySystemArticle() {
         />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://axivelt.com/projects/motogear" />
+        <link
+          rel="canonical"
+          href="https://axivelt.com/projects/motogear-inventory-management-system"
+        />
 
         {/* Geo Tags for Local SEO */}
         <meta name="geo.region" content="LK-1" />
@@ -104,7 +107,7 @@ export default function MotoGearInventorySystemArticle() {
         />
         <meta
           property="og:url"
-          content="https://axivelt.com/projects/motogear"
+          content="https://axivelt.com/projects/motogear-inventory-management-system"
         />
         <meta
           property="og:image"
@@ -147,13 +150,15 @@ export default function MotoGearInventorySystemArticle() {
         <article className="pa-hero">
           <div className="pa-hero-inner">
             <h1 className="pa-hero-title">
-              MotoGear Inventory Management System — Complete Retail Solution
-              for Motorcycle Parts & Helmet Stores
+              MotoGear Inventory Management System
             </h1>
+            <h2>
+              Complete Retail Solution for Motorcycle Parts & Helmet Stores
+            </h2>
             <p className="pa-hero-sub">
               Professional inventory management system featuring comprehensive
               stock tracking, integrated POS, sales recording, expense
-              management, and powerful analytics — empowering retail businesses
+              management, and powerful analytics - empowering retail businesses
               to streamline operations and boost profitability.
             </p>
           </div>
@@ -181,7 +186,7 @@ export default function MotoGearInventorySystemArticle() {
             <strong>web development projects in Sri Lanka</strong>, we built a
             complete business management solution that handles everything from
             real-time inventory tracking and point-of-sale transactions to
-            expense recording and visual analytics — all designed to eliminate
+            expense recording and visual analytics - all designed to eliminate
             manual processes and reduce operational errors for small retail
             businesses.
           </p>
@@ -644,11 +649,11 @@ export default function MotoGearInventorySystemArticle() {
 
           <div className="pa-screens">
             <img
-              src={dash1}
+              src={ProductSearch1}
               alt="MotoGear inventory dashboard - stock management system Sri Lanka"
             />
             <img
-              src={dash2}
+              src={ProductSearch2}
               alt="POS interface and sales recording - retail management software"
             />
           </div>
@@ -711,11 +716,11 @@ export default function MotoGearInventorySystemArticle() {
 
           <div className="pa-screens">
             <img
-              src={fe1}
+              src={ImgReports1}
               alt="Product management interface - inventory management system"
             />
             <img
-              src={fe2}
+              src={ImgReports2}
               alt="Sales analytics dashboard - custom retail software Sri Lanka"
             />
           </div>
@@ -1052,7 +1057,7 @@ export default function MotoGearInventorySystemArticle() {
           <p>
             Whether you need an <strong>inventory management system</strong>,
             POS solution, or complete{" "}
-            <strong>retail management software</strong> — Axivelt Solutions
+            <strong>retail management software</strong> - Axivelt Solutions
             builds custom business applications that eliminate manual work and
             boost profitability for small businesses in Sri Lanka.
           </p>
@@ -1116,7 +1121,9 @@ export default function MotoGearInventorySystemArticle() {
           </p>
 
           <div className="pa-related-grid">
-            <Link to="/projects/easyneat" className="pa-related-card">
+            <Link
+              to="/projects/easyNeat-cleaning-service-booking-platform"
+              className="pa-related-card">
               <h3>EasyNeat Cleaning Service Platform</h3>
               <p>
                 Complete booking system with advanced scheduling, customer
@@ -1125,7 +1132,9 @@ export default function MotoGearInventorySystemArticle() {
               <span className="pa-related-link">View Case Study →</span>
             </Link>
 
-            <Link to="/projects/aroundlanka" className="pa-related-card">
+            <Link
+              to="/projects/around-lanka-travels-tour-booking-platform"
+              className="pa-related-card">
               <h3>Around Lanka Tour Booking System</h3>
               <p>
                 Complete travel agency platform with itinerary builder, content
@@ -1155,7 +1164,7 @@ export default function MotoGearInventorySystemArticle() {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               name: "MotoGear Inventory Management System",
-              url: "https://axivelt.com/projects/motogear",
+              url: "https://axivelt.com/projects/motogear-inventory-management-system",
               description:
                 "Professional inventory management system for motorcycle parts and helmet retail stores in Sri Lanka. Features comprehensive stock tracking, integrated POS system, sales recording, expense management, receipt printing, and visual analytics. Custom software built by Axivelt Solutions for small retail businesses.",
               applicationCategory: "BusinessApplication",
@@ -1226,7 +1235,8 @@ export default function MotoGearInventorySystemArticle() {
               image: heroImg,
               mainEntityOfPage: {
                 "@type": "WebPage",
-                "@id": "https://axivelt.com/projects/motogear",
+                "@id":
+                  "https://axivelt.com/projects/motogear-inventory-management-system",
               },
             }),
           }}
@@ -1256,7 +1266,7 @@ export default function MotoGearInventorySystemArticle() {
                   "@type": "ListItem",
                   position: 3,
                   name: "MotoGear Inventory System",
-                  item: "https://axivelt.com/projects/motogear",
+                  item: "https://axivelt.com/projects/motogear-inventory-management-system",
                 },
               ],
             }),

@@ -6,13 +6,11 @@
 
 /* ========== GLOBAL ARTICLE STYLES ========== */
 .pa-article {
-  max-width: 1200px;
-  margin: 6rem auto 0 auto;
-  padding: 0 clamp(1rem, 4vw, 2rem);
+  margin: 4rem auto 0 auto;
   color: #f3f4f6;
   background: #000;
   box-sizing: border-box;
-  line-height: 1.7;
+  /* line-height: 1.7; */
 }
 
 .pa-article * {
@@ -37,28 +35,11 @@
 }
 
 /* ========== HERO SECTION ========== */
-.pa-hero {
-  margin-bottom: clamp(3rem, 6vw, 5rem);
-}
-
-.pa-hero-inner {
-  margin-bottom: 2rem;
-}
-
-.pa-hero-title {
-  margin: 0 0 1rem 0;
-  font-size: clamp(1.75rem, 5vw, 3rem);
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.2;
-}
 
 .pa-hero-sub {
   margin: 0 0 1.5rem 0;
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: #bdbdbd;
-  line-height: 1.6;
-  max-width: 900px;
 }
 
 .pa-hero-meta {
@@ -576,7 +557,7 @@
 }
 
 .pa-cta > p {
-  margin: 0 auto 2rem;
+  margin: 1em;
   max-width: 700px;
   font-size: clamp(1rem, 2vw, 1.125rem);
   color: #bdbdbd;
@@ -657,12 +638,12 @@
 .btn-primary {
   background: linear-gradient(135deg, #9d7aff, #ff3d9a);
   color: #ffffff;
-  box-shadow: 0 8px 20px rgba(157, 122, 255, 0.3);
+  box-shadow: 0 1px 10px rgba(157, 122, 255, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(157, 122, 255, 0.5);
+  box-shadow: 0 2px 12px rgba(157, 122, 255, 0.5);
 }
 
 .btn-secondary {

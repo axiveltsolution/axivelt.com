@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "./article.css";
 
-import heroImg from "../../assets/projects/easyneat/img1.webp";
-import dash1 from "../../assets/projects/easyneat/img1.webp";
-import dash2 from "../../assets/projects/easyneat/img1.webp";
-import fe1 from "../../assets/projects/easyneat/img1.webp";
-import fe2 from "../../assets/projects/easyneat/img1.webp";
+import heroImg from "../../assets/projects/easyneat.au.com/australian-cleaning-company-website-easyneat.au.com-axivelt-solutions-web-development-in-sri-lanka-project-hero.jpg";
+import dash1 from "../../assets/projects/easyneat.au.com/australian-cleaning-company-website-easyneat.au.com-axivelt-solutions-web-development-in-sri-lanka-projects-admin-dashboard(1).webp";
+import dash2 from "../../assets/projects/easyneat.au.com/australian-cleaning-company-website-easyneat.au.com-axivelt-solutions-web-development-in-sri-lanka-projects-admin-dashboard(2).webp";
+import fe1 from "../../assets/projects/easyneat.au.com/australian-cleaning-company-website-easyneat.au.com-axivelt-solutions-web-development-in-sri-lanka-projects-frontend-2.jpg";
+import fe2 from "../../assets/projects/easyneat.au.com/australian-cleaning-company-website-easyneat.au.com-axivelt-solutions-web-development-in-sri-lanka-projects-frontend.jpg";
 
 /* Gallery dynamic import (Vite) */
 export default function EasyNeatArticle() {
@@ -82,7 +82,10 @@ export default function EasyNeatArticle() {
         />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://axivelt.com/projects/easyneat" />
+        <link
+          rel="canonical"
+          href="https://axivelt.com/projects/easyNeat-cleaning-service-booking-platform"
+        />
 
         {/* Geo Tags for Local SEO */}
         <meta name="geo.region" content="LK-1" />
@@ -104,7 +107,7 @@ export default function EasyNeatArticle() {
         />
         <meta
           property="og:url"
-          content="https://axivelt.com/projects/easyneat"
+          content="https://axivelt.com/projects/easyNeat-cleaning-service-booking-platform"
         />
         <meta
           property="og:image"
@@ -146,14 +149,12 @@ export default function EasyNeatArticle() {
       <main className="pa-article section">
         <article className="pa-hero">
           <div className="pa-hero-inner">
-            <h1 className="pa-hero-title">
-              EasyNeat Cleaning Service Website — Professional Booking Platform
-              Development in Sri Lanka
-            </h1>
+            <h1 className="pa-hero-title">EasyNeat Cleaning Service Website</h1>
+            <h2>Professional Booking Platform Development in Sri Lanka</h2>
             <p className="pa-hero-sub">
               Complete web application for cleaning service businesses featuring
               advanced booking systems, customer management, and powerful admin
-              dashboard — developed by Axivelt Solutions.
+              dashboard - developed by Axivelt Solutions.
             </p>
           </div>
 
@@ -181,7 +182,7 @@ export default function EasyNeatArticle() {
             <strong>web development projects in Sri Lanka</strong>, we created a
             fully integrated platform that handles real-time booking
             availability, automated customer communications, staff scheduling,
-            and complete business analytics — all designed specifically for the
+            and complete business analytics - all designed specifically for the
             cleaning services industry.
           </p>
         </section>
@@ -686,7 +687,7 @@ export default function EasyNeatArticle() {
           <p>
             Whether you need a <strong>cleaning service web app</strong>,
             booking platform, business management system, or any{" "}
-            <strong>custom website development</strong> — Axivelt Solutions
+            <strong>custom website development</strong> - Axivelt Solutions
             delivers production-ready digital solutions tailored for small
             businesses in Sri Lanka.
           </p>
@@ -757,21 +758,25 @@ export default function EasyNeatArticle() {
           </p>
 
           <div className="pa-related-grid">
-            <Link to="/projects/motogear" className="pa-related-card">
-              <h3>MotoGear E-commerce Platform</h3>
+            <Link
+              to="/projects/motogear-inventory-management-system"
+              className="pa-related-card">
+              <h3>MotoGear Inventory Management System</h3>
               <p>
-                Full-featured online store with custom inventory management,
-                order processing, and customer portal for motorcycle parts
-                retailer
+                Professional inventory and POS system with stock tracking, sales
+                recording, expense management, and analytics for motorcycle
+                parts and helmet retail store
               </p>
               <span className="pa-related-link">View Case Study →</span>
             </Link>
 
-            <Link to="/projects/aroundlanka" className="pa-related-card">
+            <Link
+              to="/projects/around-lanka-travels-tour-booking-platform"
+              className="pa-related-card">
               <h3>Around Lanka Tour Booking System</h3>
               <p>
-                Complete travel agency platform with itinerary builder, payment
-                processing, and customer booking management
+                Complete travel agency platform with itinerary builder, email
+                SMTP and customer booking management
               </p>
               <span className="pa-related-link">View Case Study →</span>
             </Link>
@@ -796,7 +801,7 @@ export default function EasyNeatArticle() {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               name: "EasyNeat Cleaning Service Web Application",
-              url: "https://axivelt.com/projects/easyneat",
+              url: "https://axivelt.com/projects/easyNeat-cleaning-service-booking-platform",
               description:
                 "Professional cleaning service booking platform developed in Sri Lanka. Custom React web application with advanced booking system, inquiry management, admin dashboard, and customer relationship tools. Built by Axivelt Solutions for small business digital transformation.",
               applicationCategory: "BusinessApplication",
