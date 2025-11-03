@@ -18,7 +18,11 @@ import Easyneat from "./Pages/Projects/EasyneatArticle.jsx";
 import AroundLankaTravels from "./Pages/Projects/AroundLankaTravelsArticle.jsx";
 import MotoGearInventorySystem from "./Pages/Projects/MotoGearInventorySystemArticle.jsx";
 
+/* ================= Lenis ================= */
+import SmoothScrolling from "./Hooks/Lenis-Scrolling.jsx";
+
 export default function App() {
+  SmoothScrolling();
   return (
     <>
       {/* Optional: If HelmetProvider is already in index.jsx, you can skip wrapping here */}
