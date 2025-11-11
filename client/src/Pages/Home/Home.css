@@ -1777,10 +1777,6 @@ p,
   }
 
   /* Hero Section */
-  .hero {
-    height: 75vh;
-  }
-
   .hero-content {
     padding: 5vh 10px;
   }
