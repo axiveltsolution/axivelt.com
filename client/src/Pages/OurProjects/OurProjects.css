@@ -281,14 +281,12 @@
 
 /* ========== CTA SECTION ========== */
 .op-cta {
-  margin-top: clamp(3rem, 6vw, 5rem);
+  margin-top: clamp(4rem, 8vw, 8rem);
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
   padding: clamp(2.5rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 2.5rem);
-  background: linear-gradient(
-    135deg,
-    rgba(157, 122, 255, 0.08),
-    rgba(255, 61, 154, 0.08)
-  );
-  border: 1px solid rgba(157, 122, 255, 0.2);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: clamp(20px, 3vw, 32px);
   text-align: center;
 }
@@ -299,6 +297,7 @@
 
 .op-cta-text {
   margin: 0 auto 1rem;
+  color: rgba(255, 255, 255, 0.851);
 }
 
 .op-cta-actions {

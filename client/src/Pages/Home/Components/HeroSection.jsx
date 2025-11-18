@@ -73,16 +73,16 @@ export default function HeroSection() {
           <span className="title-line title-rotator">
             <RotatingText words={rotatingWords} />
           </span>
-          <span className="title-line">web experiences.</span>
+          <span className="title-line">Software Solutions.</span>
         </h1>
         <p className="sub-title">
-          Leading web development company in Sri Lanka specializing in custom
-          websites, web applications, and inventory management systems. Built
-          with React, Node.js, and modern technologies for businesses in Colombo
-          and across the island.
+          Leading software development company in Sri Lanka specializing in
+          custom software, websites, web applications, and inventory management
+          systems. Built with React, Node.js, and modern technologies for
+          businesses in Colombo and across the island.
         </p>
         <div className="actions">
-          <Link to="#get-a-quote" className="btn btn-primary">
+          <Link to="/getaquote" className="btn btn-primary">
             Get Your Free Quote
           </Link>
           <Link to="#projects" className="btn btn-secondary">

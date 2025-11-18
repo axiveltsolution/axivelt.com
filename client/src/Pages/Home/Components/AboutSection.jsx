@@ -47,9 +47,9 @@ export default function AboutSection() {
             <h2 className="h2 about-title">About Axivelt Solutions</h2>
 
             <p className="body-text about-lead">
-              Leading <strong>web development company in Sri Lanka</strong>{" "}
-              specializing in custom websites, web applications, and inventory
-              systems. We deliver
+              Leading <strong>software development company in Sri Lanka</strong>{" "}
+              specializing in custom software, websites, web applications, and
+              inventory systems. We deliver
               <strong> fast, secure digital solutions</strong> for businesses
               across Colombo, Kandy, Galle, and beyond - with{" "}
               <strong>transparent pricing and realistic timelines</strong>.
@@ -143,7 +143,7 @@ export default function AboutSection() {
                 <div className="mini-l">Projects delivered</div>
               </div>
               <div className="mini">
-                <div className="mini-n">99.8%</div>
+                <div className="mini-n">99%</div>
                 <div className="mini-l">Uptime guarantee</div>
               </div>
               <div className="mini">

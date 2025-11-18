@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet-async";
 import "./Home.css";
 
 /* ==== COMPONENTS === */
-import GetAQuote from "./Components/GetAQuoteSection.jsx";
 import Hero from "./Components/HeroSection.jsx";
 import Cta from "./Components/CTASection.jsx";
 import Services from "./Components/ServicesSection.jsx";
@@ -22,16 +21,16 @@ export default function Home() {
       <Helmet>
         {/* ========== PRIMARY META TAGS ========== */}
         <title>
-          Web Development Company Sri Lanka | Custom Websites & Web Apps |
-          Axivelt Solutions
+          Software Solutions Company Sri Lanka | Custom Software Development,
+          Enterprise Systems & Digital Solutions | Axivelt Solutions
         </title>
         <meta
           name="description"
-          content="Leading web development company in Sri Lanka specializing in custom websites, web applications, and inventory systems. Affordable pricing, fast delivery. Serving Colombo, Kandy, Galle & beyond. Get your free quote today!"
+          content="Leading software solutions company in Sri Lanka specializing in custom software development, enterprise applications, inventory systems, CRM solutions, and business automation. Affordable pricing, fast delivery. Serving Colombo, Kandy, Galle & beyond. Get your free quote today!"
         />
         <meta
           name="keywords"
-          content="web development company Sri Lanka, website development Sri Lanka, custom websites Sri Lanka, web systems development Sri Lanka, software development company Sri Lanka, affordable web development Sri Lanka, web developer Colombo, React developer Sri Lanka, Node.js developer, e-commerce website Sri Lanka, inventory management system, business website Sri Lanka"
+          content="software solutions company Sri Lanka, software development company Sri Lanka, custom software development Sri Lanka, enterprise software Sri Lanka, business software solutions, inventory management system Sri Lanka, CRM software Sri Lanka, business automation Sri Lanka, ERP system Sri Lanka, custom applications Sri Lanka, software company Colombo, React developer Sri Lanka, Node.js development, digital transformation Sri Lanka, software consulting Sri Lanka"
         />
         <meta name="author" content="Axivelt Solutions" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,11 +57,11 @@ export default function Home() {
         <meta property="og:site_name" content="Axivelt Solutions" />
         <meta
           property="og:title"
-          content="Web Development Company Sri Lanka | Custom Websites & Web Applications"
+          content="Software Solutions Company Sri Lanka | Custom Software Development & Enterprise Systems"
         />
         <meta
           property="og:description"
-          content="Leading web development company in Sri Lanka. We build custom websites, web apps, and inventory systems with React & Node.js. Affordable pricing, transparent quotes. Based in Colombo."
+          content="Leading software solutions company in Sri Lanka. We build custom software, enterprise applications, inventory systems, CRM solutions, and business automation tools. Affordable pricing, transparent quotes. Based in Colombo."
         />
         <meta property="og:url" content="https://axivelt.com/" />
         <meta
@@ -73,7 +72,7 @@ export default function Home() {
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="Axivelt Solutions - Web Development Company Sri Lanka"
+          content="Axivelt Solutions - Software Solutions Company Sri Lanka"
         />
 
         {/* ========== TWITTER CARD ========== */}
@@ -82,11 +81,11 @@ export default function Home() {
         <meta name="twitter:creator" content="@axivelt" />
         <meta
           name="twitter:title"
-          content="Web Development Company Sri Lanka | Axivelt Solutions"
+          content="Software Solutions Company Sri Lanka | Axivelt Solutions"
         />
         <meta
           name="twitter:description"
-          content="Custom websites, web apps & inventory systems. Leading web development company in Colombo, Sri Lanka. Get your free quote today!"
+          content="Custom software development, enterprise applications, inventory systems & business automation. Leading software solutions company in Colombo, Sri Lanka. Get your free quote today!"
         />
         <meta
           name="twitter:image"
@@ -112,7 +111,7 @@ export default function Home() {
               name: "Axivelt Solutions",
               alternateName: "Axivelt",
               description:
-                "Leading web development company in Sri Lanka specializing in custom websites, web applications, and inventory management systems.",
+                "Leading software solutions company in Sri Lanka specializing in custom software development, enterprise applications, inventory management systems, CRM solutions, and business automation.",
               url: "https://axivelt.com",
               telephone: "+94-76-698-0686",
               email: "axiveltofficial@gmail.com",
@@ -128,7 +127,7 @@ export default function Home() {
                 width: 1200,
                 height: 630,
               },
-              priceRange: "Rs. 75,000 - Rs. 800,000",
+              priceRange: "Rs. 75,000 - Rs. 1,500,000",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Colombo",
@@ -197,7 +196,7 @@ export default function Home() {
               "@type": "ProfessionalService",
               name: "Axivelt Solutions",
               description:
-                "Professional web development and software development services in Sri Lanka",
+                "Professional software solutions and custom software development services in Sri Lanka",
               url: "https://axivelt.com",
               telephone: "+94-76-698-0686",
               email: "axiveltofficial@gmail.com",
@@ -207,13 +206,21 @@ export default function Home() {
                 addressCountry: "LK",
               },
               serviceType: [
-                "Web Development",
-                "Custom Website Development",
-                "Web Application Development",
-                "E-commerce Development",
+                "Custom Software Development",
+                "Enterprise Software Solutions",
+                "Business Automation",
                 "Inventory Management Systems",
-                "Website Maintenance",
-                "SEO Optimization",
+                "CRM Software Development",
+                "ERP Solutions",
+                "Web Application Development",
+                "Mobile App Development",
+                "E-commerce Solutions",
+                "API Development & Integration",
+                "Database Design & Management",
+                "Software Consulting",
+                "Digital Transformation",
+                "Cloud Solutions",
+                "Software Maintenance & Support",
               ],
               areaServed: {
                 "@type": "Country",
@@ -230,16 +237,16 @@ export default function Home() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ItemList",
-              name: "Web Development Services",
+              name: "Software Solutions & Development Services",
               description:
-                "Our comprehensive web development services in Sri Lanka",
+                "Our comprehensive software solutions and custom development services in Sri Lanka",
               itemListElement: [
                 {
                   "@type": "Service",
                   position: 1,
-                  name: "Custom Website Development",
+                  name: "Custom Software Development",
                   description:
-                    "Responsive business websites, e-commerce platforms, and landing pages built with React",
+                    "Tailored software solutions built from scratch to meet your unique business requirements and workflows",
                   provider: {
                     "@type": "Organization",
                     name: "Axivelt Solutions",
@@ -249,9 +256,9 @@ export default function Home() {
                 {
                   "@type": "Service",
                   position: 2,
-                  name: "Web Application Development",
+                  name: "Enterprise Applications",
                   description:
-                    "Custom portals, booking systems, CRM dashboards, and SaaS platforms",
+                    "Scalable enterprise solutions including CRM systems, ERP software, and business management platforms",
                   provider: {
                     "@type": "Organization",
                     name: "Axivelt Solutions",
@@ -263,7 +270,7 @@ export default function Home() {
                   position: 3,
                   name: "Inventory Management Systems",
                   description:
-                    "Complete web systems for inventory, stock tracking, and order processing",
+                    "Complete inventory and warehouse management solutions with real-time tracking, reporting, and automation",
                   provider: {
                     "@type": "Organization",
                     name: "Axivelt Solutions",
@@ -273,9 +280,9 @@ export default function Home() {
                 {
                   "@type": "Service",
                   position: 4,
-                  name: "SEO & Performance Optimization",
+                  name: "Business Automation Solutions",
                   description:
-                    "Technical SEO, Core Web Vitals optimization, and Google Analytics setup",
+                    "Automate repetitive tasks, streamline workflows, and improve efficiency with custom automation tools",
                   provider: {
                     "@type": "Organization",
                     name: "Axivelt Solutions",
@@ -285,9 +292,33 @@ export default function Home() {
                 {
                   "@type": "Service",
                   position: 5,
-                  name: "Website Maintenance & Support",
+                  name: "Web & Mobile Applications",
                   description:
-                    "Automated backups, security updates, uptime monitoring, and bug fixes",
+                    "Modern web applications and mobile apps built with React, Node.js, and cutting-edge technologies",
+                  provider: {
+                    "@type": "Organization",
+                    name: "Axivelt Solutions",
+                  },
+                  areaServed: "Sri Lanka",
+                },
+                {
+                  "@type": "Service",
+                  position: 6,
+                  name: "API Development & Integration",
+                  description:
+                    "RESTful APIs, third-party integrations, and seamless system connectivity solutions",
+                  provider: {
+                    "@type": "Organization",
+                    name: "Axivelt Solutions",
+                  },
+                  areaServed: "Sri Lanka",
+                },
+                {
+                  "@type": "Service",
+                  position: 7,
+                  name: "Software Maintenance & Support",
+                  description:
+                    "Ongoing maintenance, updates, bug fixes, and 24/7 technical support for your software systems",
                   provider: {
                     "@type": "Organization",
                     name: "Axivelt Solutions",
@@ -328,7 +359,7 @@ export default function Home() {
               "@id": "https://axivelt.com/#website",
               url: "https://axivelt.com",
               name: "Axivelt Solutions",
-              description: "Web Development Company in Sri Lanka",
+              description: "Software Solutions Company in Sri Lanka",
               publisher: {
                 "@id": "https://axivelt.com/#organization",
               },
@@ -354,34 +385,42 @@ export default function Home() {
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "How much does a custom website cost in Sri Lanka?",
+                  name: "How much does custom software development cost in Sri Lanka?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Our website development Sri Lanka pricing starts from Rs. 75,000 for basic business websites. E-commerce sites range from Rs. 200,000-400,000, and custom web applications from Rs. 300,000-800,000 depending on features. We provide detailed, transparent quotes with no hidden costs after understanding your specific requirements.",
+                    text: "Our custom software development pricing starts from Rs. 150,000 for basic business applications. Inventory management systems range from Rs. 300,000-600,000, CRM and ERP solutions from Rs. 400,000-1,000,000, and complex enterprise applications from Rs. 800,000-1,500,000+ depending on features and complexity. We provide detailed, transparent quotes with no hidden costs after analyzing your specific requirements.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How long does it take to build a website?",
+                  name: "How long does it take to develop custom software?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most business websites are delivered within 2-4 weeks from project start. Landing pages can be completed in 5-7 days. Complex web systems development Sri Lanka projects like inventory management or booking platforms typically take 6-12 weeks with phased rollouts.",
+                    text: "Development timelines vary based on project complexity. Simple business applications take 4-8 weeks, inventory or CRM systems typically require 8-16 weeks, and complex enterprise solutions may take 16-24 weeks or more. We follow agile methodology with phased rollouts, allowing you to start using core features while we continue development.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Do you provide website maintenance and support?",
+                  name: "Do you provide software maintenance and support?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes! We offer comprehensive maintenance packages including automatic backups, security updates, performance monitoring, bug fixes, and content updates. Our affordable care plans start from Rs. 15,000/month with 24/7 uptime monitoring and fast response times.",
+                    text: "Yes! We offer comprehensive maintenance packages including bug fixes, security updates, performance optimization, feature enhancements, database management, and technical support. Our support plans start from Rs. 25,000/month with priority response times and regular system monitoring.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Will my website be mobile-friendly and SEO optimized?",
+                  name: "What technologies do you use for software development?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Absolutely. Every website we build is fully responsive (mobile, tablet, desktop) and follows SEO best practices from day one. We optimize page speed, implement proper meta tags, create XML sitemaps, add schema markup, and integrate Google Analytics and Search Console.",
+                    text: "We use modern, industry-standard technologies including React and Node.js for web applications, React Native for mobile apps, PostgreSQL and MongoDB for databases, and cloud platforms like AWS. We choose the best tech stack based on your specific needs, scalability requirements, and budget.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can you integrate the software with our existing systems?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Absolutely. We specialize in API development and third-party integrations. We can connect your new software with existing systems, accounting software, payment gateways, email services, and other business tools to create a seamless workflow across your organization.",
                   },
                 },
               ],
@@ -414,9 +453,6 @@ export default function Home() {
 
         {/* WHY CHOOSE US */}
         <WhyChooseUs />
-
-        {/* Get A Quote SECTION */}
-        <GetAQuote />
 
         {/* FAQ */}
         <FAQ />

@@ -49,10 +49,10 @@ export default function NavBar() {
         <nav className="nav-links" aria-label="Main Navigation">
           {NavItem("/", "Home")}
           {AnchorItem("#services", "Services")}
-          {AnchorItem("#projects", "Projects")}
           {AnchorItem("#about", "About")}
-          {AnchorItem("#get-a-quote", "Get a Quote")}
           {AnchorItem("#faq", "FAQ")}
+          {NavItem("/our-projects", "Our Projects")}
+          {NavItem("/getaquote", "Get a Quote")}
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -73,10 +73,10 @@ export default function NavBar() {
         <nav className="m-links" aria-label="Mobile Navigation">
           {NavItem("/", "Home")}
           {AnchorItem("#services", "Services")}
-          {AnchorItem("#projects", "Projects")}
           {AnchorItem("#about", "About")}
-          {AnchorItem("#get-a-quote", "Get a Quote")}
           {AnchorItem("#faq", "FAQ")}
+          {NavItem("/our-projects", "Our Projects")}
+          {NavItem("/getaquote", "Get a Quote")}
         </nav>
       </div>
     </header>

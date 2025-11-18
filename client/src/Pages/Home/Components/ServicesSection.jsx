@@ -64,7 +64,7 @@ function ServiceCard({ icon, title, description }) {
       </div>
       <div className="card-content">
         <h3 className="h3">{title}</h3>
-        <p className="muted">{description}</p>
+        <p className="">{description}</p>
       </div>
     </article>
   );
@@ -118,10 +118,10 @@ export default function ServicesSection() {
         transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)",
       }}>
       <div className="slab">
-        <h2 className="h1">Our Web Development Services</h2>
+        <h2 className="h1">Our Software & Web Development Services</h2>
         <p className="sub-title">
-          Comprehensive website development Sri Lanka businesses trust.
-          Transparent pricing, fixed timelines, and expert execution from
+          Comprehensive software and website development Sri Lanka businesses
+          trust. Transparent pricing, fixed timelines, and expert execution from
           discovery to launch.
         </p>
         <div className="grid grid-3 services-section-grid">

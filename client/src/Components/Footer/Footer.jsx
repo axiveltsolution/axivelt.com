@@ -55,10 +55,10 @@ export default function Footer() {
           <div>
             <h3>Axivelt Solutions</h3>
             <p className="muted">
-              Leading web development company in Sri Lanka specializing in
-              custom websites, web applications, and inventory management
-              systems. Based in Colombo, serving businesses across Sri Lanka and
-              internationally.
+              Leading software solutions company in Sri Lanka specializing in
+              custom software development, enterprise applications, inventory
+              management systems, and business automation. Based in Colombo,
+              serving businesses across Sri Lanka and internationally.
             </p>
 
             {/* Social icons row */}
@@ -104,7 +104,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/#get-a-quote" className="footlink">
+                <Link to="/getaquote" className="footlink">
                   Get a Quote
                 </Link>
               </li>
@@ -122,17 +122,12 @@ export default function Footer() {
             <ul className="list">
               <li>
                 <Link to="/#services" className="footlink">
-                  Custom Website Development
+                  Custom Software Development
                 </Link>
               </li>
               <li>
                 <Link to="/#services" className="footlink">
-                  Web Application Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/#services" className="footlink">
-                  E-commerce Solutions
+                  Enterprise Applications
                 </Link>
               </li>
               <li>
@@ -142,12 +137,17 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/#services" className="footlink">
-                  Website Maintenance
+                  CRM & ERP Solutions
                 </Link>
               </li>
               <li>
                 <Link to="/#services" className="footlink">
-                  SEO Optimization
+                  Business Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/#services" className="footlink">
+                  API Development & Integration
                 </Link>
               </li>
             </ul>
@@ -178,14 +178,14 @@ export default function Footer() {
               </li>
             </ul>
             <div>
-              <span className="badge">2-4 weeks delivery</span>
+              <span className="badge">Agile Development</span>
             </div>
           </div>
         </div>
 
         <div className="bottom">
           <small>
-            © {year} Axivelt Solutions. All rights reserved. Web Development
+            © {year} Axivelt Solutions. All rights reserved. Software Solutions
             Company Sri Lanka.
           </small>
           <small>

@@ -47,11 +47,8 @@ export default function StatusSection() {
           <div className="stats-grid">
             <StatCard number="10+" label="Successful projects delivered" />
             <StatCard number="100%" label="Happy clients across Sri Lanka" />
-            <StatCard number="99.8%" label="Uptime guarantee" />
-            <StatCard
-              number="2-4 weeks"
-              label="Average website delivery time"
-            />
+            <StatCard number="99%" label="Uptime guarantee" />
+            <StatCard number="24/7" label="Technical support available" />
           </div>
         </div>
       </section>
