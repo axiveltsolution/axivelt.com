@@ -157,9 +157,16 @@ p,
   object-fit: cover;
   z-index: 0;
   opacity: 0.7;
+<<<<<<< HEAD
   background-image: url("./../../../public/web-development-and-software-development-company-in-sri-lanka-axivelt.com-hero-section-img.webp");
   background-position: bottom;
+=======
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.166)),
+    url("./../../assets/Hero/software-development-company-in-sri-lanka-axivelt-solutions.webp");
+  background-position: center left;
+>>>>>>> main
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .hero-content {
@@ -297,6 +304,8 @@ p,
 /* ============================== CTA Section ======================== */
 .cta {
   background: radial-gradient(ellipse at bottom, #0a0a0f 0%, #000 100%);
+  padding-bottom: clamp(1rem, 10vw, 7rem);
+  padding-top: clamp(1rem, 10vw, 7rem);
 }
 
 .cta-box {
@@ -309,6 +318,10 @@ p,
   overflow: hidden;
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.02);
+  background-image: url("./../../assets/background/web-development-and-software-development-company-in-sri-lanka-axivelt.com-hero-section-img.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cta-box::before {
@@ -345,18 +358,11 @@ p,
 /* ===================================== Services Section ======================================= */
 
 .services-section {
-  background: radial-gradient(
-      ellipse at top,
-      rgba(10, 10, 15, 0.6) 0%,
-      rgba(0, 0, 0, 0) 80%
-    ),
-    radial-gradient(
-      ellipse at bottom,
-      rgba(10, 10, 15, 0.6) 0%,
-      rgba(0, 0, 0, 0) 80%
-    ),
-    #000;
-  background-blend-mode: overlay;
+  background: linear-gradient(rgba(0, 0, 0, 0.885), rgba(0, 0, 0, 0.523)),
+    url("./../../assets/background/software-development-company-in-sri-lanka.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ===================================== Cards ======================================= */
@@ -744,6 +750,14 @@ p,
 
 /* ===================================== WHY CHOOSE US SECTION ======================================= */
 
+.why-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url("./../../assets/background/software-development-company-in-sri-lanka-why-choose-us.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .why-slab {
   padding-left: clamp(10px, 4vw, 20px);
   padding-right: clamp(10px, 4vw, 20px);
@@ -781,265 +795,10 @@ p,
   flex: 1 1 auto;
 }
 
-/* ===================================== CONTACT US SECTION ======================================= */
-
-.get-quote-section {
-  width: 100%;
-  background-color: #07070b;
-  color: var(--clr-white);
-  text-align: start;
-  position: relative;
+.w-content {
+  color: rgba(255, 255, 255, 0.847);
 }
 
-.get-quote-form {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1rem, 2.5vw, 1.5rem);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  background: linear-gradient(
-      135deg,
-      rgba(16, 6, 51, 0.05) 0%,
-      rgba(24, 48, 98, 0.05) 50%,
-      rgba(98, 24, 83, 0.05) 100%
-    ),
-    radial-gradient(ellipse at top, #0a0a0f 0%, #000 100%);
-  margin: 1rem auto 0;
-}
-
-.quote-row2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(0.75rem, 2vw, 1.2rem);
-}
-
-.quote-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.quote-field label {
-  font-weight: 600;
-  color: var(--clr-gray-lighter);
-  font-size: clamp(0.9rem, 2vw, 1rem);
-}
-
-.quote-field .required {
-  color: var(--clr-accent-pink);
-}
-
-.quote-field input,
-.quote-field textarea,
-.quote-field select {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--clr-white);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: clamp(0.75rem, 2vw, 0.9rem) clamp(0.85rem, 2.5vw, 1rem);
-  font-size: clamp(0.9rem, 2vw, 0.95rem);
-  font-family: "Roboto", sans-serif;
-  outline: none;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.quote-field select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none' stroke='%23e7f6ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='2 4 6 8 10 4'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 12px;
-  cursor: pointer;
-}
-
-.quote-field select option {
-  background: var(--clr-black);
-  color: var(--clr-white);
-}
-
-.quote-field input:focus,
-.quote-field textarea:focus,
-.quote-field select:focus {
-  border-color: var(--clr-accent-purple);
-  box-shadow: 0 0 0 3px rgba(157, 122, 255, 0.25);
-}
-
-.quote-field input:-webkit-autofill,
-.quote-field input:-webkit-autofill:hover,
-.quote-field input:-webkit-autofill:focus,
-.quote-field input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.05) inset !important;
-  -webkit-text-fill-color: var(--clr-white) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-.quote-field textarea {
-  resize: vertical;
-  min-height: 100px;
-  max-height: 300px;
-}
-
-.field-instruction {
-  font-size: clamp(0.8rem, 1.8vw, 0.85rem);
-  color: var(--clr-gray-mid);
-}
-
-.quote-websites {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.quote-websites-row {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.quote-websites label {
-  font-weight: 600;
-  color: var(--clr-gray-lighter);
-  margin-bottom: 0.5rem;
-  display: block;
-  font-size: clamp(0.9rem, 2vw, 1rem);
-}
-
-.quote-websites input[type="url"] {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--clr-white);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: clamp(0.75rem, 2vw, 0.9rem) clamp(0.85rem, 2.5vw, 1rem);
-  font-size: clamp(0.9rem, 2vw, 0.95rem);
-  outline: none;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-  width: 100%;
-}
-
-.quote-websites input[type="url"]:focus {
-  border-color: var(--clr-accent-purple);
-  box-shadow: 0 0 0 3px rgba(157, 122, 255, 0.25);
-}
-
-.quote-websites input[type="url"]:-webkit-autofill,
-.quote-websites input[type="url"]:-webkit-autofill:hover,
-.quote-websites input[type="url"]:-webkit-autofill:focus,
-.quote-websites input[type="url"]:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.05) inset !important;
-  -webkit-text-fill-color: var(--clr-white) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-.remove-website-btn {
-  background: transparent;
-  border: none;
-  color: var(--clr-accent-pink);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  cursor: pointer;
-  transition: color 0.25s ease;
-}
-
-.btn-add-website {
-  background: transparent;
-  border: 1px solid var(--clr-accent-purple);
-  color: var(--clr-accent-purple);
-  padding: clamp(0.4rem, 1.5vw, 0.5rem) clamp(0.75rem, 2vw, 1rem);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-weight: 600;
-  width: fit-content;
-  transition: all 0.3s ease;
-  font-size: clamp(0.85rem, 2vw, 0.9rem);
-}
-
-.btn-add-website:hover {
-  background: rgba(157, 122, 255, 0.1);
-  color: var(--clr-white);
-}
-
-.send-row {
-  display: flex;
-  gap: clamp(0.75rem, 2vw, 1rem);
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-
-.send-row .btn {
-  font-weight: 600;
-  padding: clamp(0.65rem, 1.5vw, 0.75rem) clamp(1.25rem, 2.5vw, 1.5rem);
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.sent-banner {
-  background: rgba(157, 122, 255, 0.1);
-  border: 1px solid rgba(157, 122, 255, 0.25);
-  border-radius: 8px;
-  padding: clamp(0.75rem, 2vw, 1rem);
-  color: var(--clr-white);
-  font-weight: 500;
-  font-size: clamp(0.85rem, 1.8vw, 0.9rem);
-  margin-top: 0.5rem;
-}
-
-.error-text {
-  color: var(--clr-accent-pink);
-  font-size: clamp(0.8rem, 1.8vw, 0.85rem);
-  margin: 0.25rem 0 0;
-}
-
-.quote-help {
-  font-weight: 500;
-  font-size: clamp(0.85rem, 1.8vw, 0.9rem);
-  color: var(--clr-gray-mid);
-  margin: 1rem 0 0;
-}
-
-.website-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.website-tag {
-  display: flex;
-  align-items: center;
-  background: rgba(157, 122, 255, 0.15);
-  color: var(--clr-white);
-  padding: clamp(0.25rem, 1vw, 0.3rem) clamp(0.5rem, 1.5vw, 0.6rem);
-  border-radius: 0.5rem;
-  font-size: clamp(0.8rem, 1.8vw, 0.85rem);
-}
-
-.website-tag button {
-  background: transparent;
-  border: none;
-  color: var(--clr-accent-pink);
-  margin-left: 0.3rem;
-  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
-  cursor: pointer;
-  transition: color 0.25s ease;
-}
-
-.website-tag button:hover {
-  color: var(--clr-accent-purple);
-}
-
-.quote-help a {
-  color: var(--clr-accent-purple);
-  text-decoration: underline;
-  transition: color 0.25s ease;
-}
-
-.quote-help a:hover {
-  color: var(--clr-accent-pink);
-}
 /* === FAQ Section === */
 .faq {
   background: radial-gradient(ellipse at top, #0a0a0f 0%, #000 100%);
@@ -1576,11 +1335,6 @@ p,
     border-radius: 20px;
   }
 
-  .cta-actions {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   /* Services Section */
   .services-section-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1774,6 +1528,10 @@ p,
     padding: 6px 12px;
   }
 
+<<<<<<< HEAD
+=======
+  /* Hero Section */
+>>>>>>> main
   .hero-content {
     padding: 5vh 10px;
   }
@@ -1818,6 +1576,7 @@ p,
   }
 
   /* Services Section */
+
   .services-section-grid {
     grid-template-columns: 1fr;
   }

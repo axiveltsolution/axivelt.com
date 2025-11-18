@@ -10,53 +10,51 @@ import Footer from "./Components/Footer/Footer.jsx";
 
 /* ================= Pages ================= */
 import Home from "./Pages/Home/Home.jsx";
-import OurProjects from "./Pages/OurProjects/OurProjects.jsx";
+import OurProjectsWrapper from "./Pages/OurProjects/OurProjectsWrapper.jsx";
 import NotFound from "./Pages/NotFound/NotFound.jsx";
+import GetAQuote from "./Pages/GetAQuote/GetAQuote.jsx";
 
 /* ================= Project Detail Pages ================= */
 import Easyneat from "./Pages/Projects/EasyneatArticle.jsx";
 import AroundLankaTravels from "./Pages/Projects/AroundLankaTravelsArticle.jsx";
 import MotoGearInventorySystem from "./Pages/Projects/MotoGearInventorySystemArticle.jsx";
 
+/* ================= Lenis ================= */
+import SmoothScrolling from "./Hooks/Lenis-Scrolling.jsx";
+
 export default function App() {
+  SmoothScrolling();
+
   return (
     <>
-      {/* Optional: If HelmetProvider is already in index.jsx, you can skip wrapping here */}
-      <HelmetProvider>
-        {/* Navbar */}
-        <NavBar />
+      <NavBar />
 
-        {/* Routes */}
-        <Routes>
-          {/* Top-level pages */}
-          <Route path="/" element={<Home />} />
-          <Route path="/our-projects" element={<OurProjects />} />
-          <Route
-            path="/projects"
-            element={<Navigate to="/our-projects" replace />}
-          />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/our-projects" element={<OurProjectsWrapper />} />
+        <Route
+          path="/projects"
+          element={<Navigate to="/our-projects" replace />}
+        />
+        <Route path="/getaquote" element={<GetAQuote />} />
 
-          {/* Project detail pages */}
-          <Route
-            path="/projects/easyNeat-cleaning-service-booking-platform"
-            element={<Easyneat />}
-          />
-          <Route
-            path="/projects/around-lanka-travels-tour-booking-platform"
-            element={<AroundLankaTravels />}
-          />
-          <Route
-            path="/projects/motogear-inventory-management-system"
-            element={<MotoGearInventorySystem />}
-          />
+        <Route
+          path="/projects/easyNeat-cleaning-service-booking-platform"
+          element={<Easyneat />}
+        />
+        <Route
+          path="/projects/around-lanka-travels-tour-booking-platform"
+          element={<AroundLankaTravels />}
+        />
+        <Route
+          path="/projects/motogear-inventory-management-system"
+          element={<MotoGearInventorySystem />}
+        />
 
-          {/* 404 */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
 
-        {/* Footer */}
-        <Footer />
-      </HelmetProvider>
+      <Footer />
     </>
   );
 }

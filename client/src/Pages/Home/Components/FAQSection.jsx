@@ -6,28 +6,24 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      q: "How long does it take to build a website?",
-      a: "Most business websites are delivered within 2-4 weeks from project start. Landing pages can be completed in 5-7 days. Complex web systems development Sri Lanka projects like inventory management or booking platforms typically take 6-12 weeks with phased rollouts. You'll receive a realistic timeline in our proposal.",
+      q: "How long does it take to develop custom software?",
+      a: "Development timelines vary based on project complexity. Simple business applications take 4-8 weeks, inventory or CRM systems typically require 8-16 weeks, and complex enterprise solutions may take 16-24 weeks or more. We follow agile methodology with phased rollouts, allowing you to start using core features while we continue development of advanced functionality.",
     },
     {
-      q: "Do you provide website maintenance and support?",
-      a: "Yes! We offer comprehensive maintenance packages that include automatic backups, security updates, performance monitoring, bug fixes, and content updates. You’ll also get 24/7 uptime monitoring and fast response times via WhatsApp, email, and phone.",
+      q: "Do you provide software maintenance and support?",
+      a: "Yes! We offer comprehensive maintenance packages including bug fixes, security updates, performance optimization, feature enhancements, database management, and technical support. Our support plans start from Rs. 25,000/month with priority response times, regular system monitoring, and guaranteed uptime. We're available via WhatsApp, email, and phone for urgent issues.",
     },
     {
-      q: "Will my website be mobile-friendly and SEO optimized?",
-      a: "Absolutely. Every website we build is fully responsive (mobile, tablet, desktop) and follows SEO best practices from day one. We optimize page speed, implement proper meta tags, create XML sitemaps, add schema markup, and integrate Google Analytics and Search Console to help your site rank higher and attract more customers.",
+      q: "What technologies do you use for software development?",
+      a: "We use modern, industry-standard technologies including React and Node.js for web applications, React Native for mobile apps, PostgreSQL and MongoDB for databases, and cloud platforms like AWS for hosting. We choose the best tech stack based on your specific needs, scalability requirements, and budget - ensuring your software is fast, secure, and maintainable.",
     },
     {
-      q: "Can you help with hosting and domain registration?",
-      a: "Yes, we handle the complete technical setup. We can register your .lk or .com domain, set up reliable hosting (we recommend providers based on your budget and traffic), configure business email accounts, install SSL certificates for security, and ensure everything is properly connected before launch.",
+      q: "Can you integrate the software with our existing systems?",
+      a: "Absolutely! We specialize in API development and third-party integrations. We can connect your new software with existing systems, accounting software (QuickBooks, Zoho Books), payment gateways, email services, CRM platforms, and other business tools to create a seamless workflow across your organization. We handle all technical integration work.",
     },
     {
       q: "Do you work with clients outside Colombo?",
-      a: "Yes! While we're based in Colombo, we serve businesses throughout Sri Lanka - Kandy, Galle, Jaffna, and beyond. We're also experienced working with international clients in Australia, UK, and other countries. We operate remotely with clear communication via video calls, email, and project management tools.",
-    },
-    {
-      q: "Can you redesign my existing website?",
-      a: "Definitely! We can refresh your current website with a modern design, improved speed, and better SEO performance - all while keeping your existing content and branding. Whether you need a small visual upgrade or a full rebuild, we’ll make sure your site looks great and performs even better.",
+      a: "Yes! While we're based in Colombo, we serve businesses throughout Sri Lanka - Kandy, Galle, Jaffna, and beyond. We're also experienced working with international clients in Australia, UK, and other countries. We operate remotely with clear communication via video calls, screen sharing, project management tools, and regular demos to keep you updated on progress.",
     },
   ];
 
@@ -46,8 +42,9 @@ export default function FAQSection() {
           textAlign: "center",
           margin: "0 auto 2rem",
         }}>
-        Common questions about our website development services in Sri Lanka.
-        Don't see your question? Contact us directly, we're here to help!
+        Common questions about our software solutions and development services
+        in Sri Lanka. Don't see your question? Contact us directly, we're here
+        to help!
       </p>
       <div className="faq-list">
         {faqs.map((item, index) => (

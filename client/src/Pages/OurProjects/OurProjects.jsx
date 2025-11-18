@@ -1,8 +1,15 @@
 // src/pages/OurProjects.jsx
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "./OurProjects.css";
+
+import HeroSection from "../../Components/HeroSection/HeroSection.jsx";
+import HeroBg from "./../../assets/Hero/software-development-company-in-sri-lanka-axivelt-solutions-our-projects.webp";
+
+import EasyNeatIMG from "./../../assets/projects/easyneat.au.com/australian-cleaning-company-website-easyneat.au.com-axivelt-solutions-web-development-in-sri-lanka-projects-frontend.jpg";
+import MotogearIMG from "./../../assets/projects/motogearinventorysystem/inventory-management-system-development-axivelt-solutions-web-development-in-sri-lanka-project-dashboard.webp";
+import AroundLankaIMG from "./../../assets/projects/aroundlankatravels.com/sri-lanka-traveling-agency-website-aroundlankatravels.com-axivelt-solutions-web-development-in-sri-lanka-project-hero.jpg";
 
 /**
  * OurProjects Page - SEO Optimized
@@ -14,7 +21,7 @@ const projects = [
     title: "EasyNeat - Cleaning Service Booking Platform",
     description:
       "Professional booking platform and admin dashboard for cleaning service business in Victoria, Australia. Features advanced multi-step booking form with real-time availability, customer inquiry system, staff scheduling, automated notifications, and comprehensive admin dashboard. Built with React (Vite) and Node.js for exceptional performance and security.",
-    image: "/assets/projects/easyneat/img1.webp",
+    image: EasyNeatIMG,
     website: "https://easyneat.com.au",
     href: "/projects/easyNeat-cleaning-service-booking-platform",
     tags: ["Booking System", "React", "Admin Dashboard", "Australia"],
@@ -24,7 +31,7 @@ const projects = [
     title: "MotoGear - Inventory Management System",
     description:
       "Professional inventory management system for motorcycle helmet and parts retail store in Sri Lanka. Features comprehensive stock tracking, integrated POS system with receipt printing, sales recording, expense management, and beautiful analytics dashboards. Streamlines retail operations and eliminates manual processes with clean, intuitive interface.",
-    image: "/assets/projects/motogear/img1.webp",
+    image: MotogearIMG,
     website: "",
     href: "/projects/motogear-inventory-management-system",
     tags: ["Inventory System", "POS System", "Retail Software", "Sri Lanka"],
@@ -34,7 +41,7 @@ const projects = [
     title: "Around Lanka Travels - Tour Booking Platform",
     description:
       "Complete travel agency website for Sri Lankan tourism business. Features advanced tour booking system, dynamic content management dashboard, beautiful destination galleries, inquiry management, automated email notifications, and page editor for non-technical users. Empowers travel agencies to showcase tours and convert visitors into confirmed bookings.",
-    image: "/assets/projects/aroundlanka/img1.webp",
+    image: AroundLankaIMG,
     website: "https://aroundlankatravels.com/",
     href: "/projects/around-lanka-travels-tour-booking-platform",
     tags: ["Travel Agency", "Booking System", "Tourism", "Sri Lanka"],
@@ -112,9 +119,8 @@ function ProjectCard({ project }) {
         )}
         {!imgLoaded && !imgError && <div className="op-image-placeholder" />}
       </div>
-
       <div className="op-body">
-        <h3 className="op-title">{title}</h3>
+        <h4 className="op-title">{title}</h4>
 
         {tags && tags.length > 0 && (
           <div className="op-tags">
@@ -154,15 +160,16 @@ export default function OurProjects() {
       <Helmet>
         {/* Primary Meta Tags */}
         <title>
-          Our Projects | Web Development Portfolio Sri Lanka | Axivelt Solutions
+          Our Projects | Software Development Portfolio Sri Lanka | Axivelt
+          Solutions
         </title>
         <meta
           name="description"
-          content="Explore our portfolio of custom websites, web applications, and e-commerce platforms. Real projects delivered for businesses in Sri Lanka and internationally by Axivelt Solutions."
+          content="Explore our portfolio of custom software, websites, web applications, and e-commerce platforms. Real projects delivered for businesses in Sri Lanka and internationally by Axivelt Solutions."
         />
         <meta
           name="keywords"
-          content="web development portfolio Sri Lanka, custom website examples, web app portfolio, e-commerce projects Sri Lanka, Axivelt projects, website design portfolio Colombo"
+          content="software development portfolio Sri Lanka, web development portfolio Sri Lanka, custom software examples, custom website examples, web app portfolio, e-commerce projects Sri Lanka, Axivelt projects, website design portfolio Colombo"
         />
         <link rel="canonical" href="https://axivelt.com/our-projects" />
 
@@ -170,11 +177,11 @@ export default function OurProjects() {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Our Projects - Web Development Portfolio | Axivelt Solutions"
+          content="Our Projects - Software Development Portfolio | Axivelt Solutions"
         />
         <meta
           property="og:description"
-          content="See our portfolio of custom websites and web applications built for businesses in Sri Lanka and internationally."
+          content="See our portfolio of custom software, websites and web applications built for businesses in Sri Lanka and internationally."
         />
         <meta property="og:url" content="https://axivelt.com/our-projects" />
         <meta
@@ -186,11 +193,11 @@ export default function OurProjects() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Our Projects - Web Development Portfolio"
+          content="Our Projects - Software Development Portfolio"
         />
         <meta
           name="twitter:description"
-          content="Custom websites, web apps, and e-commerce platforms built by Axivelt Solutions."
+          content="Custom software, websites, web apps, and e-commerce platforms built by Axivelt Solutions."
         />
         <meta
           name="twitter:image"
@@ -204,9 +211,9 @@ export default function OurProjects() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "CollectionPage",
-              name: "Web Development Projects Portfolio",
+              name: "Software Development Projects Portfolio",
               description:
-                "Portfolio of custom websites and web applications by Axivelt Solutions",
+                "Portfolio of custom software, websites and web applications by Axivelt Solutions",
               url: "https://axivelt.com/our-projects",
               provider: {
                 "@type": "Organization",
@@ -242,7 +249,11 @@ export default function OurProjects() {
           }}
         />
       </Helmet>
-
+      <HeroSection
+        title="Showcasing Our Works"
+        subtitle="Here are the websites, systems, and applications we’ve developed with precision, creativity, and a focus on user experience."
+        backgroundImage={HeroBg}
+      />
       <section
         className="op-section section"
         aria-labelledby="op-projects-title">
@@ -250,14 +261,14 @@ export default function OurProjects() {
           <header className="op-header">
             <div>
               <div className="op-badge">Our Portfolio</div>
-              <h1 id="op-projects-title" className="op-heading">
-                Custom Websites & Web Applications We've Built
-              </h1>
+              <h2 id="op-projects-title" className="op-heading">
+                Custom Software, Websites & Web Applications We've Built
+              </h2>
               <p className="op-sub">
                 Real projects delivered for businesses across Sri Lanka and
                 internationally. From e-commerce platforms to booking systems -
-                See how our web development expertise transforms ideas into
-                successful digital products.
+                See how our software and web development expertise transforms
+                ideas into successful digital products.
               </p>
             </div>
           </header>
@@ -269,16 +280,20 @@ export default function OurProjects() {
           </div>
 
           {/* CTA Section */}
-          <div className="op-cta">
+          <div
+            className="op-cta"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(${HeroBg})`,
+            }}>
             <h2 className="op-cta-title">Ready to Start Your Project?</h2>
             <p className="op-cta-text">
               Let's build something amazing together. Get your free custom
-              website quote today.
+              software or website quote today.
             </p>
             <div className="op-cta-actions">
-              <a href="/#get-a-quote" className="op-btn-primary">
+              <Link to="/getaquote" className="op-btn-primary">
                 Get Free Quote
-              </a>
+              </Link>
             </div>
           </div>
         </div>

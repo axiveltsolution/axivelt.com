@@ -1,36 +1,37 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 /**
  * WhyChooseUs.jsx
  * - Six cards showcasing competitive advantages
- * - SEO-optimized content for Sri Lankan market
+ * - SEO-optimized content for Sri Lankan market (Software Solutions focus)
  * - Edit the `features` array to change content
  */
 
 const features = [
   {
-    title: "Local Expertise, Global Standards",
-    text: "Based in Colombo, we understand Sri Lankan businesses while delivering international quality web development. Competitive pricing without compromising on security, performance, or scalability.",
+    title: "End-to-End Software Solutions",
+    text: "From concept to deployment, we handle everything - custom software development, database design, API integrations, and system automation. One partner for your entire digital transformation journey.",
   },
   {
-    title: "Transparent & Affordable Pricing",
-    text: "You’ll always know exactly what you’re paying for. No hidden fees or unexpected costs - just clear, fair pricing that works for you.",
+    title: "Business-Focused Approach",
+    text: "We don't just write code - we solve business problems. Our software solutions streamline operations, reduce manual work, and drive measurable ROI for your organization.",
   },
   {
-    title: "Modern Technology Stack",
-    text: "Built with React, Node.js, and cloud infrastructure. Your custom website loads fast, ranks well on Google, and scales effortlessly as your business grows.",
+    title: "Transparent & Competitive Pricing",
+    text: "Fixed-price quotes with detailed breakdowns. No hidden fees or scope creep. Get enterprise-quality software at Sri Lankan prices - 40-60% lower than international alternatives.",
   },
   {
-    title: "SEO & Performance First",
-    text: "Every website we develop includes technical SEO optimization, Core Web Vitals enhancement, and Google Analytics integration to help you rank higher and convert more visitors.",
+    title: "Modern & Scalable Technology",
+    text: "Built with React, Node.js, and robust databases (PostgreSQL/MongoDB). Your software scales effortlessly as your business grows, handles high traffic, and integrates seamlessly with existing systems.",
   },
   {
-    title: "Complete Web Systems Development",
-    text: "From simple landing pages to complex inventory management systems - we handle everything including payment gateways, API integrations, and custom business automation.",
+    title: "Agile Development Process",
+    text: "Weekly demos, continuous feedback, and phased rollouts. You'll see progress every week and start using core features while we build advanced functionality - no waiting months for results.",
   },
   {
-    title: "Ongoing Support & Maintenance",
-    text: "24/7 monitoring, automatic backups, security updates, and fast response times. Our affordable maintenance plans keep your website secure and running smoothly year round.",
+    title: "24/7 Support & Maintenance",
+    text: "Round-the-clock monitoring, regular updates, bug fixes, and technical support. Our maintenance plans ensure your software stays secure, fast, and reliable with guaranteed uptime.",
   },
 ];
 
@@ -40,24 +41,30 @@ export default function WhyChooseUsSection() {
       <div className="slab why-slab">
         <div className="section-header why-header">
           <div>
-            <div className="badge">Why Choose Axivelt Solutions</div>
+            <div
+              className="badge"
+              style={{
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+              }}>
+              Why Choose Axivelt Solutions
+            </div>
             <h2 id="why-title" className="section-title why-title">
-              Why Choose Our Web Development Company?
+              Why Choose Our Software Solutions Company?
             </h2>
             <p className="sub-title">
-              Leading software development company in Sri Lanka delivering
-              custom websites, web applications, and inventory systems. Here's
-              what sets us apart from other web development companies in Colombo
-              and across the island.
+              Leading software solutions company in Sri Lanka delivering custom
+              software, enterprise applications, inventory systems, and business
+              automation. Here's what sets us apart from other software
+              development companies in Colombo and across the island.
             </p>
           </div>
           <div className="why-cta">
-            <a className="btn btn-outline" href="#get-a-quote">
+            <Link to={"/getaquote"} className="btn btn-outline">
               Get free quote
-            </a>
-            <a className="btn btn-primary" href="#projects">
+            </Link>
+            <Link to={"/our-projects"} className="btn btn-primary">
               View portfolio
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -66,7 +73,7 @@ export default function WhyChooseUsSection() {
             <article key={i} className="card why-card">
               <div className="card-content why-card-content">
                 <h3 className="h3 card-title why-card-title">{f.title}</h3>
-                <p className="p-muted">{f.text}</p>
+                <p className="w-content">{f.text}</p>
               </div>
             </article>
           ))}

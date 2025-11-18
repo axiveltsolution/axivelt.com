@@ -1,11 +1,12 @@
 /* only bare essentials */
 ::selection {
-  background: #b894ff;
+  background: #ff3d9be0;
   color: #ffffff;
 }
 
 html {
-  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scroll-behavior: auto !important;
 }
 
 * {
