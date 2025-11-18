@@ -157,14 +157,9 @@ p,
   object-fit: cover;
   z-index: 0;
   opacity: 0.7;
-<<<<<<< HEAD
-  background-image: url("./../../../public/web-development-and-software-development-company-in-sri-lanka-axivelt.com-hero-section-img.webp");
-  background-position: bottom;
-=======
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.166)),
     url("./../../assets/Hero/software-development-company-in-sri-lanka-axivelt-solutions.webp");
   background-position: center left;
->>>>>>> main
   background-size: cover;
   background-attachment: fixed;
 }
@@ -1528,10 +1523,7 @@ p,
     padding: 6px 12px;
   }
 
-<<<<<<< HEAD
-=======
   /* Hero Section */
->>>>>>> main
   .hero-content {
     padding: 5vh 10px;
   }
