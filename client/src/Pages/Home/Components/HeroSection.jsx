@@ -69,8 +69,8 @@ export default function HeroSection() {
       <div className="hero-content">
         <div className="badge">🇱🇰 Sri Lanka • Serving Colombo & Beyond</div>
         <h1 className="title">
-          <span className="title-line">We build</span>
-          <span className="title-line title-rotator">
+          <span className="title-line mobile-title-hero">We build</span>
+          <span className="title-line title-rotator mobile-title-rotator">
             <RotatingText words={rotatingWords} />
           </span>
           <span className="title-line">Software Solutions.</span>

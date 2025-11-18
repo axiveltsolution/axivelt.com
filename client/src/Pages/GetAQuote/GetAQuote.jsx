@@ -1,6 +1,5 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import "./../../Pages/Home/Home.css";
 import "./GetAQuote.css";
 import HeroSection from "../../Components/HeroSection/HeroSection.jsx";
 import HeroBg from "./../../assets/Hero/software-development-company-in-sri-lanka-contact-us.webp";
@@ -159,25 +158,16 @@ export default function GetAQuoteSection() {
         backgroundImage={HeroBg}
       />
       <section className="section get-quote-section">
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div
-            className="badge"
-            style={{
-              display: "inline-block",
-              marginBottom: "1rem",
-            }}>
-            Start Your Project
-          </div>
+        <div className="gaq-heading-wrapper">
+          <div className="badge">Start Your Project</div>
+          <h2 className="h1 gaq-main-heading">Get Your Free Custom Quote</h2>
+          <p className="sub-title gaq-sub-heading">
+            Ready to build your custom software solution? Fill in the form below
+            with your project details. As a leading software solutions company
+            in Sri Lanka, we provide transparent proposals and competitive
+            quotes within 24 hours. No hidden costs, no pressure.
+          </p>
         </div>
-        <h2 className="h1" style={{ textAlign: "center" }}>
-          Get Your Free Custom Quote
-        </h2>
-        <p className="sub-title" style={{ textAlign: "center" }}>
-          Ready to build your custom software solution? Fill in the form below
-          with your project details. As a leading software solutions company in
-          Sri Lanka, we provide transparent proposals and competitive quotes
-          within 24 hours. No hidden costs, no pressure.
-        </p>
 
         <form
           name="get-a-quote"

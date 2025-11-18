@@ -61,7 +61,7 @@ export default function FAQSection() {
             <div
               className="faq-answer"
               style={{
-                maxHeight: activeIndex === index ? "200px" : "0",
+                maxHeight: activeIndex === index ? "400px" : "0",
                 opacity: activeIndex === index ? 1 : 0,
               }}>
               <p>{item.a}</p>

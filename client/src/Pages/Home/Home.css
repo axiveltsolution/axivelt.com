@@ -1455,11 +1455,6 @@ p,
     border-radius: 20px;
   }
 
-  .quote-row2 {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
   .quote-field input,
   .quote-field select,
   .quote-field textarea {
@@ -1525,15 +1520,20 @@ p,
 
   /* Hero Section */
   .hero-content {
-    padding: 5vh 10px;
+    padding: 4vh 10px 5vh 10px;
   }
 
   .title {
-    font-size: clamp(2rem, 10vw, 2.8rem);
-    gap: 3px;
+    font-size: clamp(2rem, 11vw, 3rem);
+    gap: 5px;
+  }
+
+  .mobile-title-hero {
+    font-size: clamp(3rem, 10vw, 4rem);
   }
 
   .title-rotator {
+    font-size: clamp(3rem, 10vw, 4rem);
     margin: clamp(-6px, -1vw, -8px) 0;
   }
 
@@ -1574,7 +1574,7 @@ p,
   }
 
   .card {
-    padding: 1rem;
+    padding: 0.8rem 0.5rem;
   }
 
   .card-icon {
@@ -1614,6 +1614,11 @@ p,
   .ts-star {
     width: 12px;
     height: 12px;
+  }
+
+  .ts-slab {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /* Recent Work Section */
@@ -1659,7 +1664,7 @@ p,
 
   /* About Section */
   .about-grid {
-    padding: 0 10px;
+    padding: 0;
   }
 
   .about-copy {
@@ -1713,6 +1718,11 @@ p,
 
   .why-header {
     gap: 12px;
+  }
+
+  .why-slab {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /* Get a Quote Section */
@@ -1769,6 +1779,13 @@ p,
 
   .quote-help {
     font-size: 0.85rem;
+  }
+
+  .gaq-heading-wrapper .badge,
+  .op-heading-wrapper .badge {
+    /* To keep the badge itself from stretching full width */
+    display: inline-block;
+    margin-top: 3rem;
   }
 
   /* FAQ Section */

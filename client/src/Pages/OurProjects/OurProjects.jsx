@@ -259,8 +259,8 @@ export default function OurProjects() {
         aria-labelledby="op-projects-title">
         <div className="op-slab">
           <header className="op-header">
-            <div>
-              <div className="op-badge">Our Portfolio</div>
+            <div className="op-heading" style={{ textAlign: "center" }}>
+              <div className="badge">Our Portfolio</div>
               <h2 id="op-projects-title" className="op-heading">
                 Custom Software, Websites & Web Applications We've Built
               </h2>

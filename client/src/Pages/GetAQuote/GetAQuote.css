@@ -8,6 +8,10 @@
   position: relative;
 }
 
+.gaq-heading-wrapper {
+  text-align: center;
+}
+
 .get-quote-form {
   display: flex;
   flex-direction: column;
@@ -254,4 +258,13 @@
 
 .quote-help a:hover {
   color: var(--clr-accent-pink);
+}
+
+/* === Responsive Adjustments for Get A Quote form === */
+
+/* Tablet & Mobile (≤992px) */
+@media (max-width: 992px) {
+  .quote-row2 {
+    grid-template-columns: 1fr;
+  }
 }
