@@ -1,83 +1,90 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./NavBar.css";
 
 export default function NavBar() {
-  const { pathname, hash } = useLocation();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Check if a hash link (like #about) is active
-  const isHashActive = (h) => pathname === "/" && hash === h;
-
-  // Close mobile menu when navigating
+  // Add glass effect when the user scrolls down
   useEffect(() => {
-    setOpen(false);
-  }, [pathname, hash]);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  // Prevent body scroll when menu is open
+  // Helper function to close the menu when a link is clicked
+  const closeMenu = () => {
+    setOpen(false);
+    document.body.style.overflow = "";
+  };
+
+  // Lock scrolling when the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
-  const NavItem = (to, label) => (
-    <NavLink
-      to={to}
-      className={({ isActive }) => (isActive ? "link active" : "link")}
-      onClick={() => setOpen(false)}>
-      {label}
-    </NavLink>
-  );
-
-  const AnchorItem = (h, label) => (
-    <Link
-      to={`/${h}`}
-      className={isHashActive(h) ? "link active" : "link"}
-      onClick={() => setOpen(false)}>
-      {label}
-    </Link>
-  );
-
   return (
-    <header className={`nav-header${open ? " open" : ""}`}>
-      <div className="nav-container">
-        {/* Brand */}
-        <Link to="/" className="brand" onClick={() => setOpen(false)}>
-          <p className="logo-text-nav">Axivelt Solutions</p>
+    <header
+      className={`navbar ${scrolled ? "navbar--scrolled" : ""} ${open ? "navbar--open" : ""}`}>
+      <div className="container navbar__container">
+        {/* Brand Logo with Blood Red Accent */}
+        <Link to="/" className="navbar__brand" onClick={closeMenu}>
+          AXIVELT SOLUTIONS<span className="text-red">.</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="nav-links" aria-label="Main Navigation">
-          {NavItem("/", "Home")}
-          {AnchorItem("#services", "Services")}
-          {AnchorItem("#about", "About")}
-          {AnchorItem("#faq", "FAQ")}
-          {NavItem("/our-projects", "Our Projects")}
-          {NavItem("/getaquote", "Get a Quote")}
+        {/* Desktop Links (No active classes, clean simple Links) */}
+        <nav className="navbar__desktop">
+          <Link to="/" className="navbar__link" onClick={closeMenu}>
+            Home
+          </Link>
+          <Link to="/#services" className="navbar__link" onClick={closeMenu}>
+            Services
+          </Link>
+          <Link to="/#about" className="navbar__link" onClick={closeMenu}>
+            About
+          </Link>
+
+          {/* UPDATED: Projects now points to the homepage section */}
+          <Link to="/#projects" className="navbar__link" onClick={closeMenu}>
+            Projects
+          </Link>
+
+          <Link to="/#contact" className="btn btn-primary" onClick={closeMenu}>
+            Get a Quote
+          </Link>
         </nav>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Hamburger Button */}
         <button
-          className="nav-toggle"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          onClick={() => setOpen((v) => !v)}>
-          <span />
-          <span />
-          <span />
+          className="navbar__toggle"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle Menu">
+          <span className="bar"></span>
+          <span className="bar"></span>
         </button>
       </div>
 
-      {/* Mobile Drawer */}
-      <div id="mobile-menu" className="drawer" role="dialog" aria-modal="true">
-        <nav className="m-links" aria-label="Mobile Navigation">
-          {NavItem("/", "Home")}
-          {AnchorItem("#services", "Services")}
-          {AnchorItem("#about", "About")}
-          {AnchorItem("#faq", "FAQ")}
-          {NavItem("/our-projects", "Our Projects")}
-          {NavItem("/getaquote", "Get a Quote")}
-        </nav>
+      {/* Mobile Menu Drawer */}
+      <div className="navbar__mobile">
+        <Link to="/" className="navbar__link" onClick={closeMenu}>
+          Home
+        </Link>
+        <Link to="/#services" className="navbar__link" onClick={closeMenu}>
+          Services
+        </Link>
+        <Link to="/#about" className="navbar__link" onClick={closeMenu}>
+          About
+        </Link>
+
+        {/* UPDATED: Mobile link also points to #projects */}
+        <Link to="/#projects" className="navbar__link" onClick={closeMenu}>
+          Projects
+        </Link>
+
+        <Link to="/#contact" className="btn btn-primary" onClick={closeMenu}>
+          Get a Quote
+        </Link>
       </div>
     </header>
   );

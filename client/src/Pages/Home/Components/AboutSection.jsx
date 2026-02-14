@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 /* ================= Intersection Observer ================= */
 function useIntersectionObserver(options = {}) {
@@ -14,11 +13,11 @@ function useIntersectionObserver(options = {}) {
           el.style.transform = "translateY(0)";
         }
       },
-      { threshold: 0.1, ...options }
+      { threshold: 0.1, ...options },
     );
     obs.observe(el);
     return () => obs.unobserve(el);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
   return ref;
 }
 
@@ -28,129 +27,95 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="section about">
-      <div className="slab">
-        <div className="about-grid">
-          <div
-            ref={leftRef}
-            className="about-copy"
-            style={{
-              opacity: 0,
-              transform: "translateY(30px)",
-              transition: "all .6s cubic-bezier(.4,0,.2,1)",
-            }}>
-            <div className="about-badges">
-              <span className="chip">Remote-first</span>
-              <span className="chip">Colombo, Sri Lanka</span>
-              <span className="chip">Senior-led</span>
+      <div className="container">
+        <div className="about__grid">
+          {/* LEFT COLUMN: The Story */}
+          <div ref={leftRef} className="about__copy">
+            <div className="about__badges">
+              <span className="badge-label">Remote-first</span>
+              <span className="badge-label">Colombo, SL</span>
+              <span className="badge-label">Senior-led</span>
             </div>
 
-            <h2 className="h2 about-title">About Axivelt Solutions</h2>
+            <h2 className="about__title">
+              Engineering Digital <br />
+              Excellence.
+            </h2>
 
-            <p className="body-text about-lead">
-              Leading <strong>software development company in Sri Lanka</strong>{" "}
-              specializing in custom software, websites, web applications, and
-              inventory systems. We deliver
-              <strong> fast, secure digital solutions</strong> for businesses
-              across Colombo, Kandy, Galle, and beyond - with{" "}
-              <strong>transparent pricing and realistic timelines</strong>.
+            <p className="about__lead">
+              Premier software engineering agency specializing in custom systems
+              and high-performance web applications. We deliver secure digital
+              solutions with absolute transparency.
             </p>
 
-            <ul className="about-points">
+            <ul className="about__points">
               <li>
-                <strong>Speed</strong> — Most corporate sites delivered in 2-4
-                weeks; complex web systems in 6-12 weeks with phased rollouts.
+                <strong>Speed</strong> — Sites in 2-4 weeks; systems in 6-12
+                weeks.
               </li>
               <li>
-                <strong>Transparency</strong> — Fixed quotes, detailed
-                proposals, clear milestones, and a dedicated project manager for
-                every build.
+                <strong>Transparency</strong> — Fixed quotes and clear
+                milestones.
               </li>
               <li>
-                <strong>Ongoing Support</strong> — 24/7 monitoring, automatic
-                backups, security updates, and affordable maintenance plans.
+                <strong>Support</strong> — 24/7 monitoring and maintenance.
               </li>
             </ul>
 
-            <div className="about-stack">
-              <span className="stack-label">Our technology stack</span>
-              <ul className="stack-chips">
-                <li className="chip">React</li>
-                <li className="chip">Node.js</li>
-                <li className="chip">Express</li>
-                <li className="chip">Vite</li>
-                <li className="chip">MySQL / MongoDB</li>
-                <li className="chip">Cloud Hosting</li>
-              </ul>
+            <div className="about__stack">
+              <span className="badge-label text-red">Core Technology</span>
+              <div className="about__stack-flex">
+                <span>React</span>
+                <span className="dot">•</span> <span>Node.js</span>
+                <span className="dot">•</span> <span>Vite</span>
+                <span className="dot">•</span> <span>MongoDB</span>
+                <span className="dot">•</span> <span>AWS</span>
+              </div>
             </div>
           </div>
 
-          <div
-            ref={rightRef}
-            className="about-panel"
-            style={{
-              opacity: 0,
-              transform: "translateY(30px)",
-              transition: "all .6s cubic-bezier(.4,0,.2,1) .06s",
-            }}>
-            <div className="about-art" aria-hidden="true" />
-            <h3 className="h3 about-panel-title">Our Development Process</h3>
-            <ol className="about-steps">
+          {/* RIGHT COLUMN: The Process (Using global glass-card!) */}
+          <div ref={rightRef} className="glass-card about__panel">
+            <h3 className="badge-label text-red">Our Development Process</h3>
+
+            <ol className="about__process-list">
               <li>
-                <span className="step-n">1</span>
+                <span className="process__num text-red">01</span>
                 <div>
-                  <div className="step-t">Discovery & Planning</div>
-                  <div className="muted">
-                    Understand your goals, audience, features, and technical
-                    requirements.
+                  <div className="process__title">Discovery</div>
+                  <div className="process__desc">
+                    Technical requirements and goal alignment.
                   </div>
                 </div>
               </li>
               <li>
-                <span className="step-n">2</span>
+                <span className="process__num text-red">02</span>
                 <div>
-                  <div className="step-t">Proposal & Quote</div>
-                  <div className="muted">
-                    Detailed scope, fixed pricing, timeline, and deliverables in
-                    writing.
+                  <div className="process__title">Proposal</div>
+                  <div className="process__desc">
+                    Fixed pricing and detailed deliverables.
                   </div>
                 </div>
               </li>
               <li>
-                <span className="step-n">3</span>
+                <span className="process__num text-red">03</span>
                 <div>
-                  <div className="step-t">Design & Development</div>
-                  <div className="muted">
-                    Staging environment access, weekly updates, and
-                    collaborative feedback.
+                  <div className="process__title">Development</div>
+                  <div className="process__desc">
+                    Weekly updates and collaborative feedback.
                   </div>
                 </div>
               </li>
               <li>
-                <span className="step-n">4</span>
+                <span className="process__num text-red">04</span>
                 <div>
-                  <div className="step-t">Launch & Maintenance</div>
-                  <div className="muted">
-                    Live deployment, training, analytics setup, and ongoing
-                    support.
+                  <div className="process__title">Launch</div>
+                  <div className="process__desc">
+                    Live deployment and ongoing support.
                   </div>
                 </div>
               </li>
             </ol>
-
-            <div className="about-mini-stats">
-              <div className="mini">
-                <div className="mini-n">10+</div>
-                <div className="mini-l">Projects delivered</div>
-              </div>
-              <div className="mini">
-                <div className="mini-n">99%</div>
-                <div className="mini-l">Uptime guarantee</div>
-              </div>
-              <div className="mini">
-                <div className="mini-n">GMT+5:30</div>
-                <div className="mini-l">Sri Lanka timezone</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

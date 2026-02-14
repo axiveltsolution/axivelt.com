@@ -1,137 +1,66 @@
 import React from "react";
-import { useRef, useEffect, useState } from "react";
-import "./../Home.css";
+import { Monitor, Cpu, Package, BarChart3, Settings, Zap } from "lucide-react";
 
-/* ======= SERVICES GIFs ======= */
-import gifWebsites from "../../../assets/gifs/websites.gif";
-import gifWebapps from "../../../assets/gifs/webapps.gif";
-import gifInventory from "../../../assets/gifs/inventory.gif";
-import gifSeo from "../../../assets/gifs/seo.gif";
-import gifMaintenance from "../../../assets/gifs/maintenance.gif";
-import gifMigrations from "../../../assets/gifs/migrations.gif";
-
-/* ================= Intersection Observer ================= */
-function useIntersectionObserver(options = {}) {
-  const ref = useRef(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.style.opacity = "1";
-          el.style.transform = "translateY(0)";
-        }
-      },
-      { threshold: 0.1, ...options }
-    );
-    obs.observe(el);
-    return () => obs.unobserve(el);
-  }, []);
-  return ref;
-}
-
-function ServiceCard({ icon, title, description }) {
-  const [iconLoaded, setIconLoaded] = useState(false);
-  const [iconError, setIconError] = useState(false);
-  const cardRef = useIntersectionObserver();
-
-  return (
-    <article
-      ref={cardRef}
-      className="card services-section-card"
-      style={{
-        opacity: 0,
-        transform: "translateY(30px)",
-        transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)",
-      }}>
-      <div className="card-icon services-section-gif">
-        {!iconError ? (
-          <img
-            src={icon}
-            alt={`${title} - web development services Sri Lanka`}
-            loading="lazy"
-            decoding="async"
-            onLoad={() => setIconLoaded(true)}
-            onError={() => setIconError(true)}
-            style={{ opacity: iconLoaded ? 1 : 0, transition: "opacity 0.3s" }}
-          />
-        ) : (
-          <div className="icon-fallback" aria-hidden="true">
-            {title.charAt(0)}
-          </div>
-        )}
-      </div>
-      <div className="card-content">
-        <h3 className="h3">{title}</h3>
-        <p className="">{description}</p>
-      </div>
-    </article>
-  );
-}
-
-/* ================= SERVICES ================= */
-const items = [
+const services = [
   {
-    gif: gifWebsites,
-    title: "Custom Website Development",
-    desc: "Responsive business websites, e-commerce platforms, and landing pages built with React. Perfect for startups and SMEs in Colombo looking to establish their online presence.",
+    icon: Monitor,
+    title: "Custom Websites",
+    desc: "High-performance, responsive business websites built with React and modern tech.",
   },
   {
-    gif: gifWebapps,
-    title: "Web Application Development",
-    desc: "Custom portals, booking systems, CRM dashboards, and SaaS platforms. Scalable web apps built with modern JavaScript frameworks for complex business needs.",
+    icon: Cpu,
+    title: "Web Applications",
+    desc: "Scalable portals and SaaS platforms designed for complex business logic.",
   },
   {
-    gif: gifInventory,
-    title: "Inventory & ERP Systems",
-    desc: "Complete web systems development for inventory management, stock tracking, order processing, supplier management, and business reporting with seamless integrations.",
+    icon: Package,
+    title: "Inventory & ERP",
+    desc: "Complete business systems for stock tracking, order processing, and reporting.",
   },
   {
-    gif: gifSeo,
-    title: "SEO & Performance Optimization",
-    desc: "Technical SEO, Core Web Vitals optimization, Google Analytics setup, and Search Console integration to help your website rank higher and load faster.",
+    icon: BarChart3,
+    title: "SEO & Performance",
+    desc: "Technical optimization to ensure your brand ranks higher and loads faster.",
   },
   {
-    gif: gifMaintenance,
-    title: "Website Maintenance & Support",
-    desc: "Affordable care plans including automated backups, security updates, uptime monitoring, bug fixes, and continuous improvements with 24/7 support availability.",
+    icon: Settings,
+    title: "Maintenance",
+    desc: "24/7 support, security updates, and automated backups for peace of mind.",
   },
   {
-    gif: gifMigrations,
-    title: "Website Migrations & Fixes",
-    desc: "Migrate to better hosting, rescue broken websites, refactor legacy code, and modernize outdated frontends with zero downtime deployment strategies.",
+    icon: Zap,
+    title: "Migrations",
+    desc: "Zero-downtime deployment for moving, modernizing, or fixing legacy code.",
   },
 ];
 
 export default function ServicesSection() {
-  const sectionRef = useIntersectionObserver();
-
   return (
-    <section
-      id="services"
-      className="section services-section"
-      ref={sectionRef}
-      style={{
-        opacity: 0,
-        transform: "translateY(30px)",
-        transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)",
-      }}>
-      <div className="slab">
-        <h2 className="h1">Our Software & Web Development Services</h2>
-        <p className="sub-title">
-          Comprehensive software and website development Sri Lanka businesses
-          trust. Transparent pricing, fixed timelines, and expert execution from
-          discovery to launch.
-        </p>
-        <div className="grid grid-3 services-section-grid">
-          {items.map((s, i) => (
-            <ServiceCard
-              key={i}
-              icon={s.gif}
-              title={s.title}
-              description={s.desc}
-            />
+    <section id="services" className="section services">
+      <div className="container">
+        {/* Header Block */}
+        <div className="services__header">
+          <span className="badge-label text-red">Our Expertise</span>
+          <h2 className="services__title">
+            Software & Web Development Services
+          </h2>
+          <p className="services__subtitle">
+            Comprehensive solutions Sri Lankan businesses trust. Fixed timelines
+            and expert execution from discovery to launch.
+          </p>
+        </div>
+
+        {/* Ghost Grid Layout */}
+        <div className="services__grid">
+          {services.map((s, i) => (
+            /* We use your global glass-card class right here! */
+            <article key={i} className="glass-card services__card">
+              <div className="services__icon-wrapper">
+                <s.icon size={32} strokeWidth={1.5} />
+              </div>
+              <h3 className="services__card-title">{s.title}</h3>
+              <p className="services__card-desc">{s.desc}</p>
+            </article>
           ))}
         </div>
       </div>

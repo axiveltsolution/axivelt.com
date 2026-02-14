@@ -10,9 +10,7 @@ import Footer from "./Components/Footer/Footer.jsx";
 
 /* ================= Pages ================= */
 import Home from "./Pages/Home/Home.jsx";
-import OurProjectsWrapper from "./Pages/OurProjects/OurProjectsWrapper.jsx";
 import NotFound from "./Pages/NotFound/NotFound.jsx";
-import GetAQuote from "./Pages/GetAQuote/GetAQuote.jsx";
 
 /* ================= Project Detail Pages ================= */
 import Easyneat from "./Pages/Projects/EasyneatArticle.jsx";
@@ -31,12 +29,6 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/our-projects" element={<OurProjectsWrapper />} />
-        <Route
-          path="/projects"
-          element={<Navigate to="/our-projects" replace />}
-        />
-        <Route path="/getaquote" element={<GetAQuote />} />
 
         <Route
           path="/projects/easyNeat-cleaning-service-booking-platform"

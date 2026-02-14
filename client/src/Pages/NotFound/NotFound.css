@@ -1,19 +1,49 @@
-.nf-root {
-  padding: 48px 0;
+/* ==========================================================================
+   NOT FOUND (404) PAGE STYLES
+   Theme: Deep Black, Pure White, and Blood Red
+   ========================================================================== */
+
+.not-found {
+  min-height: 80vh; /* Forces the content to center vertically on the screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px 0 80px 0; /* Ensures it doesn't hide behind your fixed navbar */
 }
-.nf-h1 {
-  font-family: "Space Grotesk", Inter, sans-serif;
-  margin: 0 0 6px;
+
+.not-found__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  animation: fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
-.nf-muted {
-  color: #9ca0a8;
+
+.not-found__title {
+  font-size: clamp(3rem, 8vw, 5.5rem); /* Massive, cinematic typography */
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--clr-white);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
 }
-.nf-btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-weight: 700;
-  color: #061019;
-  background: linear-gradient(135deg, #19c6ff, #7c5cff);
+
+.not-found__subtitle {
+  font-size: 1.15rem;
+  color: var(--clr-gray-light);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Simple entrance animation so it feels premium when it loads */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

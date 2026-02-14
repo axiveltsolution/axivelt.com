@@ -12,7 +12,9 @@ import Status from "./Components/StatusSection.jsx";
 import FAQ from "./Components/FAQSection.jsx";
 import About from "./Components/AboutSection.jsx";
 import WhyChooseUs from "./Components/WhyChooseUsSection.jsx";
+import Contact from "./Components/ContactSection.jsx";
 import Testimonial from "./Components/TestimonialSection.jsx";
+import { ContactIcon } from "lucide-react";
 
 /* ============================= Home Page ============================= */
 export default function Home() {
@@ -453,6 +455,8 @@ export default function Home() {
 
         {/* WHY CHOOSE US */}
         <WhyChooseUs />
+
+        <Contact />
 
         {/* FAQ */}
         <FAQ />

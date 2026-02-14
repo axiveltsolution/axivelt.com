@@ -1,12 +1,4 @@
 import React from "react";
-import "./../Home.css";
-
-/**
- * TestimonialSection.jsx
- * - 3 testimonials with 5 stars
- * - SEO-optimized content for Sri Lankan market
- * - Includes client location and project type
- */
 
 const testimonials = [
   {
@@ -14,48 +6,46 @@ const testimonials = [
     role: "Owner",
     company: "MotoGear Helmet Store",
     location: "Colombo",
-    website: "",
     quote:
-      "Axivelt transformed our inventory chaos into a streamlined system. The POS and stock tracking eliminated manual errors completely. Professional, delivered on time and within budget.",
+      "Axivelt transformed our inventory chaos into a streamlined system. The POS and stock tracking eliminated manual errors completely.",
     initials: "RF",
-    projectType: "Inventory Management System",
+    projectType: "Inventory System",
+    website: "",
   },
   {
     name: "Anuhas",
     role: "Owner",
     company: "AroundLankaTravels",
-    location: "Colombo, Sri Lanka",
+    location: "Colombo",
     website: "https://aroundlankatravels.com/",
     quote:
-      "Axivelt delivered a beautiful travel website that showcases our Sri Lankan tours perfectly. The content management system is easy to use, and our online bookings have increased significantly since launch.",
+      "Axivelt delivered a beautiful travel website that showcases our tours perfectly. Our online bookings have increased significantly since launch.",
     initials: "SP",
-    projectType: "Travel Agency Website",
+    projectType: "Travel Website",
   },
   {
     name: "Dr. Nuwan Silva",
     role: "Owner",
     company: "EasyNeat",
-    location: "Melbourne, Australia",
+    location: "Melbourne",
     website: "https://easyneat.com.au/",
     quote:
-      "The booking platform revolutionized our operations. Customers love the easy booking process, and our staff saves hours weekly with the automated dashboard. Highly professional team and great value.",
+      "The booking platform revolutionized our operations. Customers love the process, and our staff saves hours weekly with the automated dashboard.",
     initials: "NS",
-    projectType: "Booking Website",
+    projectType: "Booking Platform",
   },
 ];
 
-function Stars({ size = 14 }) {
+function Stars() {
   return (
-    <div className="ts-stars" aria-label="5 out of 5 stars">
+    <div className="testimonials__stars text-red">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
-          className="ts-star"
-          width={size}
-          height={size}
+          width="14"
+          height="14"
           viewBox="0 0 24 24"
-          fill="currentColor"
-          aria-hidden="true">
+          fill="currentColor">
           <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.786 1.402 8.17L12 18.896 4.664 23.166l1.402-8.17L.132 9.21l8.2-1.192z" />
         </svg>
       ))}
@@ -63,82 +53,49 @@ function Stars({ size = 14 }) {
   );
 }
 
-function Avatar({ initials, size = 48 }) {
-  return (
-    <svg
-      className="ts-avatar"
-      width={size}
-      height={size}
-      viewBox="0 0 64 64"
-      role="img"
-      aria-label={`Profile ${initials}`}>
-      <defs>
-        <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-          <stop offset="0" stopColor="#9d7aff" />
-          <stop offset="1" stopColor="#ff3d9a" />
-        </linearGradient>
-      </defs>
-      <circle cx="32" cy="32" r="30" fill="url(#g1)" />
-      <text
-        x="50%"
-        y="50%"
-        textAnchor="middle"
-        dominantBaseline="central"
-        fontFamily="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif"
-        fontWeight="700"
-        fontSize="20"
-        fill="#fff">
-        {initials}
-      </text>
-    </svg>
-  );
-}
-
 export default function TestimonialSection() {
   return (
-    <section className="section ts-section" aria-labelledby="ts-title">
-      <div className="slab ts-slab">
-        <div
-          className="ts-header"
-          style={{ textAlign: "center", marginBottom: "3rem" }}>
-          <div
-            className="badge"
-            style={{ display: "inline-block", marginBottom: "1rem" }}>
-            Client Success Stories
-          </div>
-          <h2 id="ts-title" className="h1">
-            What Our Clients Say
-          </h2>
-          <p className="sub-title">
-            Trusted by businesses across Sri Lanka - from Colombo to Galle and
-            Kandy. Here's what companies say about our web development services.
+    <section className="section testimonials">
+      <div className="container">
+        <div className="testimonials__header">
+          <span className="badge-label text-red">Client Stories</span>
+          <h2 className="testimonials__title">What Our Clients Say</h2>
+          <p className="testimonials__subtitle">
+            Trusted by businesses across Sri Lanka and internationally. Here is
+            how we've helped companies scale.
           </p>
         </div>
 
-        <div className="ts-grid">
+        <div className="testimonials__grid">
           {testimonials.map((t, i) => (
-            <article key={i} className="ts-card card">
-              <header className="ts-card-head">
-                <Avatar initials={t.initials} />
-                <div className="ts-meta">
-                  <strong className="ts-name">{t.name}</strong>
-                  <span className="ts-role">
-                    {t.role} - <span className="ts-company">{t.company}</span>
+            <article key={i} className="glass-card testimonials__card">
+              <div className="testimonials__card-top">
+                <div className="testimonials__avatar">{t.initials}</div>
+                <div className="testimonials__info">
+                  <strong className="testimonials__name">{t.name}</strong>
+                  <span className="testimonials__role">
+                    {t.role} • {t.company}
                   </span>
-                  <span
-                    className="ts-location"
-                    style={{ fontSize: "0.875rem", color: "#64748b" }}>
-                    {t.location} • {t.projectType}
-                  </span>
-                  <Stars />
                 </div>
-              </header>
+              </div>
 
-              <div className="ts-body">
-                <p className="ts-quote">"{t.quote}"</p>
-                <a style={{ color: "#9d7aff" }} href={t.website}>
-                  {t.website}
-                </a>
+              <div className="testimonials__card-middle">
+                <p className="testimonials__quote">"{t.quote}"</p>
+
+                {t.website && (
+                  <a
+                    href={t.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="testimonials__link">
+                    Visit Project <span className="arrow">→</span>
+                  </a>
+                )}
+              </div>
+
+              <div className="testimonials__card-bottom">
+                <span className="testimonials__tag">{t.projectType}</span>
+                <Stars />
               </div>
             </article>
           ))}

@@ -1,7 +1,5 @@
-import React from "react";
-import { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-/* ================= Intersection Observer ================= */
 function useIntersectionObserver(options = {}) {
   const ref = useRef(null);
   useEffect(() => {
@@ -14,11 +12,11 @@ function useIntersectionObserver(options = {}) {
           el.style.transform = "translateY(0)";
         }
       },
-      { threshold: 0.1, ...options }
+      { threshold: 0.1, ...options },
     );
     obs.observe(el);
     return () => obs.unobserve(el);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
   return ref;
 }
 
@@ -27,31 +25,29 @@ function StatCard({ number, label }) {
   return (
     <div
       ref={cardRef}
-      className="stat"
+      className="stats__item"
       style={{
         opacity: 0,
         transform: "translateY(20px)",
-        transition: "all 0.5s cubic-bezier(0.4,0,0.2,1)",
+        transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)",
       }}>
-      <div className="stat-number">{number}</div>
-      <div className="stat-label">{label}</div>
+      <div className="stats__num">{number}</div>
+      <div className="stats__label text-red">{label}</div>
     </div>
   );
 }
 
 export default function StatusSection() {
   return (
-    <>
-      <section className="section stats">
-        <div>
-          <div className="stats-grid">
-            <StatCard number="10+" label="Successful projects delivered" />
-            <StatCard number="100%" label="Happy clients across Sri Lanka" />
-            <StatCard number="99%" label="Uptime guarantee" />
-            <StatCard number="24/7" label="Technical support available" />
-          </div>
+    <section className="section stats">
+      <div className="container">
+        <div className="stats__grid">
+          <StatCard number="10+" label="Successful Projects" />
+          <StatCard number="100%" label="Client Satisfaction" />
+          <StatCard number="99%" label="Uptime Guarantee" />
+          <StatCard number="24/7" label="Technical Support" />
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
