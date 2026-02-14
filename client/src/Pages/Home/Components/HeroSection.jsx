@@ -30,7 +30,7 @@ export default function HeroSection() {
           </p>
 
           <div className="hero__actions">
-            <Link to="/#contact" className="btn btn-primary">
+            <Link to="#contact" className="btn btn-primary">
               Start a Project
             </Link>
             <Link to="#projects" className="btn btn-outline">
