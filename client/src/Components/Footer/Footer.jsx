@@ -25,17 +25,17 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         {/* Main Grid */}
-        <div className="footer__grid">
+        <div className="footer-grid">
           {/* Brand Info */}
-          <div className="footer__brand-col">
-            <Link to="/" className="footer__logo">
+          <div className="footer-brand-col">
+            <Link to="/" className="footer-logo">
               AXIVELT SOLUTIONS<span className="text-red">.</span>
             </Link>
-            <p className="footer__desc">
+            <p className="footer-desc">
               Premier software engineering agency in Sri Lanka. We craft
               high-performance digital solutions for global businesses.
             </p>
-            <div className="footer__socials">
+            <div className="footer-socials">
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
@@ -54,8 +54,8 @@ export default function Footer() {
           </div>
 
           {/* Links Column 1 */}
-          <div className="footer__links-col">
-            <h4 className="footer__label">Navigation</h4>
+          <div className="footer-links-col">
+            <h4 className="footer-label">Navigation</h4>
             <ul>
               <li>
                 <Link to="/#about">About</Link>
@@ -73,8 +73,8 @@ export default function Footer() {
           </div>
 
           {/* Links Column 2 */}
-          <div className="footer__links-col">
-            <h4 className="footer__label">Services</h4>
+          <div className="footer-links-col">
+            <h4 className="footer-label">Services</h4>
             <ul>
               <li>
                 <Link to="/#services">Custom Software</Link>
@@ -92,8 +92,8 @@ export default function Footer() {
           </div>
 
           {/* Contact Column */}
-          <div className="footer__links-col">
-            <h4 className="footer__label">Contact</h4>
+          <div className="footer-links-col">
+            <h4 className="footer-label">Contact</h4>
             <ul>
               <li>
                 <a href="mailto:axiveltofficial@gmail.com">
@@ -103,13 +103,13 @@ export default function Footer() {
               <li>
                 <a href={`https://wa.me/${WHATSAPP_NUMBER}`}>+94 76 698 0686</a>
               </li>
-              <li className="footer__location">📍 Colombo, Sri Lanka</li>
+              <li className="footer-location">📍 Colombo, Sri Lanka</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="footer__bottom">
+        <div className="footer-bottom">
           <p>© {year} Axivelt Solutions. All rights reserved.</p>
           <p>
             Designed & Developed by <Link to="/">Axivelt Solutions</Link>

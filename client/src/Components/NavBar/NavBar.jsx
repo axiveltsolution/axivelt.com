@@ -27,26 +27,26 @@ export default function NavBar() {
   return (
     <header
       className={`navbar ${scrolled ? "navbar--scrolled" : ""} ${open ? "navbar--open" : ""}`}>
-      <div className="container navbar__container">
+      <div className="container navbar-container">
         {/* Brand Logo with Blood Red Accent */}
-        <Link to="/" className="navbar__brand" onClick={closeMenu}>
+        <Link to="/" className="navbar-brand" onClick={closeMenu}>
           AXIVELT SOLUTIONS<span className="text-red">.</span>
         </Link>
 
         {/* Desktop Links (No active classes, clean simple Links) */}
-        <nav className="navbar__desktop">
-          <Link to="/" className="navbar__link" onClick={closeMenu}>
+        <nav className="navbar-desktop">
+          <Link to="/" className="navbar-link" onClick={closeMenu}>
             Home
           </Link>
-          <Link to="/#services" className="navbar__link" onClick={closeMenu}>
+          <Link to="/#services" className="navbar-link" onClick={closeMenu}>
             Services
           </Link>
-          <Link to="/#about" className="navbar__link" onClick={closeMenu}>
+          <Link to="/#about" className="navbar-link" onClick={closeMenu}>
             About
           </Link>
 
           {/* UPDATED: Projects now points to the homepage section */}
-          <Link to="/#projects" className="navbar__link" onClick={closeMenu}>
+          <Link to="/#projects" className="navbar-link" onClick={closeMenu}>
             Projects
           </Link>
 
@@ -57,7 +57,7 @@ export default function NavBar() {
 
         {/* Mobile Hamburger Button */}
         <button
-          className="navbar__toggle"
+          className="navbar-toggle"
           onClick={() => setOpen(!open)}
           aria-label="Toggle Menu">
           <span className="bar"></span>
@@ -66,19 +66,19 @@ export default function NavBar() {
       </div>
 
       {/* Mobile Menu Drawer */}
-      <div className="navbar__mobile">
-        <Link to="/" className="navbar__link" onClick={closeMenu}>
+      <div className="navbar-mobile">
+        <Link to="/" className="navbar-link" onClick={closeMenu}>
           Home
         </Link>
-        <Link to="/#services" className="navbar__link" onClick={closeMenu}>
+        <Link to="/#services" className="navbar-link" onClick={closeMenu}>
           Services
         </Link>
-        <Link to="/#about" className="navbar__link" onClick={closeMenu}>
+        <Link to="/#about" className="navbar-link" onClick={closeMenu}>
           About
         </Link>
 
         {/* UPDATED: Mobile link also points to #projects */}
-        <Link to="/#projects" className="navbar__link" onClick={closeMenu}>
+        <Link to="/#projects" className="navbar-link" onClick={closeMenu}>
           Projects
         </Link>
 

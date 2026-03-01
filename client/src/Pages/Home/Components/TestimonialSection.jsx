@@ -38,7 +38,7 @@ const testimonials = [
 
 function Stars() {
   return (
-    <div className="testimonials__stars text-red">
+    <div className="testimonials-stars text-red">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
@@ -57,44 +57,44 @@ export default function TestimonialSection() {
   return (
     <section className="section testimonials">
       <div className="container">
-        <div className="testimonials__header">
+        <div className="testimonials-header">
           <span className="badge-label text-red">Client Stories</span>
-          <h2 className="testimonials__title">What Our Clients Say</h2>
-          <p className="testimonials__subtitle">
+          <h2 className="testimonials-title">What Our Clients Say</h2>
+          <p className="testimonials-subtitle">
             Trusted by businesses across Sri Lanka and internationally. Here is
             how we've helped companies scale.
           </p>
         </div>
 
-        <div className="testimonials__grid">
+        <div className="testimonials-grid">
           {testimonials.map((t, i) => (
-            <article key={i} className="glass-card testimonials__card">
-              <div className="testimonials__card-top">
-                <div className="testimonials__avatar">{t.initials}</div>
-                <div className="testimonials__info">
-                  <strong className="testimonials__name">{t.name}</strong>
-                  <span className="testimonials__role">
+            <article key={i} className="glass-card testimonials-card">
+              <div className="testimonials-card-top">
+                <div className="testimonials-avatar">{t.initials}</div>
+                <div className="testimonials-info">
+                  <strong className="testimonials-name">{t.name}</strong>
+                  <span className="testimonials-role">
                     {t.role} • {t.company}
                   </span>
                 </div>
               </div>
 
-              <div className="testimonials__card-middle">
-                <p className="testimonials__quote">"{t.quote}"</p>
+              <div className="testimonials-card-middle">
+                <p className="testimonials-quote">"{t.quote}"</p>
 
                 {t.website && (
                   <a
                     href={t.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="testimonials__link">
+                    className="testimonials-link">
                     Visit Project <span className="arrow">→</span>
                   </a>
                 )}
               </div>
 
-              <div className="testimonials__card-bottom">
-                <span className="testimonials__tag">{t.projectType}</span>
+              <div className="testimonials-card-bottom">
+                <span className="testimonials-tag">{t.projectType}</span>
                 <Stars />
               </div>
             </article>

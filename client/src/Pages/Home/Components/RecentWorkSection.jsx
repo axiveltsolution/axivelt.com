@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-/* ======= Project images (Keeping your existing local imports) ======= */
 import EasyneatImg from "../../../assets/projects/easyneat.au.com/australian-cleaning-company-website-easyneat.au.com-axivelt-solutions-web-development-in-sri-lanka-projects-frontend.jpg";
 import MotogearInventoryImg from "../../../assets/projects/motogearinventorysystem/inventory-management-system-development-axivelt-solutions-web-development-in-sri-lanka-project-dashboard.webp";
 import AroundLankaTravelsImg from "../../../assets/projects/aroundlankatravels.com/sri-lanka-traveling-agency-website-aroundlankatravels.com-axivelt-solutions-web-development-in-sri-lanka-project-hero.jpg";
@@ -31,42 +30,35 @@ function ProjectCard({ href, website, title, description, image, tags }) {
   const cardRef = useIntersectionObserver();
 
   return (
-    /* We use the global glass-card class, and add portfolio__card for specific tweaks */
-    <article ref={cardRef} className="glass-card portfolio__card">
+    <article ref={cardRef} className="glass-card portfolio-card">
       <div
-        className="portfolio__image-wrapper"
+        className="portfolio-image-wrapper"
         onClick={() => href && navigate(href)}>
-        <img
-          src={image}
-          alt={title}
-          className="portfolio__img"
-          loading="lazy"
-        />
-        <div className="portfolio__overlay">
-          <span className="portfolio__overlay-btn">View Case Study</span>
+        <img src={image} alt={title} className="portfolio-img" loading="lazy" />
+        <div className="portfolio-overlay">
+          <span className="portfolio-overlay-btn">View Case Study</span>
         </div>
       </div>
 
-      <div className="portfolio__content">
-        <h3 className="portfolio__title">{title}</h3>
+      <div className="portfolio-content">
+        <h3 className="portfolio-title">{title}</h3>
 
-        <div className="portfolio__tags">
+        <div className="portfolio-tags">
           {tags.map((tag, i) => (
-            <span key={i} className="portfolio__tag">
+            <span key={i} className="portfolio-tag">
               {tag}
             </span>
           ))}
         </div>
 
-        <p className="portfolio__desc">{description.slice(0, 110)}...</p>
+        <p className="portfolio-desc">{description.slice(0, 110)}...</p>
 
-        {/* The restored, highly professional visit link */}
         {website && (
           <a
             href={website}
             target="_blank"
             rel="noopener noreferrer"
-            className="portfolio__link">
+            className="portfolio-link">
             Visit Project <span className="arrow">→</span>
           </a>
         )}
@@ -79,10 +71,10 @@ export default function RecentWorkSection() {
   return (
     <section id="projects" className="section portfolio">
       <div className="container">
-        <div className="portfolio__header">
-          <div className="portfolio__header-text">
+        <div className="portfolio-header">
+          <div className="portfolio-header-text">
             <span className="badge-label text-red">Selected Works</span>
-            <h2 className="portfolio__heading">
+            <h2 className="portfolio-heading">
               Custom Projects <br />
               We've Built
             </h2>
@@ -92,7 +84,7 @@ export default function RecentWorkSection() {
           </Link>
         </div>
 
-        <div className="portfolio__grid">
+        <div className="portfolio-grid">
           <ProjectCard
             href="/projects/easyNeat-cleaning-service-booking-platform"
             website="https://easyneat.com.au"

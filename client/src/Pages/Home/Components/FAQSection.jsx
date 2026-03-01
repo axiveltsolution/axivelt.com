@@ -33,30 +33,29 @@ export default function FAQSection() {
   return (
     <section id="faq" className="section faq">
       <div className="container">
-        <div className="faq__header">
+        <div className="faq-header">
           <span className="badge-label text-red">Help Center</span>
-          <h2 className="faq__title">Frequently Asked Questions</h2>
-          <p className="faq__subtitle">
+          <h2 className="faq-title">Frequently Asked Questions</h2>
+          <p className="faq-subtitle">
             Common questions about our software solutions and development
             services.
           </p>
         </div>
 
-        {/* Linear FAQ List */}
-        <div className="faq__list">
+        <div className="faq-list">
           {faqs.map((item, index) => {
             const isOpen = activeIndex === index;
             return (
               <div
                 key={index}
-                className={`faq__item ${isOpen ? "faq__item--open" : ""}`}
+                className={`faq-item ${isOpen ? "faq-item--open" : ""}`}
                 onClick={() => toggleFAQ(index)}>
-                <div className="faq__question">
+                <div className="faq-question">
                   <span>{item.q}</span>
-                  <div className="faq__icon"></div>
+                  <div className="faq-icon"></div>
                 </div>
-                <div className="faq__answer">
-                  <div className="faq__answer-inner">
+                <div className="faq-answer">
+                  <div className="faq-answer-inner">
                     <p>{item.a}</p>
                   </div>
                 </div>

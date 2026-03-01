@@ -38,28 +38,25 @@ export default function ServicesSection() {
   return (
     <section id="services" className="section services">
       <div className="container">
-        {/* Header Block */}
-        <div className="services__header">
+        <div className="services-header">
           <span className="badge-label text-red">Our Expertise</span>
-          <h2 className="services__title">
+          <h2 className="services-title">
             Software & Web Development Services
           </h2>
-          <p className="services__subtitle">
+          <p className="services-subtitle">
             Comprehensive solutions Sri Lankan businesses trust. Fixed timelines
             and expert execution from discovery to launch.
           </p>
         </div>
 
-        {/* Ghost Grid Layout */}
-        <div className="services__grid">
+        <div className="services-grid">
           {services.map((s, i) => (
-            /* We use your global glass-card class right here! */
-            <article key={i} className="glass-card services__card">
-              <div className="services__icon-wrapper">
+            <article key={i} className="glass-card services-card">
+              <div className="services-icon-wrapper">
                 <s.icon size={32} strokeWidth={1.5} />
               </div>
-              <h3 className="services__card-title">{s.title}</h3>
-              <p className="services__card-desc">{s.desc}</p>
+              <h3 className="services-card-title">{s.title}</h3>
+              <p className="services-card-desc">{s.desc}</p>
             </article>
           ))}
         </div>

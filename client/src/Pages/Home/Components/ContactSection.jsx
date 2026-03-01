@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Mail, Phone, MapPin, Clock } from "lucide-react"; // Added icons for the left side!
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const SERVICE_ID = "service_gmailaxivelt";
 const TEMPLATE_ADMIN_ID = "template_2erh7n5";
@@ -19,7 +19,6 @@ export default function ContactSection() {
   const [websiteError, setWebsiteError] = useState("");
   const [submitType, setSubmitType] = useState("quote");
 
-  // Website tag input logic (Untouched)
   const handleWebsiteKeyDown = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
@@ -45,7 +44,6 @@ export default function ContactSection() {
   const removeWebsite = (index) =>
     setWebsites(websites.filter((_, i) => i !== index));
 
-  // Form submission logic (Untouched)
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErr("");
@@ -134,68 +132,66 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section contact">
       <div className="container">
-        {/* NEW SPLIT LAYOUT GRID */}
-        <div className="contact__grid">
-          {/* LEFT SIDE: Contact Details */}
-          <div className="contact__info">
+        <div className="contact-grid">
+          <div className="contact-info">
             <span className="badge-label text-red">Start Your Project</span>
-            <h2 className="contact__title">Let's Build Something Amazing.</h2>
-            <p className="contact__subtitle">
+            <h2 className="contact-title">Let's Build Something Amazing.</h2>
+            <p className="contact-subtitle">
               Ready to build your custom software solution? As a leading agency
               in Sri Lanka, we provide transparent proposals and competitive
               quotes within 24 hours. No hidden costs.
             </p>
 
-            <div className="contact__methods">
-              <div className="contact__method">
-                <div className="contact__icon">
+            <div className="contact-methods">
+              <div className="contact-method">
+                <div className="contact-icon">
                   <Mail size={24} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <div className="contact__method-label">Email Us</div>
+                  <div className="contact-method-label">Email Us</div>
                   <a
                     href="mailto:axiveltofficial@gmail.com"
-                    className="contact__method-text">
+                    className="contact-method-text">
                     axiveltofficial@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="contact__method">
-                <div className="contact__icon">
+              <div className="contact-method">
+                <div className="contact-icon">
                   <Phone size={24} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <div className="contact__method-label">Call or WhatsApp</div>
+                  <div className="contact-method-label">Call or WhatsApp</div>
                   <a
                     href="https://wa.me/94766980686"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="contact__method-text">
+                    className="contact-method-text">
                     +94 76 698 0686
                   </a>
                 </div>
               </div>
 
-              <div className="contact__method">
-                <div className="contact__icon">
+              <div className="contact-method">
+                <div className="contact-icon">
                   <MapPin size={24} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <div className="contact__method-label">Location</div>
-                  <span className="contact__method-text">
+                  <div className="contact-method-label">Location</div>
+                  <span className="contact-method-text">
                     Colombo, Sri Lanka
                   </span>
                 </div>
               </div>
 
-              <div className="contact__method">
-                <div className="contact__icon">
+              <div className="contact-method">
+                <div className="contact-icon">
                   <Clock size={24} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <div className="contact__method-label">Working Hours</div>
-                  <span className="contact__method-text">
+                  <div className="contact-method-label">Working Hours</div>
+                  <span className="contact-method-text">
                     Mon - Fri, 9:00 AM - 6:00 PM (IST)
                   </span>
                 </div>
@@ -203,8 +199,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* RIGHT SIDE: The Form in a Glass Card */}
-          <div className="glass-card contact__form-card">
+          <div className="glass-card contact-form-card">
             <form
               name="get-a-quote"
               method="POST"
@@ -212,24 +207,24 @@ export default function ContactSection() {
               onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="get-a-quote" />
 
-              <div className="contact__row">
-                <div className="contact__field">
+              <div className="contact-row">
+                <div className="contact-field">
                   <label>
                     Name <span className="text-red">*</span>
                   </label>
                   <input
-                    className="contact__input"
+                    className="contact-input"
                     name="name"
                     required
                     placeholder="Your full name"
                   />
                 </div>
-                <div className="contact__field">
+                <div className="contact-field">
                   <label>
                     Email <span className="text-red">*</span>
                   </label>
                   <input
-                    className="contact__input"
+                    className="contact-input"
                     type="email"
                     name="email"
                     required
@@ -238,20 +233,20 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="contact__row">
-                <div className="contact__field">
+              <div className="contact-row">
+                <div className="contact-field">
                   <label>Mobile number (optional)</label>
                   <input
-                    className="contact__input"
+                    className="contact-input"
                     name="phone"
                     type="tel"
                     placeholder="+94771234567"
                   />
                 </div>
-                <div className="contact__field">
+                <div className="contact-field">
                   <label>Budget (optional)</label>
                   <select
-                    className="contact__input"
+                    className="contact-input"
                     name="budget"
                     defaultValue="">
                     <option value="" disabled>
@@ -266,12 +261,12 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="contact__field">
+              <div className="contact-field">
                 <label>
                   Tell us about your project <span className="text-red">*</span>
                 </label>
                 <textarea
-                  className="contact__input"
+                  className="contact-input"
                   name="details"
                   rows="4"
                   placeholder="What software solution do you need? What problems are you trying to solve?"
@@ -279,28 +274,28 @@ export default function ContactSection() {
                 />
               </div>
 
-              <div className="contact__field">
+              <div className="contact-field">
                 <label>Reference examples (optional)</label>
                 <input
-                  className="contact__input"
+                  className="contact-input"
                   type="url"
                   placeholder="Paste website/software URL and press Enter"
                   value={websiteInput}
                   onChange={(e) => setWebsiteInput(e.target.value)}
                   onKeyDown={handleWebsiteKeyDown}
                 />
-                <p className="contact__instruction">
+                <p className="contact-instruction">
                   Hit <span className="text-red">Enter</span> to add links to
                   features you like.
                 </p>
 
                 {websiteError && (
-                  <p className="contact__error">{websiteError}</p>
+                  <p className="contact-error">{websiteError}</p>
                 )}
 
-                <div className="contact__tags">
+                <div className="contact-tags">
                   {websites.map((w, i) => (
-                    <span key={i} className="contact__tag">
+                    <span key={i} className="contact-tag">
                       {w}
                       <button type="button" onClick={() => removeWebsite(i)}>
                         ✕
@@ -310,7 +305,7 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="contact__actions">
+              <div className="contact-actions">
                 <button
                   type="submit"
                   className="btn btn-outline"
@@ -329,7 +324,7 @@ export default function ContactSection() {
 
               {sent && (
                 <div
-                  className="contact__success"
+                  className="contact-success"
                   role="status"
                   aria-live="polite">
                   <p>
@@ -338,7 +333,7 @@ export default function ContactSection() {
                   </p>
                 </div>
               )}
-              {err && <p className="contact__error">{err}</p>}
+              {err && <p className="contact-error">{err}</p>}
             </form>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 
-/* ================= Intersection Observer ================= */
 function useIntersectionObserver(options = {}) {
   const ref = useRef(null);
   useEffect(() => {
@@ -28,27 +27,26 @@ export default function AboutSection() {
   return (
     <section id="about" className="section about">
       <div className="container">
-        <div className="about__grid">
-          {/* LEFT COLUMN: The Story */}
-          <div ref={leftRef} className="about__copy">
-            <div className="about__badges">
+        <div className="about-grid">
+          <div ref={leftRef} className="about-copy">
+            <div className="about-badges">
               <span className="badge-label">Remote-first</span>
               <span className="badge-label">Colombo, SL</span>
               <span className="badge-label">Senior-led</span>
             </div>
 
-            <h2 className="about__title">
+            <h2 className="about-title">
               Engineering Digital <br />
               Excellence.
             </h2>
 
-            <p className="about__lead">
+            <p className="about-lead">
               Premier software engineering agency specializing in custom systems
               and high-performance web applications. We deliver secure digital
               solutions with absolute transparency.
             </p>
 
-            <ul className="about__points">
+            <ul className="about-points">
               <li>
                 <strong>Speed</strong> — Sites in 2-4 weeks; systems in 6-12
                 weeks.
@@ -62,9 +60,9 @@ export default function AboutSection() {
               </li>
             </ul>
 
-            <div className="about__stack">
+            <div className="about-stack">
               <span className="badge-label text-red">Core Technology</span>
-              <div className="about__stack-flex">
+              <div className="about-stack-flex">
                 <span>React</span>
                 <span className="dot">•</span> <span>Node.js</span>
                 <span className="dot">•</span> <span>Vite</span>
@@ -74,43 +72,42 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: The Process (Using global glass-card!) */}
-          <div ref={rightRef} className="glass-card about__panel">
+          <div ref={rightRef} className="glass-card about-panel">
             <h3 className="badge-label text-red">Our Development Process</h3>
 
-            <ol className="about__process-list">
+            <ol className="about-process-list">
               <li>
-                <span className="process__num text-red">01</span>
+                <span className="process-num text-red">01</span>
                 <div>
-                  <div className="process__title">Discovery</div>
-                  <div className="process__desc">
+                  <div className="process-title">Discovery</div>
+                  <div className="process-desc">
                     Technical requirements and goal alignment.
                   </div>
                 </div>
               </li>
               <li>
-                <span className="process__num text-red">02</span>
+                <span className="process-num text-red">02</span>
                 <div>
-                  <div className="process__title">Proposal</div>
-                  <div className="process__desc">
+                  <div className="process-title">Proposal</div>
+                  <div className="process-desc">
                     Fixed pricing and detailed deliverables.
                   </div>
                 </div>
               </li>
               <li>
-                <span className="process__num text-red">03</span>
+                <span className="process-num text-red">03</span>
                 <div>
-                  <div className="process__title">Development</div>
-                  <div className="process__desc">
+                  <div className="process-title">Development</div>
+                  <div className="process-desc">
                     Weekly updates and collaborative feedback.
                   </div>
                 </div>
               </li>
               <li>
-                <span className="process__num text-red">04</span>
+                <span className="process-num text-red">04</span>
                 <div>
-                  <div className="process__title">Launch</div>
-                  <div className="process__desc">
+                  <div className="process-title">Launch</div>
+                  <div className="process-desc">
                     Live deployment and ongoing support.
                   </div>
                 </div>

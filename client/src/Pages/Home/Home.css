@@ -1,6 +1,5 @@
-/* ==========================================================================
-   1. HERO SECTION
-   ========================================================================== */
+/* //////////////////////////////////////// 1. HERO SECTION //////////////////////////////////////// */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -9,22 +8,19 @@
   overflow: hidden;
 }
 
-/* Background image with a heavy black overlay to make the red and white pop */
-.hero__bg {
+.hero-bg {
   position: absolute;
   inset: 0;
-  /* Your specific office/desk photo */
   background-image: url("../../assets/Hero/axivelt-solutions-web-and-softwaredeveloping-company-in-sri-lanka.avif");
   background-size: cover;
   background-position: center;
   z-index: 0;
 }
 
-.hero__bg::after {
+.hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* Dark gradient that fades from pure black on the left to semi-transparent black on the right */
   background: linear-gradient(
     to right,
     rgba(5, 5, 5, 0.95) 10%,
@@ -33,18 +29,17 @@
   );
 }
 
-.hero__container {
+.hero-container {
   position: relative;
   z-index: 1;
   width: 100%;
 }
 
-.hero__content {
-  max-width: 900px; /* Keeps the text from stretching too far */
+.hero-content {
+  max-width: 900px;
   animation: fadeUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-/* Simple, smooth Entrance Animation */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -56,149 +51,137 @@
   }
 }
 
-.hero__title {
-  font-size: clamp(3rem, 8vw, 6rem); /* Massive typography */
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
   line-height: 1.1;
   margin-bottom: 24px;
 }
 
-.hero__subtitle {
+.hero-subtitle {
   font-size: 1.15rem;
   max-width: 600px;
   margin-bottom: 40px;
 }
 
-/* Button Container */
-.hero__actions {
+.hero-actions {
   display: flex;
   gap: 16px;
-  align-items: center; /* Ensures the new circle icon aligns perfectly with the text buttons */
+  align-items: center;
 }
 
-/* --- The New WhatsApp Icon Button --- */
-.hero__whatsapp-btn {
+.hero-whatsapp-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px; /* Matches the height of the pill buttons */
+  width: 50px;
   height: 50px;
-  border-radius: 50%; /* Makes it a perfect circle */
+  border-radius: 50%;
   background-color: transparent;
   border: 1px solid var(--clr-gray-dark);
   color: var(--clr-white);
   transition: var(--transition-fast);
 }
 
-/* The Blood Red hover glow */
-.hero__whatsapp-btn:hover {
+.hero-whatsapp-btn:hover {
   border-color: #25d366;
   color: #25d366;
   transform: translateY(-2px);
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
-  .hero__title {
+  .hero-title {
     font-size: 3.5rem;
   }
-  .hero__actions {
+  .hero-actions {
     flex-direction: column;
     width: 100%;
   }
-  .hero__actions .btn {
+  .hero-actions .btn {
     width: 100%;
   }
-  .hero__whatsapp-btn {
+  .hero-whatsapp-btn {
     width: 100%;
-    border-radius: 50px; /* Turns into a wide pill shape on mobile to match the other buttons */
+    border-radius: 50px;
   }
 }
 
-/* ==========================================================================
-   2. SERVICES SECTION
-   ========================================================================== */
-.services__header {
+/* //////////////////////////////////////// 2. SERVICES SECTION //////////////////////////////////////// */
+
+.services-header {
   max-width: 800px;
   margin-bottom: 60px;
 }
 
-.services__title {
+.services-title {
   font-size: clamp(2.5rem, 5vw, 3.8rem);
   margin-bottom: 1rem;
 }
 
-.services__subtitle {
+.services-subtitle {
   font-size: 1.1rem;
   max-width: 600px;
 }
 
-/* The Grid System */
-.services__grid {
+.services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px; /* Generous spacing between glass cards */
+  gap: 30px;
 }
 
-/* The Card Layout */
-.services__card {
+.services-card {
   display: flex;
   flex-direction: column;
   gap: 20px;
   cursor: pointer;
-  /* Note: The border, blur, background, and red hover glow 
-     are all handled automatically by the .glass-card class in app.css! */
 }
 
-.services__icon-wrapper {
+.services-icon-wrapper {
   width: 56px;
   height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--clr-white);
-  background: rgba(255, 255, 255, 0.05); /* Faint gray box */
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   transition: var(--transition-smooth);
 }
 
-/* When the card is hovered, the icon box turns red! */
-.glass-card:hover .services__icon-wrapper {
-  background: rgba(220, 38, 38, 0.15); /* Faint red background */
+.glass-card:hover .services-icon-wrapper {
+  background: rgba(220, 38, 38, 0.15);
   color: var(--clr-red);
   transform: scale(1.1);
 }
 
-.services__card-title {
+.services-card-title {
   font-size: 1.3rem;
   margin: 0;
 }
 
-.services__card-desc {
+.services-card-desc {
   font-size: 0.95rem;
   margin: 0;
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 1024px) {
-  .services__grid {
+  .services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 }
 
 @media (max-width: 768px) {
-  .services__grid {
+  .services-grid {
     grid-template-columns: 1fr;
   }
-  .services__title {
+  .services-title {
     font-size: 2.5rem;
   }
 }
 
-/* ==========================================================================
-   3. PORTFOLIO SECTION
-   ========================================================================== */
-.portfolio__header {
+/* //////////////////////////////////////// 3. PORTFOLIO SECTION //////////////////////////////////////// */
+
+.portfolio-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -206,26 +189,24 @@
   gap: 20px;
 }
 
-.portfolio__heading {
+.portfolio-heading {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 0;
 }
 
-.portfolio__grid {
+.portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-/* Override the default 40px padding of .glass-card so the image fits edge-to-edge */
-.portfolio__card {
+.portfolio-card {
   padding: 0;
   display: flex;
   flex-direction: column;
 }
 
-/* Image Thumbnail & Hover Animation */
-.portfolio__image-wrapper {
+.portfolio-image-wrapper {
   position: relative;
   width: 100%;
   border-top-left-radius: 16px;
@@ -236,19 +217,18 @@
   border-bottom: 1px solid var(--clr-gray-dark);
 }
 
-.portfolio__img {
+.portfolio-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio__card:hover .portfolio__img {
-  transform: scale(1.05); /* Slight zoom on hover */
+.portfolio-card:hover .portfolio-img {
+  transform: scale(1.05);
 }
 
-/* The dark overlay that appears on hover */
-.portfolio__overlay {
+.portfolio-overlay {
   position: absolute;
   inset: 0;
   background: rgba(3, 3, 3, 0.6);
@@ -259,12 +239,11 @@
   transition: var(--transition-fast);
 }
 
-.portfolio__card:hover .portfolio__overlay {
+.portfolio-card:hover .portfolio-overlay {
   opacity: 1;
 }
 
-/* The hidden Blood Red button */
-.portfolio__overlay-btn {
+.portfolio-overlay-btn {
   background-color: var(--clr-red);
   color: var(--clr-white);
   padding: 10px 24px;
@@ -276,12 +255,11 @@
   transition: var(--transition-smooth);
 }
 
-.portfolio__card:hover .portfolio__overlay-btn {
-  transform: translateY(0); /* Button slides up beautifully */
+.portfolio-card:hover .portfolio-overlay-btn {
+  transform: translateY(0);
 }
 
-/* Text Content Area */
-.portfolio__content {
+.portfolio-content {
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -289,18 +267,18 @@
   flex-grow: 1;
 }
 
-.portfolio__title {
+.portfolio-title {
   font-size: 1.4rem;
   margin-bottom: 0;
 }
 
-.portfolio__tags {
+.portfolio-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.portfolio__tag {
+.portfolio-tag {
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -311,13 +289,12 @@
   border-radius: 4px;
 }
 
-.portfolio__desc {
+.portfolio-desc {
   font-size: 0.95rem;
-  margin-bottom: auto; /* Pushes the "Visit Project" link to the absolute bottom */
+  margin-bottom: auto;
 }
 
-/* The sleek "Visit Project" Link */
-.portfolio__link {
+.portfolio-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -331,68 +308,67 @@
   padding-bottom: 4px;
 }
 
-.portfolio__link .arrow {
+.portfolio-link .arrow {
   transition: transform 0.3s ease;
-  color: var(--clr-red); /* The arrow is permanently red to draw the eye */
+  color: var(--clr-red);
 }
 
-.portfolio__link:hover {
-  border-bottom-color: var(--clr-red); /* Underline turns red on hover */
+.portfolio-link:hover {
+  border-bottom-color: var(--clr-red);
 }
 
-.portfolio__link:hover .arrow {
-  transform: translateX(4px); /* Arrow moves to the right */
+.portfolio-link:hover .arrow {
+  transform: translateX(4px);
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 1024px) {
-  .portfolio__grid {
+  .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 }
 
 @media (max-width: 768px) {
-  .portfolio__header {
+  .portfolio-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  .portfolio__grid {
+  .portfolio-grid {
     grid-template-columns: 1fr;
   }
 }
-/* ==========================================================================
-   4. ABOUT SECTION
-   ========================================================================== */
-.about__grid {
+
+/* //////////////////////////////////////// 4. ABOUT SECTION //////////////////////////////////////// */
+
+.about-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr; /* Slight offset for a modern look */
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
   align-items: start;
 }
 
-.about__badges {
+.about-badges {
   display: flex;
   gap: 16px;
 }
 
-.about__title {
+.about-title {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   margin-bottom: 24px;
 }
 
-.about__lead {
+.about-lead {
   font-size: 1.15rem;
   margin-bottom: 40px;
   max-width: 600px;
 }
 
-.about__points {
+.about-points {
   list-style: none;
   margin-bottom: 50px;
 }
 
-.about__points li {
+.about-points li {
   font-size: 1rem;
   color: var(--clr-gray-light);
   margin-bottom: 16px;
@@ -400,23 +376,22 @@
   gap: 12px;
 }
 
-/* Custom Blood Red Dash for bullets */
-.about__points li::before {
+.about-points li::before {
   content: "—";
   color: var(--clr-red);
   font-weight: 700;
 }
 
-.about__points strong {
+.about-points strong {
   color: var(--clr-white);
 }
 
-.about__stack {
+.about-stack {
   padding-top: 30px;
   border-top: 1px solid var(--clr-gray-dark);
 }
 
-.about__stack-flex {
+.about-stack-flex {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -428,65 +403,62 @@
   color: var(--clr-white);
 }
 
-.about__stack-flex .dot {
-  color: var(--clr-red); /* Tiny red dots separating the tech stack */
+.about-stack-flex .dot {
+  color: var(--clr-red);
 }
 
-/* The Glass Process Panel */
-.about__process-list {
+.about-process-list {
   list-style: none;
   margin-top: 30px;
 }
 
-.about__process-list li {
+.about-process-list li {
   display: flex;
   gap: 24px;
   margin-bottom: 30px;
 }
 
-.about__process-list li:last-child {
+.about-process-list li:last-child {
   margin-bottom: 0;
 }
 
-.process__num {
+.process-num {
   font-size: 1rem;
   font-weight: 900;
   margin-top: 2px;
 }
 
-.process__title {
+.process-title {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--clr-white);
   margin-bottom: 4px;
 }
 
-.process__desc {
+.process-desc {
   font-size: 0.9rem;
   color: var(--clr-gray-light);
 }
 
-/* ==========================================================================
-   5. STATS SECTION
-   ========================================================================== */
+/* //////////////////////////////////////// 5. STATS SECTION //////////////////////////////////////// */
+
 .stats {
-  background: rgba(3, 3, 3, 0.5); /* Very faint darkening of the background */
+  background: rgba(3, 3, 3, 0.5);
   padding: 80px 0;
 }
 
-.stats__grid {
+.stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.stats__item {
+.stats-item {
   text-align: center;
   padding: 20px;
   position: relative;
 }
 
-/* Thin gray vertical dividers between stats */
-.stats__item:not(:last-child)::after {
+.stats-item:not(:last-child)::after {
   content: "";
   position: absolute;
   right: 0;
@@ -496,7 +468,7 @@
   background-color: var(--clr-gray-dark);
 }
 
-.stats__num {
+.stats-num {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 900;
   color: var(--clr-white);
@@ -505,41 +477,40 @@
   letter-spacing: -0.02em;
 }
 
-.stats__label {
+.stats-label {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 1024px) {
-  .about__grid {
+  .about-grid {
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  .stats__grid {
+  .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 0;
   }
-  .stats__item:nth-child(2)::after {
+  .stats-item:nth-child(2)::after {
     display: none;
-  } /* Remove 2nd divider on 2x2 grid */
+  }
 }
 
 @media (max-width: 600px) {
-  .stats__grid {
+  .stats-grid {
     grid-template-columns: 1fr;
     gap: 40px 0;
   }
-  .stats__item::after {
+  .stats-item::after {
     display: none;
-  } /* Remove all dividers on mobile */
+  }
 }
-/* ==========================================================================
-   6. WHY CHOOSE US
-   ========================================================================== */
-.why__header {
+
+/* //////////////////////////////////////// 6. WHY CHOOSE US SECTION //////////////////////////////////////// */
+
+.why-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -547,46 +518,45 @@
   gap: 40px;
 }
 
-.why__title {
+.why-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 20px;
 }
 
-.why__subtitle {
+.why-subtitle {
   max-width: 500px;
 }
 
-.why__grid {
+.why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.why__card {
+.why-card {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.why__icon {
-  color: var(--clr-red); /* Blood red icons */
+.why-icon {
+  color: var(--clr-red);
   margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
 
-.glass-card:hover .why__icon {
+.glass-card:hover .why-icon {
   transform: scale(1.1);
 }
 
-.why__card-title {
+.why-card-title {
   font-size: 1.25rem;
   margin: 0;
 }
 
-/* ==========================================================================
-   7. FAQ SECTION (Linear Minimalist)
-   ========================================================================== */
-.faq__header {
+/* //////////////////////////////////////// 7. FAQ SECTION //////////////////////////////////////// */
+
+.faq-header {
   text-align: center;
   margin-bottom: 60px;
   display: flex;
@@ -594,35 +564,34 @@
   align-items: center;
 }
 
-.faq__title {
+.faq-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 20px;
 }
 
-.faq__subtitle {
+.faq-subtitle {
   max-width: 600px;
 }
 
-.faq__list {
-  /* max-width: 900px; */
+.faq-list {
   margin: 0 auto;
 }
 
-.faq__item {
+.faq-item {
   border-bottom: 1px solid var(--clr-gray-dark);
   cursor: pointer;
   transition: var(--transition-fast);
 }
 
-.faq__item:first-child {
+.faq-item:first-child {
   border-top: 1px solid var(--clr-gray-dark);
 }
 
-.faq__item:hover {
+.faq-item:hover {
   background-color: rgba(255, 255, 255, 0.02);
 }
 
-.faq__question {
+.faq-question {
   padding: 30px 20px;
   display: flex;
   justify-content: space-between;
@@ -633,35 +602,34 @@
   transition: color 0.3s ease;
 }
 
-.faq__item:hover .faq__question,
-.faq__item--open .faq__question {
+.faq-item:hover .faq-question,
+.faq-item--open .faq-question {
   color: var(--clr-red);
 }
 
-/* Custom CSS animated Plus/Minus Icon */
-.faq__icon {
+.faq-icon {
   position: relative;
   width: 16px;
   height: 16px;
   flex-shrink: 0;
 }
 
-.faq__icon::before,
-.faq__icon::after {
+.faq-icon::before,
+.faq-icon::after {
   content: "";
   position: absolute;
   background-color: currentColor;
   transition: transform 0.3s ease;
 }
 
-.faq__icon::before {
+.faq-icon::before {
   top: 50%;
   left: 0;
   width: 100%;
   height: 2px;
   transform: translateY(-50%);
 }
-.faq__icon::after {
+.faq-icon::after {
   left: 50%;
   top: 0;
   height: 100%;
@@ -669,57 +637,56 @@
   transform: translateX(-50%);
 }
 
-.faq__item--open .faq__icon::after {
+.faq-item--open .faq-icon::after {
   transform: translateX(-50%) rotate(90deg);
   opacity: 0;
 }
 
-.faq__answer {
+.faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.faq__item--open .faq__answer {
-  max-height: 500px; /* Large enough to hold any answer */
+.faq-item--open .faq-answer {
+  max-height: 500px;
 }
 
-.faq__answer-inner {
+.faq-answer-inner {
   padding: 0 20px 30px 20px;
 }
 
-.faq__answer p {
+.faq-answer p {
   max-width: 800px;
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 1024px) {
-  .why__grid {
+  .why-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 }
 
 @media (max-width: 768px) {
-  .why__header {
+  .why-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  .why__grid {
+  .why-grid {
     grid-template-columns: 1fr;
   }
-  .faq__question {
+  .faq-question {
     font-size: 1.05rem;
     padding: 20px 10px;
   }
-  .faq__answer-inner {
+  .faq-answer-inner {
     padding: 0 10px 20px 10px;
   }
 }
-/* ==========================================================================
-   8. CTA SECTION
-   ========================================================================== */
-.cta__box {
+
+/* //////////////////////////////////////// 8. CTA SECTION //////////////////////////////////////// */
+
+.cta-box {
   text-align: center;
   padding: 80px 40px;
   display: flex;
@@ -727,27 +694,26 @@
   align-items: center;
 }
 
-.cta__title {
+.cta-title {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   margin-bottom: 24px;
 }
 
-.cta__text {
+.cta-text {
   max-width: 600px;
   margin-bottom: 40px;
 }
 
-.cta__actions {
+.cta-actions {
   display: flex;
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-/* ==========================================================================
-   9. TESTIMONIALS SECTION
-   ========================================================================== */
-.testimonials__header {
+/* //////////////////////////////////////// 9. TESTIMONIALS SECTION //////////////////////////////////////// */
+
+.testimonials-header {
   text-align: center;
   margin-bottom: 60px;
   display: flex;
@@ -755,35 +721,35 @@
   align-items: center;
 }
 
-.testimonials__title {
+.testimonials-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 20px;
 }
 
-.testimonials__subtitle {
+.testimonials-subtitle {
   max-width: 600px;
 }
 
-.testimonials__grid {
+.testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.testimonials__card {
+.testimonials-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
 }
 
-.testimonials__card-top {
+.testimonials-card-top {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.testimonials__avatar {
+.testimonials-avatar {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -796,33 +762,33 @@
   color: var(--clr-white);
 }
 
-.testimonials__name {
+.testimonials-name {
   display: block;
   font-size: 1.05rem;
   color: var(--clr-white);
 }
 
-.testimonials__role {
+.testimonials-role {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--clr-gray-light);
 }
 
-.testimonials__quote {
+.testimonials-quote {
   font-size: 1rem;
   line-height: 1.7;
   font-style: italic;
   margin-bottom: 24px;
 }
 
-.testimonials__card-middle {
+.testimonials-card-middle {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.testimonials__link {
+.testimonials-link {
   margin-top: auto;
   display: inline-flex;
   align-items: center;
@@ -836,20 +802,20 @@
   width: fit-content;
 }
 
-.testimonials__link .arrow {
+.testimonials-link .arrow {
   color: var(--clr-red);
   transition: var(--transition-fast);
 }
 
-.testimonials__link:hover {
+.testimonials-link:hover {
   border-bottom-color: var(--clr-red);
 }
 
-.testimonials__link:hover .arrow {
+.testimonials-link:hover .arrow {
   transform: translateX(4px);
 }
 
-.testimonials__card-bottom {
+.testimonials-card-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -857,7 +823,7 @@
   border-top: 1px solid var(--clr-gray-dark);
 }
 
-.testimonials__tag {
+.testimonials-tag {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -865,65 +831,62 @@
   color: var(--clr-gray-light);
 }
 
-.testimonials__stars {
+.testimonials-stars {
   display: flex;
   gap: 4px;
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 1024px) {
-  .testimonials__grid {
+  .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .testimonials__grid {
+  .testimonials-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* ==========================================================================
-   10. CONTACT / GET A QUOTE SECTION (Split Layout)
-   ========================================================================== */
-.contact__grid {
+/* //////////////////////////////////////// 10. CONTACT SECTION //////////////////////////////////////// */
+
+.contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr; /* Gives the form slightly more room */
+  grid-template-columns: 1fr 1.3fr;
   gap: 80px;
   align-items: start;
 }
 
-/* --- Left Side (Info) --- */
-.contact__info {
+.contact-info {
   display: flex;
   flex-direction: column;
 }
 
-.contact__title {
+.contact-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 20px;
 }
 
-.contact__subtitle {
+.contact-subtitle {
   margin-bottom: 50px;
   font-size: 1.1rem;
 }
 
-.contact__methods {
+.contact-methods {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.contact__method {
+.contact-method {
   display: flex;
   align-items: flex-start;
   gap: 20px;
 }
 
-.contact__icon {
+.contact-icon {
   color: var(--clr-red);
-  background: rgba(220, 38, 38, 0.1); /* Faint red circle */
+  background: rgba(220, 38, 38, 0.1);
   padding: 12px;
   border-radius: 50%;
   display: flex;
@@ -931,7 +894,7 @@
   justify-content: center;
 }
 
-.contact__method-label {
+.contact-method-label {
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -940,42 +903,41 @@
   margin-bottom: 4px;
 }
 
-.contact__method-text {
+.contact-method-text {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--clr-white);
   transition: var(--transition-fast);
 }
 
-a.contact__method-text:hover {
+a.contact-method-text:hover {
   color: var(--clr-red);
 }
 
-/* --- Right Side (Form inside Glass Card) --- */
-.contact__form-card {
+.contact-form-card {
   padding: 50px;
 }
 
-.contact__row {
+.contact-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-.contact__field {
+.contact-field {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 24px;
 }
 
-.contact__field label {
+.contact-field label {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--clr-white);
 }
 
-.contact__input {
+.contact-input {
   width: 100%;
   padding: 14px 16px;
   background: rgba(255, 255, 255, 0.03);
@@ -987,30 +949,30 @@ a.contact__method-text:hover {
   transition: var(--transition-fast);
 }
 
-.contact__input::placeholder {
+.contact-input::placeholder {
   color: #555;
 }
 
-.contact__input:focus {
+.contact-input:focus {
   outline: none;
   border-color: var(--clr-red);
   background: rgba(255, 255, 255, 0.05);
 }
 
-.contact__instruction {
+.contact-instruction {
   font-size: 0.85rem;
   color: var(--clr-gray-light);
   margin: 0;
 }
 
-.contact__tags {
+.contact-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
 }
 
-.contact__tag {
+.contact-tag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1022,7 +984,7 @@ a.contact__method-text:hover {
   font-size: 0.85rem;
 }
 
-.contact__tag button {
+.contact-tag button {
   background: none;
   border: none;
   color: var(--clr-red);
@@ -1030,13 +992,13 @@ a.contact__method-text:hover {
   font-weight: 700;
 }
 
-.contact__actions {
+.contact-actions {
   display: flex;
   gap: 16px;
   margin-top: 10px;
 }
 
-.contact__success {
+.contact-success {
   background: rgba(34, 197, 94, 0.1);
   border: 1px solid #22c55e;
   color: #22c55e;
@@ -1046,71 +1008,61 @@ a.contact__method-text:hover {
   font-weight: 500;
 }
 
-.contact__error {
+.contact-error {
   color: var(--clr-red);
   font-size: 0.9rem;
   font-weight: 500;
   margin-top: 5px;
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 1024px) {
-  .contact__grid {
+  .contact-grid {
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  .contact__form-card {
+  .contact-form-card {
     padding: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .contact__row {
+  .contact-row {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .contact__actions {
+  .contact-actions {
     flex-direction: column;
   }
-  .contact__actions .btn {
+  .contact-actions .btn {
     width: 100%;
   }
-  .contact__form-card {
+  .contact-form-card {
     padding: 30px 20px;
   }
 }
 
-/* ==========================================================================
-   FIX 1: Override Chrome/Edge Autofill White Background
-   ========================================================================== */
-.contact__input:-webkit-autofill,
-.contact__input:-webkit-autofill:hover,
-.contact__input:-webkit-autofill:focus,
-.contact__input:-webkit-autofill:active {
-  /* Forces a dark background inside the autofilled input */
+/* //////////////////////////////////////// BROWSER FIXES & INPUT STYLES //////////////////////////////////////// */
+
+.contact-input:-webkit-autofill,
+.contact-input:-webkit-autofill:hover,
+.contact-input:-webkit-autofill:focus,
+.contact-input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #121212 inset !important;
-  /* Keeps the text white */
   -webkit-text-fill-color: var(--clr-white) !important;
-  /* Prevents the background color from flashing */
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* ==========================================================================
-   FIX 2: Style the <select> Options & Dropdown Arrow
-   ========================================================================== */
-/* Make the dropdown menu items dark */
-.contact__input option {
-  background-color: #0a0a0a; /* Deep black to match the theme */
+.contact-input option {
+  background-color: #0a0a0a;
   color: var(--clr-white);
   padding: 10px;
 }
 
-/* Optional: Replace the ugly default browser dropdown arrow with a sleek white one */
-select.contact__input {
+select.contact-input {
   appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 16px center;
   background-size: 16px;
-  padding-right: 40px; /* Make room for the new arrow */
+  padding-right: 40px;
 }

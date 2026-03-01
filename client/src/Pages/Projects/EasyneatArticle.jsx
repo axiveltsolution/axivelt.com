@@ -56,7 +56,6 @@ export default function EasyNeatArticle() {
   return (
     <>
       <Helmet>
-        {/* Your exactly preserved SEO Tags */}
         <title>
           EasyNeat Cleaning Service Website | React Web Development Sri Lanka -
           Axivelt
@@ -77,27 +76,25 @@ export default function EasyNeatArticle() {
 
       <main className="article-page">
         <div className="container">
-          {/* HEADER & HERO */}
-          <header className="article__header">
+          <header className="article-header">
             <span className="badge-label text-red">Web Application</span>
-            <h1 className="article__title">EasyNeat Booking Platform</h1>
-            <p className="article__subtitle">
+            <h1 className="article-title">EasyNeat Booking Platform</h1>
+            <p className="article-subtitle">
               Complete web application for cleaning service businesses featuring
               advanced booking systems, customer management, and a powerful
               admin dashboard.
             </p>
           </header>
 
-          <div className="article__hero-wrapper">
+          <div className="article-hero-wrapper">
             <img
               src={heroImg}
               alt="EasyNeat cleaning service booking platform"
             />
           </div>
 
-          {/* ARTICLE CONTENT */}
-          <div className="article__content">
-            <section className="article__section">
+          <div className="article-content">
+            <section className="article-section">
               <h2>Custom Web Application Development</h2>
               <p>
                 EasyNeat is a production-grade{" "}
@@ -109,7 +106,7 @@ export default function EasyNeatArticle() {
               </p>
             </section>
 
-            <section className="article__section">
+            <section className="article-section">
               <h2>Key Features & Solutions</h2>
               <h3>Advanced Booking System</h3>
               <p>
@@ -117,7 +114,7 @@ export default function EasyNeatArticle() {
                 project is an intelligent multi-step booking form that guides
                 customers through service selection with:
               </p>
-              <ul className="article__list">
+              <ul className="article-list">
                 <li>
                   <strong>Smart address autocomplete:</strong> Google Maps
                   integration for accurate service location detection.
@@ -141,7 +138,7 @@ export default function EasyNeatArticle() {
                 The backend management interface provides business owners with
                 complete operational control:
               </p>
-              <ul className="article__list">
+              <ul className="article-list">
                 <li>
                   <strong>Interactive calendar view:</strong> Drag-and-drop
                   booking assignments with color-coded status indicators.
@@ -160,20 +157,20 @@ export default function EasyNeatArticle() {
                 </li>
               </ul>
 
-              <div className="article__screens">
+              <div className="article-screens">
                 <img src={dash1} alt="Admin dashboard calendar view" />
                 <img src={dash2} alt="Booking management interface" />
               </div>
             </section>
 
-            <section className="article__section">
+            <section className="article-section">
               <h2>User Interface & Customer Experience</h2>
               <p>
                 The customer-facing interface prioritizes ease of use and
                 conversion optimization to remove friction from the booking
                 process:
               </p>
-              <ul className="article__list">
+              <ul className="article-list">
                 <li>
                   <strong>Clear value proposition:</strong> Service benefits and
                   trust signals highlighted above the fold.
@@ -188,15 +185,15 @@ export default function EasyNeatArticle() {
                 </li>
               </ul>
 
-              <div className="article__screens">
+              <div className="article-screens">
                 <img src={fe1} alt="Mobile booking wizard interface" />
                 <img src={fe2} alt="Booking confirmation screen" />
               </div>
             </section>
 
-            <section className="article__section">
+            <section className="article-section">
               <h2>Technology Stack</h2>
-              <ul className="article__list">
+              <ul className="article-list">
                 <li>
                   <strong>Frontend:</strong> React 18, Vite, React Router v6,
                   Progressive Web App (PWA)
@@ -216,8 +213,7 @@ export default function EasyNeatArticle() {
               </ul>
             </section>
 
-            {/* GALLERY SYSTEM */}
-            <section className="article__section">
+            <section className="article-section">
               <h2>Project Gallery Walkthrough</h2>
               <p>
                 Explore detailed screenshots showcasing the full range of
@@ -225,12 +221,12 @@ export default function EasyNeatArticle() {
               </p>
 
               {images.length > 0 && (
-                <div className="article__gallery-grid">
+                <div className="article-gallery-grid">
                   {images.map((src, i) => (
                     <button
                       key={i}
                       type="button"
-                      className="article__gallery-btn"
+                      className="article-gallery-btn"
                       onClick={() => openAt(i)}>
                       <img
                         src={src}
@@ -243,16 +239,14 @@ export default function EasyNeatArticle() {
               )}
             </section>
 
-            {/* CTA SECTION */}
-            <section className="article__cta" id="contact">
+            <section className="article-cta" id="contact">
               <h2>Ready to Build Your Custom Web Application?</h2>
               <p>
                 Axivelt Solutions delivers production-ready digital solutions
                 tailored for service businesses in Sri Lanka.
               </p>
 
-              {/* Using Global Buttons! */}
-              <div className="article__cta-buttons">
+              <div className="article-cta-buttons">
                 <Link to="/#contact" className="btn btn-primary">
                   Get Your Free Quote
                 </Link>
@@ -266,22 +260,21 @@ export default function EasyNeatArticle() {
               </div>
             </section>
 
-            {/* RELATED PROJECTS (Using Global Glass Cards!) */}
-            <section className="article__section">
+            <section className="article-section">
               <h2>More Custom Web Applications</h2>
-              <div className="article__related-grid">
+              <div className="article-related-grid">
                 <Link
                   to="/projects/motogear-inventory-management-system"
                   className="glass-card">
                   <span className="badge-label">Software</span>
                   <h3>MotoGear POS</h3>
                   <p
-                    className="article__subtitle"
+                    className="article-subtitle"
                     style={{ fontSize: "0.95rem", margin: "10px 0 20px 0" }}>
                     Professional inventory and POS system with stock tracking
                     and analytics.
                   </p>
-                  <span className="article__related-link">
+                  <span className="article-related-link">
                     View Case Study <span className="arrow">→</span>
                   </span>
                 </Link>
@@ -292,12 +285,12 @@ export default function EasyNeatArticle() {
                   <span className="badge-label">Travel & Tourism</span>
                   <h3>Around Lanka Travels</h3>
                   <p
-                    className="article__subtitle"
+                    className="article-subtitle"
                     style={{ fontSize: "0.95rem", margin: "10px 0 20px 0" }}>
                     Complete travel agency platform with itinerary builder and
                     booking system.
                   </p>
-                  <span className="article__related-link">
+                  <span className="article-related-link">
                     View Case Study <span className="arrow">→</span>
                   </span>
                 </Link>
@@ -307,14 +300,13 @@ export default function EasyNeatArticle() {
         </div>
       </main>
 
-      {/* FULLSCREEN LIGHTBOX */}
       {isOpen && images.length > 0 && (
         <div className="lightbox" role="dialog" aria-modal="true">
-          <button className="lightbox__close" onClick={closeLightbox}>
+          <button className="lightbox-close" onClick={closeLightbox}>
             ✕
           </button>
           <button
-            className="lightbox__prev"
+            className="lightbox-prev"
             onClick={(e) => {
               e.stopPropagation();
               prev();
@@ -322,7 +314,7 @@ export default function EasyNeatArticle() {
             ◀
           </button>
 
-          <div className="lightbox__stage" onClick={closeLightbox}>
+          <div className="lightbox-stage" onClick={closeLightbox}>
             <img
               src={images[currentIndex]}
               alt={`Gallery view ${currentIndex + 1}`}
@@ -330,14 +322,14 @@ export default function EasyNeatArticle() {
           </div>
 
           <button
-            className="lightbox__next"
+            className="lightbox-next"
             onClick={(e) => {
               e.stopPropagation();
               next();
             }}>
             ▶
           </button>
-          <div className="lightbox__counter">
+          <div className="lightbox-counter">
             {currentIndex + 1} / {images.length}
           </div>
         </div>

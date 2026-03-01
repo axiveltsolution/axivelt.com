@@ -19,14 +19,14 @@
   border-bottom: 1px solid var(--clr-gray-dark);
 }
 
-.navbar__container {
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 /* Brand styling with the red dot */
-.navbar__brand {
+.navbar-brand {
   font-size: 1.5rem;
   font-weight: 900;
   letter-spacing: 0.1em;
@@ -34,13 +34,13 @@
 }
 
 /* Desktop Links */
-.navbar__desktop {
+.navbar-desktop {
   display: flex;
   align-items: center;
   gap: 40px; /* Wide spacing for a premium feel */
 }
 
-.navbar__link {
+.navbar-link {
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -52,12 +52,12 @@
 }
 
 /* NO ACTIVE STATE - Only turns white on HOVER */
-.navbar__link:hover {
+.navbar-link:hover {
   color: var(--clr-white);
 }
 
 /* Blood Red underline animation */
-.navbar__link::after {
+.navbar-link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -69,18 +69,18 @@
 }
 
 /* ONLY expands the underline on HOVER */
-.navbar__link:hover::after {
+.navbar-link:hover::after {
   width: 100%;
 }
 
 /* Mobile Setup */
-.navbar__toggle {
+.navbar-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
 }
-.navbar__toggle .bar {
+.navbar-toggle .bar {
   display: block;
   width: 24px;
   height: 2px;
@@ -88,31 +88,31 @@
   margin: 6px 0;
   transition: var(--transition-smooth);
 }
-.navbar__mobile {
+.navbar-mobile {
   display: none;
 }
 
 @media (max-width: 992px) {
-  .navbar__desktop {
+  .navbar-desktop {
     display: none;
   }
-  .navbar__toggle {
+  .navbar-toggle {
     display: block;
     z-index: 1001;
     position: relative;
   }
 
   /* Animate Hamburger to an X */
-  .navbar--open .navbar__toggle .bar:nth-child(1) {
+  .navbar--open .navbar-toggle .bar:nth-child(1) {
     transform: translateY(4px) rotate(45deg);
     background-color: var(--clr-red);
   }
-  .navbar--open .navbar__toggle .bar:nth-child(2) {
+  .navbar--open .navbar-toggle .bar:nth-child(2) {
     transform: translateY(-4px) rotate(-45deg);
     background-color: var(--clr-red);
   }
 
-  .navbar__mobile {
+  .navbar-mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,11 +129,11 @@
     transition: var(--transition-smooth);
   }
 
-  .navbar--open .navbar__mobile {
+  .navbar--open .navbar-mobile {
     opacity: 1;
     pointer-events: all;
   }
-  .navbar__mobile .navbar__link {
+  .navbar-mobile .navbar-link {
     font-size: 1.5rem;
   }
 }

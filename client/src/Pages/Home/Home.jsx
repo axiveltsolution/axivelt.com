@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "./Home.css";
 
-/* ==== COMPONENTS === */
 import Hero from "./Components/HeroSection.jsx";
 import Cta from "./Components/CTASection.jsx";
 import Services from "./Components/ServicesSection.jsx";
@@ -16,12 +15,10 @@ import Contact from "./Components/ContactSection.jsx";
 import Testimonial from "./Components/TestimonialSection.jsx";
 import { ContactIcon } from "lucide-react";
 
-/* ============================= Home Page ============================= */
 export default function Home() {
   return (
     <>
       <Helmet>
-        {/* ========== PRIMARY META TAGS ========== */}
         <title>
           Software Solutions Company Sri Lanka | Custom Software Development,
           Enterprise Systems & Digital Solutions | Axivelt Solutions
@@ -44,16 +41,13 @@ export default function Home() {
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
 
-        {/* Canonical URL */}
         <link rel="canonical" href="https://axivelt.com/" />
 
-        {/* Geo Tags for Local SEO */}
         <meta name="geo.region" content="LK-1" />
         <meta name="geo.placename" content="Colombo" />
         <meta name="geo.position" content="6.9271;79.8612" />
         <meta name="ICBM" content="6.9271, 79.8612" />
 
-        {/* ========== OPEN GRAPH (Facebook, LinkedIn) ========== */}
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Axivelt Solutions" />
@@ -77,7 +71,6 @@ export default function Home() {
           content="Axivelt Solutions - Software Solutions Company Sri Lanka"
         />
 
-        {/* ========== TWITTER CARD ========== */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@axivelt" />
         <meta name="twitter:creator" content="@axivelt" />
@@ -94,7 +87,6 @@ export default function Home() {
           content="https://axivelt.com/og-image-home.jpg"
         />
 
-        {/* ========== ADDITIONAL SEO META ========== */}
         <meta name="theme-color" content="#07070b" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -102,7 +94,6 @@ export default function Home() {
           content="black-translucent"
         />
 
-        {/* ========== SCHEMA MARKUP - LOCAL BUSINESS ========== */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -189,7 +180,6 @@ export default function Home() {
           }}
         />
 
-        {/* ========== SCHEMA MARKUP - PROFESSIONAL SERVICE ========== */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -232,7 +222,6 @@ export default function Home() {
           }}
         />
 
-        {/* ========== SCHEMA MARKUP - SERVICES OFFERED ========== */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -332,7 +321,6 @@ export default function Home() {
           }}
         />
 
-        {/* ========== SCHEMA MARKUP - BREADCRUMB ========== */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -351,7 +339,6 @@ export default function Home() {
           }}
         />
 
-        {/* ========== SCHEMA MARKUP - WEBSITE ========== */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -377,7 +364,6 @@ export default function Home() {
           }}
         />
 
-        {/* ========== SCHEMA MARKUP - FAQ ========== */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -432,33 +418,15 @@ export default function Home() {
       </Helmet>
 
       <div className="home">
-        {/* HERO */}
         <Hero />
-
-        {/* CTA */}
         <Cta />
-
-        {/* SERVICES */}
         <Services />
-
-        {/* TESTIMONIAL */}
         <Testimonial />
-
-        {/* RECENT WORK (exactly three) */}
         <RecentWork />
-
-        {/* STATS */}
         <Status />
-
-        {/* ABOUT */}
         <About />
-
-        {/* WHY CHOOSE US */}
         <WhyChooseUs />
-
         <Contact />
-
-        {/* FAQ */}
         <FAQ />
       </div>
     </>

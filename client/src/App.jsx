@@ -2,8 +2,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 
-import { HelmetProvider } from "react-helmet-async"; // optional here if already wrapped in index.jsx
-
 /* ================= Components ================= */
 import NavBar from "./Components/NavBar/NavBar.jsx";
 import Footer from "./Components/Footer/Footer.jsx";

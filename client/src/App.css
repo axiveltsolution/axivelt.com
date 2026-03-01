@@ -1,25 +1,17 @@
-/* ==========================================================================
-   AXIVELT SOLUTIONS - GLOBAL DESIGN SYSTEM
-   Theme: Deep Black, Pure White, and Blood Red
-   ========================================================================== */
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
-  /* --- Color Palette --- */
-  --clr-bg: #030303; /* Deepest black for the canvas */
-  --clr-surface: rgba(20, 20, 20, 0.5); /* Frosted glass for cards */
-  --clr-white: #ffffff; /* Pure white for headings */
-  --clr-gray-light: #a1a1aa; /* Soft silver for readable paragraphs */
-  --clr-gray-dark: #27272a; /* Dark gray for subtle borders */
-  --clr-red: #dc2626; /* Blood Red / Tech Accent */
+  --clr-bg: #030303;
+  --clr-surface: rgba(20, 20, 20, 0.5);
+  --clr-white: #ffffff;
+  --clr-gray-light: #a1a1aa;
+  --clr-gray-dark: #27272a;
+  --clr-red: #dc2626;
 
-  /* --- Layout & Spacing --- */
-  --max-width: 1600px; /* Wide format for a premium first impression */
-  --padding-x: 5%; /* Dynamic side padding */
-  --section-y: 120px; /* Generous vertical spacing between sections */
+  --max-width: 1600px;
+  --padding-x: 5%;
+  --section-y: 120px;
 
-  /* --- Transitions --- */
   --transition-fast: all 0.2s ease;
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -29,9 +21,6 @@
   color: var(--clr-white);
 }
 
-/* ==========================================================================
-   1. BASE STYLES & TYPOGRAPHY
-   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +34,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  /* Subtle, professional dark grid background */
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.0176) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.0176) 1px, transparent 1px);
@@ -73,9 +61,6 @@ a {
   transition: var(--transition-fast);
 }
 
-/* ==========================================================================
-   2. REUSABLE LAYOUT CLASSES
-   ========================================================================== */
 .section {
   padding: var(--section-y) 0;
   border-bottom: 1px solid var(--clr-gray-dark);
@@ -87,9 +72,6 @@ a {
   padding: 0 var(--padding-x);
 }
 
-/* ==========================================================================
-   3. THE GLASS CARD (Clean & Modern, No Heavy Shadows)
-   ========================================================================== */
 .glass-card {
   background: var(--clr-surface);
   border: 1px solid var(--clr-gray-dark);
@@ -103,13 +85,9 @@ a {
 .glass-card:hover {
   border-color: var(--clr-red);
   transform: translateY(-4px);
-  /* Only a very faint red glow on the border, no muddy black shadows */
   box-shadow: 0 10px 30px -10px rgba(220, 38, 38, 0.15);
 }
 
-/* ==========================================================================
-   4. BUTTON SYSTEM
-   ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -147,9 +125,6 @@ a {
   color: var(--clr-red);
 }
 
-/* ==========================================================================
-   5. UTILITIES
-   ========================================================================== */
 .text-red {
   color: var(--clr-red);
 }

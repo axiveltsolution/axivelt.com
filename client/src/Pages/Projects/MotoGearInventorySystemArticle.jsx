@@ -56,7 +56,6 @@ export default function MotoGearInventorySystemArticle() {
   return (
     <>
       <Helmet>
-        {/* Your exactly preserved SEO Tags */}
         <title>
           MotoGear Inventory Management System | Custom Inventory Software Sri
           Lanka | Axivelt Solutions
@@ -77,24 +76,22 @@ export default function MotoGearInventorySystemArticle() {
 
       <main className="article-page">
         <div className="container">
-          {/* HEADER & HERO */}
-          <header className="article__header">
+          <header className="article-header">
             <span className="badge-label text-red">Business Software</span>
-            <h1 className="article__title">MotoGear Inventory System</h1>
-            <p className="article__subtitle">
+            <h1 className="article-title">MotoGear Inventory System</h1>
+            <p className="article-subtitle">
               Professional inventory management system featuring comprehensive
               stock tracking, integrated POS, sales recording, expense
               management, and powerful analytics.
             </p>
           </header>
 
-          <div className="article__hero-wrapper">
+          <div className="article-hero-wrapper">
             <img src={heroImg} alt="MotoGear inventory management system" />
           </div>
 
-          {/* ARTICLE CONTENT */}
-          <div className="article__content">
-            <section className="article__section">
+          <div className="article-content">
+            <section className="article-section">
               <h2>Custom Inventory Management System</h2>
               <p>
                 MotoGear is a production-grade{" "}
@@ -108,7 +105,7 @@ export default function MotoGearInventorySystemArticle() {
               </p>
             </section>
 
-            <section className="article__section">
+            <section className="article-section">
               <h2>Key Features & Solutions</h2>
               <h3>Comprehensive Stock Management</h3>
               <p>
@@ -116,7 +113,7 @@ export default function MotoGearInventorySystemArticle() {
                 stock tracking system that provides complete visibility over
                 your inventory:
               </p>
-              <ul className="article__list">
+              <ul className="article-list">
                 <li>
                   <strong>Real-time stock levels:</strong> Live tracking of
                   available quantities, low-stock alerts, and automatic reorder
@@ -142,7 +139,7 @@ export default function MotoGearInventorySystemArticle() {
                 The built-in POS solution enables seamless in-store sales
                 transactions:
               </p>
-              <ul className="article__list">
+              <ul className="article-list">
                 <li>
                   <strong>Fast product lookup:</strong> Quick search by name,
                   SKU, barcode, or category.
@@ -161,7 +158,7 @@ export default function MotoGearInventorySystemArticle() {
                 </li>
               </ul>
 
-              <div className="article__screens">
+              <div className="article-screens">
                 <img src={ProductSearch1} alt="MotoGear inventory dashboard" />
                 <img
                   src={ProductSearch2}
@@ -170,13 +167,13 @@ export default function MotoGearInventorySystemArticle() {
               </div>
             </section>
 
-            <section className="article__section">
+            <section className="article-section">
               <h2>Beautiful Data Visualization & Analytics</h2>
               <p>
                 Our retail management software includes powerful visual
                 analytics that turn raw data into actionable business insights:
               </p>
-              <ul className="article__list">
+              <ul className="article-list">
                 <li>
                   <strong>Sales trend charts:</strong> Line graphs showing
                   revenue patterns over time.
@@ -191,15 +188,15 @@ export default function MotoGearInventorySystemArticle() {
                 </li>
               </ul>
 
-              <div className="article__screens">
+              <div className="article-screens">
                 <img src={ImgReports1} alt="Product management interface" />
                 <img src={ImgReports2} alt="Sales analytics dashboard" />
               </div>
             </section>
 
-            <section className="article__section">
+            <section className="article-section">
               <h2>Technology Stack & Architecture</h2>
-              <ul className="article__list">
+              <ul className="article-list">
                 <li>
                   <strong>Frontend:</strong> HTML5, CSS3, Vanilla JavaScript,
                   Chart.js, Bootstrap components
@@ -219,8 +216,7 @@ export default function MotoGearInventorySystemArticle() {
               </ul>
             </section>
 
-            {/* GALLERY SYSTEM */}
-            <section className="article__section">
+            <section className="article-section">
               <h2>Project Gallery Walkthrough</h2>
               <p>
                 Explore detailed screenshots of every module in this inventory
@@ -229,12 +225,12 @@ export default function MotoGearInventorySystemArticle() {
               </p>
 
               {images.length > 0 && (
-                <div className="article__gallery-grid">
+                <div className="article-gallery-grid">
                   {images.map((src, i) => (
                     <button
                       key={i}
                       type="button"
-                      className="article__gallery-btn"
+                      className="article-gallery-btn"
                       onClick={() => openAt(i)}>
                       <img
                         src={src}
@@ -247,8 +243,7 @@ export default function MotoGearInventorySystemArticle() {
               )}
             </section>
 
-            {/* CTA SECTION */}
-            <section className="article__cta" id="contact">
+            <section className="article-cta" id="contact">
               <h2>Ready to Modernize Your Retail Business?</h2>
               <p>
                 Axivelt Solutions builds custom business applications that
@@ -256,33 +251,28 @@ export default function MotoGearInventorySystemArticle() {
                 businesses in Sri Lanka.
               </p>
 
-              {/* Using Global Buttons! */}
-              <div className="article__cta-buttons">
+              <div className="article-cta-buttons">
                 <Link to="/#contact" className="btn btn-primary">
                   Get Your Free Quote
                 </Link>
-                {/* <Link to="/our-projects" className="btn btn-outline">
-                  View More Projects
-                </Link> */}
               </div>
             </section>
 
-            {/* RELATED PROJECTS (Using Global Glass Cards!) */}
-            <section className="article__section">
+            <section className="article-section">
               <h2>More Custom Web Applications</h2>
-              <div className="article__related-grid">
+              <div className="article-related-grid">
                 <Link
                   to="/projects/easyNeat-cleaning-service-booking-platform"
                   className="glass-card">
                   <span className="badge-label">Web App</span>
                   <h3>EasyNeat Platform</h3>
                   <p
-                    className="article__subtitle"
+                    className="article-subtitle"
                     style={{ fontSize: "0.95rem", margin: "10px 0 20px 0" }}>
                     Complete booking system with advanced scheduling and admin
                     dashboard.
                   </p>
-                  <span className="article__related-link">
+                  <span className="article-related-link">
                     View Case Study <span className="arrow">→</span>
                   </span>
                 </Link>
@@ -293,12 +283,12 @@ export default function MotoGearInventorySystemArticle() {
                   <span className="badge-label">Travel & Tourism</span>
                   <h3>Around Lanka Travels</h3>
                   <p
-                    className="article__subtitle"
+                    className="article-subtitle"
                     style={{ fontSize: "0.95rem", margin: "10px 0 20px 0" }}>
                     Complete travel agency platform with itinerary builder and
                     booking system.
                   </p>
-                  <span className="article__related-link">
+                  <span className="article-related-link">
                     View Case Study <span className="arrow">→</span>
                   </span>
                 </Link>
@@ -308,14 +298,13 @@ export default function MotoGearInventorySystemArticle() {
         </div>
       </main>
 
-      {/* FULLSCREEN LIGHTBOX */}
       {isOpen && images.length > 0 && (
         <div className="lightbox" role="dialog" aria-modal="true">
-          <button className="lightbox__close" onClick={closeLightbox}>
+          <button className="lightbox-close" onClick={closeLightbox}>
             ✕
           </button>
           <button
-            className="lightbox__prev"
+            className="lightbox-prev"
             onClick={(e) => {
               e.stopPropagation();
               prev();
@@ -323,7 +312,7 @@ export default function MotoGearInventorySystemArticle() {
             ◀
           </button>
 
-          <div className="lightbox__stage" onClick={closeLightbox}>
+          <div className="lightbox-stage" onClick={closeLightbox}>
             <img
               src={images[currentIndex]}
               alt={`Gallery view ${currentIndex + 1}`}
@@ -331,20 +320,19 @@ export default function MotoGearInventorySystemArticle() {
           </div>
 
           <button
-            className="lightbox__next"
+            className="lightbox-next"
             onClick={(e) => {
               e.stopPropagation();
               next();
             }}>
             ▶
           </button>
-          <div className="lightbox__counter">
+          <div className="lightbox-counter">
             {currentIndex + 1} / {images.length}
           </div>
         </div>
       )}
 
-      {/* Preserved Schema Markup */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

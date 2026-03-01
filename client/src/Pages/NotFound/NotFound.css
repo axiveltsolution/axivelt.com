@@ -1,18 +1,13 @@
-/* ==========================================================================
-   NOT FOUND (404) PAGE STYLES
-   Theme: Deep Black, Pure White, and Blood Red
-   ========================================================================== */
-
 .not-found {
-  min-height: 80vh; /* Forces the content to center vertically on the screen */
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 140px 0 80px 0; /* Ensures it doesn't hide behind your fixed navbar */
+  padding: 140px 0 80px 0;
 }
 
-.not-found__container {
+.not-found-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,8 +15,8 @@
   animation: fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.not-found__title {
-  font-size: clamp(3rem, 8vw, 5.5rem); /* Massive, cinematic typography */
+.not-found-title {
+  font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 900;
   line-height: 1.1;
   color: var(--clr-white);
@@ -29,14 +24,13 @@
   letter-spacing: -0.02em;
 }
 
-.not-found__subtitle {
+.not-found-subtitle {
   font-size: 1.15rem;
   color: var(--clr-gray-light);
   line-height: 1.6;
   margin-bottom: 40px;
 }
 
-/* Simple entrance animation so it feels premium when it loads */
 @keyframes fadeUp {
   from {
     opacity: 0;
